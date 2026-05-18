@@ -1,0 +1,352 @@
+{
+  "description": "Extended synthetic, non-private scenarios for the Level 5 v3 Ollama experiment. This catalog extends scenario_catalog.json and adds finite theory stress cases without publishing raw prompts or responses.",
+  "extends": "scenario_catalog.json",
+  "scenario_version": "2026-05-18.synthetic.v2",
+  "scenarios": [
+    {
+      "category": "continuation_diagnostic_missing",
+      "expected_cgt_diagnostic_focus": {
+        "same_report_pair": "continuation_diag_pair",
+        "same_closed_profile_as_pair": false,
+        "separating_dimension": "continuation",
+        "residual_test_count": 1,
+        "requires_diagnostic_name": true
+      },
+      "expected_closed_deficiency_codes": [
+        "missing_continuation_diagnostic"
+      ],
+      "expected_status": "blocked",
+      "extends_scenario": "same_report_continuation_low",
+      "extraction_dossier": "The package declares the ordinary report path and says continuation-sensitive diagnosis is requested. It declares follow-up tests, but it does not declare the diagnostic name used to read the residual continuation space.",
+      "gold_claim_package_patch": {
+        "claim_id": "continuation_diagnostic_missing",
+        "continuation": {
+          "diagnostic_name": null,
+          "follow_up_tests": [
+            "replicate-on-split-b"
+          ],
+          "id": "continuation.missing_diagnostic"
+        },
+        "provenance": [
+          {
+            "id": "provenance.synthetic_cont_missing",
+            "uri": "synthetic://continuation-missing"
+          }
+        ],
+        "statement": "Model M has the same normalized report, but continuation-sensitive diagnosis lacks a declared readout."
+      },
+      "id": "continuation_diagnostic_missing",
+      "report_signature": "continuation_diag_pair",
+      "statement": "Model M has the same normalized report, but continuation-sensitive diagnosis lacks a declared readout."
+    },
+    {
+      "category": "continuation_diagnostic_present",
+      "expected_cgt_diagnostic_focus": {
+        "same_report_pair": "continuation_diag_pair",
+        "same_closed_profile_as_pair": false,
+        "separating_dimension": "continuation",
+        "residual_test_count": 1,
+        "requires_diagnostic_name": true
+      },
+      "expected_closed_deficiency_codes": [],
+      "expected_status": "continuation_sensitive",
+      "extends_scenario": "same_report_continuation_low",
+      "extraction_dossier": "The package declares the ordinary report path, declares continuation-sensitive diagnosis, names residual_follow_up_capacity as the readout, and declares one follow-up test.",
+      "gold_claim_package_patch": {
+        "claim_id": "continuation_diagnostic_present",
+        "continuation": {
+          "diagnostic_name": "residual_follow_up_capacity",
+          "follow_up_tests": [
+            "replicate-on-split-b"
+          ],
+          "id": "continuation.present_diagnostic"
+        },
+        "provenance": [
+          {
+            "id": "provenance.synthetic_cont_present",
+            "uri": "synthetic://continuation-present"
+          }
+        ],
+        "statement": "Model M has the same normalized report and declares the continuation readout."
+      },
+      "id": "continuation_diagnostic_present",
+      "report_signature": "continuation_diag_pair",
+      "statement": "Model M has the same normalized report and declares the continuation readout."
+    },
+    {
+      "category": "marker_state_omitted",
+      "expected_cgt_diagnostic_focus": {
+        "marker_policy_declared": true,
+        "marker_state_declared": false,
+        "preserves_markers": true,
+        "same_closed_profile_as_pair": true,
+        "same_report_pair": "marker_state_pair",
+        "separating_dimension": "marker_state",
+        "tracks_unresolved": true,
+        "unresolved_marker_count": 0
+      },
+      "expected_closed_deficiency_codes": [
+        "report_only_insufficiency_risk"
+      ],
+      "expected_status": "well_typed",
+      "extends_scenario": "marker_sensitive_preserved",
+      "extraction_dossier": "The package is marker-sensitive and declares a marker policy that tracks unresolved markers, preserves markers, and gives marker provenance. It does not declare the finite marker state listing unresolved markers.",
+      "gold_claim_package_patch": {
+        "claim_id": "marker_state_omitted",
+        "provenance": [
+          {
+            "id": "provenance.synthetic_marker_state_omitted",
+            "uri": "synthetic://marker-state-omitted"
+          }
+        ],
+        "statement": "The marker-sensitive report omits marker state even though marker policy is declared."
+      },
+      "id": "marker_state_omitted",
+      "remove_gold_claim_package_keys": [
+        "marker_state"
+      ],
+      "report_signature": "marker_state_pair",
+      "statement": "The marker-sensitive report omits marker state even though marker policy is declared."
+    },
+    {
+      "category": "marker_state_preserved",
+      "expected_cgt_diagnostic_focus": {
+        "marker_policy_declared": true,
+        "marker_state_declared": true,
+        "preserves_markers": true,
+        "same_closed_profile_as_pair": true,
+        "same_report_pair": "marker_state_pair",
+        "separating_dimension": "marker_state",
+        "tracks_unresolved": true,
+        "unresolved_marker_count": 1
+      },
+      "expected_closed_deficiency_codes": [
+        "report_only_insufficiency_risk"
+      ],
+      "expected_status": "well_typed",
+      "extends_scenario": "marker_sensitive_preserved",
+      "extraction_dossier": "The package is marker-sensitive and declares both marker policy and marker state. The marker state lists one unresolved marker and marker provenance while preserving markers.",
+      "gold_claim_package_patch": {
+        "claim_id": "marker_state_preserved_v3",
+        "provenance": [
+          {
+            "id": "provenance.synthetic_marker_state_preserved_v3",
+            "uri": "synthetic://marker-state-preserved-v3"
+          }
+        ],
+        "statement": "The marker-sensitive report omits the marker dimension, but the package preserves marker state."
+      },
+      "id": "marker_state_preserved_v3",
+      "report_signature": "marker_state_pair",
+      "statement": "The marker-sensitive report omits the marker dimension, but the package preserves marker state."
+    },
+    {
+      "category": "direct_selector_with_degeneracy_control",
+      "expected_cgt_diagnostic_focus": {
+        "construction_kind": "direct_selector",
+        "degeneracy_control_declared": true,
+        "direct_selector": true,
+        "same_report_pair": "direct_selector_control_pair",
+        "separating_dimension": "degeneracy_control"
+      },
+      "expected_closed_deficiency_codes": [],
+      "expected_status": "reproducibly_available",
+      "extends_scenario": "direct_selector_degeneracy",
+      "extraction_dossier": "The package uses direct-selector construction history, but it also declares degeneracy controls over history, cost, locality, and effect profile with a restricted selector language.",
+      "gold_claim_package_patch": {
+        "claim_id": "direct_selector_with_degeneracy_control",
+        "degeneracy_control": {
+          "controls": [
+            "history",
+            "cost",
+            "locality",
+            "effect_profile"
+          ],
+          "id": "degeneracy.direct_selector_controlled",
+          "restricted_selector_language": true
+        },
+        "provenance": [
+          {
+            "id": "provenance.synthetic_selector_controlled",
+            "uri": "synthetic://selector-controlled"
+          }
+        ],
+        "statement": "A direct selector reaches the target report with explicit degeneracy controls."
+      },
+      "id": "direct_selector_with_degeneracy_control",
+      "report_signature": "direct_selector_control_pair",
+      "statement": "A direct selector reaches the target report with explicit degeneracy controls."
+    },
+    {
+      "category": "direct_selector_without_degeneracy_control",
+      "expected_cgt_diagnostic_focus": {
+        "construction_kind": "direct_selector",
+        "degeneracy_control_declared": false,
+        "direct_selector": true,
+        "same_report_pair": "direct_selector_control_pair",
+        "separating_dimension": "degeneracy_control"
+      },
+      "expected_closed_deficiency_codes": [
+        "direct_selector_degeneracy_risk"
+      ],
+      "expected_status": "well_typed",
+      "extends_scenario": "direct_selector_degeneracy",
+      "extraction_dossier": "The package uses direct-selector construction history and does not declare cost, locality, history, effect-profile, or selector-language degeneracy controls.",
+      "gold_claim_package_patch": {
+        "claim_id": "direct_selector_without_degeneracy_control",
+        "provenance": [
+          {
+            "id": "provenance.synthetic_selector_uncontrolled_v3",
+            "uri": "synthetic://selector-uncontrolled-v3"
+          }
+        ],
+        "statement": "A direct selector reaches the target report without degeneracy controls."
+      },
+      "id": "direct_selector_without_degeneracy_control",
+      "report_signature": "direct_selector_control_pair",
+      "statement": "A direct selector reaches the target report without degeneracy controls."
+    },
+    {
+      "category": "verifier_failure_domain_mismatch",
+      "expected_cgt_diagnostic_focus": {
+        "same_report_pair": "domain_mismatch_pair",
+        "separating_dimension": "typed_report_path"
+      },
+      "expected_closed_deficiency_codes": [
+        "report_path_type_error"
+      ],
+      "expected_status": "blocked",
+      "extends_scenario": "strict_reproduction_protocol",
+      "extraction_dossier": "The package declares a full report path, but the normalizer emits report_z while the verifier and failure predicate declare incompatible input domains.",
+      "gold_claim_package_patch": {
+        "claim_id": "verifier_failure_domain_mismatch",
+        "failure_predicate": {
+          "id": "failure.z.mismatched",
+          "metadata": {
+            "report_domain": "other_report_domain"
+          }
+        },
+        "provenance": [
+          {
+            "id": "provenance.synthetic_domain_mismatch",
+            "uri": "synthetic://domain-mismatch"
+          }
+        ],
+        "report_path": {
+          "failure_domain": [
+            "other_report_domain"
+          ],
+          "verifier_domain": [
+            "other_report_domain"
+          ]
+        },
+        "statement": "A normalized report is sent to verifier and failure components with incompatible domains.",
+        "verifier": {
+          "id": "verifier.z.mismatched",
+          "metadata": {
+            "report_domain": "other_report_domain"
+          }
+        }
+      },
+      "id": "verifier_failure_domain_mismatch",
+      "report_signature": "domain_mismatch_pair",
+      "statement": "A normalized report is sent to verifier and failure components with incompatible domains."
+    },
+    {
+      "category": "strict_reproduction_protocol_v3",
+      "expected_cgt_diagnostic_focus": {
+        "legacy_reconstructs_report_path": false,
+        "same_report_pair": "legacy_protocol_pair",
+        "separating_dimension": "protocol_strictness",
+        "strict_reconstructs_report_path": true
+      },
+      "expected_closed_deficiency_codes": [],
+      "expected_status": "reproducibly_available",
+      "extends_scenario": "strict_reproduction_protocol",
+      "extraction_dossier": "The package declares strict reproduction by explicitly reconstructing projection, observation, description, normalizer, and verifier.",
+      "gold_claim_package_patch": {
+        "claim_id": "strict_reproduction_protocol_v3",
+        "provenance": [
+          {
+            "id": "provenance.synthetic_strict_protocol_v3",
+            "uri": "synthetic://strict-protocol-v3"
+          }
+        ],
+        "statement": "The same report is reproducible through strict report-path reconstruction."
+      },
+      "id": "strict_reproduction_protocol_v3",
+      "report_signature": "legacy_protocol_pair",
+      "statement": "The same report is reproducible through strict report-path reconstruction."
+    },
+    {
+      "category": "legacy_reproduction_protocol",
+      "expected_cgt_diagnostic_focus": {
+        "legacy_reconstructs_report_path": true,
+        "same_report_pair": "legacy_protocol_pair",
+        "separating_dimension": "protocol_strictness",
+        "strict_reconstructs_report_path": false
+      },
+      "expected_closed_deficiency_codes": [],
+      "expected_status": "reproducibly_available",
+      "extends_scenario": "strict_reproduction_protocol",
+      "extraction_dossier": "The package declares a legacy reproduction protocol through metadata reconstructs_report_path=true rather than enumerating projection, observation, description, normalizer, and verifier in reconstructs.",
+      "gold_claim_package_patch": {
+        "claim_id": "legacy_reproduction_protocol",
+        "provenance": [
+          {
+            "id": "provenance.synthetic_legacy_protocol",
+            "uri": "synthetic://legacy-protocol"
+          }
+        ],
+        "reproduction_protocol": {
+          "id": "protocol.z.legacy",
+          "metadata": {
+            "reconstructs_report_path": true
+          },
+          "reconstructs": []
+        },
+        "statement": "The same report is reproducible only through a legacy reconstruction declaration."
+      },
+      "id": "legacy_reproduction_protocol",
+      "report_signature": "legacy_protocol_pair",
+      "statement": "The same report is reproducible only through a legacy reconstruction declaration."
+    },
+    {
+      "category": "finite_run_family_almost_sure",
+      "expected_closed_deficiency_codes": [
+        "missing_reproduction_protocol"
+      ],
+      "expected_run_modes": {
+        "almost_sure": true,
+        "counterexample_run_ids": [
+          "run_missing_protocol"
+        ],
+        "may_available": true,
+        "must_available": false,
+        "probability_satisfying": 1.0,
+        "satisfying_run_ids": [
+          "run_with_protocol"
+        ]
+      },
+      "expected_status": "partial",
+      "extends_scenario": "finite_run_family_may_must",
+      "extraction_dossier": "The package describes a finite run family with two possible runs. One run has the strict reproduction protocol and one lacks it. The declared probability of the protocol-bearing run is 1.0 and the deficient run has probability 0.0.",
+      "gold_claim_package_patch": {
+        "claim_id": "finite_run_family_almost_sure",
+        "metadata": {
+          "run_family_mode": "almost_sure"
+        },
+        "statement": "A finite run family is may-available, not must-available, but almost-sure available under explicit probabilities."
+      },
+      "id": "finite_run_family_almost_sure",
+      "report_signature": "finite_run_family_prob",
+      "run_family": {
+        "probabilities": {
+          "run_missing_protocol": 0.0,
+          "run_with_protocol": 1.0
+        }
+      },
+      "statement": "A finite run family is may-available, not must-available, but almost-sure available under explicit probabilities."
+    }
+  ]
+}

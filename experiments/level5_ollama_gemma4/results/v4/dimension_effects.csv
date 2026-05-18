@@ -1,0 +1,15 @@
+report_signature,dimensions,scenario_ids,scenario_count,report_only_collapsed,closed_profile_separated,cgt_separated,continuation_only_separated
+"{""report_signature"":""normalized_z"",""verifier_verdict"":""unknown""}","[""reproduction_protocol""]","[""missing_reproduction_protocol"",""strict_reproduction_protocol""]",2,True,True,True,False
+"{""report_signature"":""same_report_0.90"",""verifier_verdict"":""unknown""}","[""continuation""]","[""same_report_continuation_high"",""same_report_continuation_low""]",2,True,False,True,True
+"{""report_signature"":""marker_omitted_report"",""verifier_verdict"":""unknown""}","[""marker""]","[""marker_sensitive_omission"",""marker_sensitive_preserved""]",2,True,True,True,False
+"{""report_signature"":""direct_target_report"",""verifier_verdict"":""unknown""}","[""history""]","[""direct_selector_degeneracy"",""structured_history_control""]",2,True,True,True,False
+"{""report_signature"":""cascade_no_projection"",""verifier_verdict"":""unknown""}","[""dependency_closure""]","[""dependency_closure_cascade"",""dependency_closure_resolved_v4""]",2,True,True,True,False
+"{""report_signature"":""finite_run_family"",""verifier_verdict"":""unknown""}","[""may_must""]","[""finite_run_family_may_must"",""finite_run_family_must_available_v4""]",2,True,True,True,False
+"{""report_signature"":""continuation_diag_pair"",""verifier_verdict"":""unknown""}","[""continuation""]","[""continuation_diagnostic_missing"",""continuation_diagnostic_present""]",2,True,True,True,False
+"{""report_signature"":""marker_state_pair"",""verifier_verdict"":""unknown""}","[""marker_state""]","[""marker_state_omitted"",""marker_state_preserved_v3""]",2,True,False,True,False
+"{""report_signature"":""direct_selector_control_pair"",""verifier_verdict"":""unknown""}","[""degeneracy_control""]","[""direct_selector_with_degeneracy_control"",""direct_selector_without_degeneracy_control""]",2,True,True,True,False
+"{""report_signature"":""domain_mismatch_pair"",""verifier_verdict"":""unknown""}","[""typed_report_path""]","[""typed_path_coherent_v4"",""verifier_failure_domain_mismatch""]",2,True,True,True,False
+"{""report_signature"":""legacy_protocol_pair"",""verifier_verdict"":""unknown""}","[""protocol_strictness""]","[""legacy_reproduction_protocol"",""strict_reproduction_protocol_v3""]",2,True,False,True,False
+"{""report_signature"":""finite_run_family_prob"",""verifier_verdict"":""unknown""}","[""almost_sure""]","[""finite_run_family_almost_sure"",""finite_run_family_not_almost_sure_v4""]",2,True,False,True,False
+"{""report_signature"":""marker_policy_pair"",""verifier_verdict"":""unknown""}","[""marker_policy""]","[""marker_policy_complete_v4"",""marker_policy_incomplete_v4""]",2,True,True,True,False
+"{""report_signature"":""continuation_space_pair"",""verifier_verdict"":""unknown""}","[""continuation""]","[""continuation_empty_space_v4"",""continuation_rich_space_v4""]",2,True,False,True,True

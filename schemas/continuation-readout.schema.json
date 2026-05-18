@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/kadubon/cgt-availability/schemas/continuation-readout.schema.json",
+  "title": "CGT Availability ContinuationReadout",
+  "type": "object",
+  "required": [
+    "diagnostic_name",
+    "residual_constraint_count",
+    "follow_up_test_count",
+    "refinement_path_count",
+    "repair_path_count",
+    "has_residual_scientific_space",
+    "required_labels",
+    "missing_labels",
+    "matched_simulation_depth",
+    "utility_metric_name"
+  ],
+  "properties": {
+    "diagnostic_name": {
+      "type": ["string", "null"]
+    },
+    "residual_constraint_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "follow_up_test_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "refinement_path_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "repair_path_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "has_residual_scientific_space": {
+      "type": "boolean"
+    },
+    "required_labels": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "missing_labels": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "matched_simulation_depth": {
+      "type": ["integer", "null"],
+      "minimum": 0
+    },
+    "utility_metric_name": {
+      "type": ["string", "null"]
+    }
+  },
+  "additionalProperties": false
+}

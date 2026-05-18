@@ -1,0 +1,6 @@
+{
+  "schema_version": "1.0",
+  "claim_id": "fixture-minimal",
+  "statement": "A minimal undeclared claim package.",
+  "metadata": {}
+}

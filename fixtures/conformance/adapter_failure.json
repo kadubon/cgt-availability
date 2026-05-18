@@ -1,0 +1,9 @@
+{
+  "adapter": "prism",
+  "error_type": "AdapterUnavailable",
+  "message": "model-checker command is unavailable: 'prism'",
+  "command": ["prism", "model.pm"],
+  "metadata": {
+    "license_boundary": "external_process"
+  }
+}

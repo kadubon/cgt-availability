@@ -1,0 +1,16 @@
+{
+  "by_mode": [
+    {
+      "diagnostic_signature_agreement_rate": 0.0,
+      "json_rate": 1.0,
+      "mean_closed_profile_jaccard": 0.19534635714285714,
+      "mean_f1": 0.220704,
+      "mean_latency_ms": 8633.462085714285,
+      "mode": "llm_extraction",
+      "parse_rate": 1.0,
+      "row_count": 70,
+      "status_agreement_rate": 0.21428571428571427
+    }
+  ],
+  "row_count": 70
+}

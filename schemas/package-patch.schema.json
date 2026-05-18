@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/kadubon/cgt-availability/schemas/package-patch.schema.json",
+  "title": "CGT Availability PackagePatch",
+  "type": "object",
+  "required": ["set_fields", "metadata_updates"],
+  "properties": {
+    "set_fields": {
+      "type": "object"
+    },
+    "metadata_updates": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}

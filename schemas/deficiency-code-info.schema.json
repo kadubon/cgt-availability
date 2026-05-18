@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/kadubon/cgt-availability/schemas/deficiency-code-info.schema.json",
+  "title": "CGT Availability DeficiencyCodeInfo",
+  "type": "object",
+  "required": ["code", "group", "rationale"],
+  "properties": {
+    "code": {
+      "type": "string"
+    },
+    "group": {
+      "type": "string"
+    },
+    "rationale": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

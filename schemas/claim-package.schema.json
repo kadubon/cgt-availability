@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/kadubon/cgt-availability/schemas/claim-package.schema.json",
+  "title": "CGT Availability ClaimPackage",
+  "type": "object",
+  "required": ["claim_id", "statement"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "claim_id": {
+      "type": "string"
+    },
+    "statement": {
+      "type": "string"
+    },
+    "metadata": {
+      "type": "object"
+    },
+    "provenance": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/spec"
+      }
+    },
+    "frame": {
+      "$ref": "#/$defs/optionalSpec"
+    },
+    "comparison_regime": {
+      "$ref": "#/$defs/optionalSpec"
+    },
+    "system": {
+      "$ref": "#/$defs/optionalSpec"
+    },
+    "projection": {
+      "$ref": "#/$defs/optionalSpec"
+    },
+    "observation": {
+      "$ref": "#/$defs/optionalSpec"
+    },
+    "description": {
+      "$ref": "#/$defs/optionalSpec"
+    },
+    "normalizer": {
+      "$ref": "#/$defs/optionalSpec"
+    },
+    "report_path": {
+      "$ref": "#/$defs/optionalSpec"
+    },
+    "expected_report": {
+      "$ref": "#/$defs/optionalSpec"
+    },
+    "verifier": {
+      "$ref": "#/$defs/optionalSpec"
+    },
+    "failure_predicate": {
+      "$ref": "#/$defs/optionalSpec"
+    },
+    "reproduction_protocol": {
+      "$ref": "#/$defs/optionalSpec"
+    },
+    "history": {
+      "$ref": "#/$defs/optionalSpec"
+    },
+    "continuation": {
+      "$ref": "#/$defs/optionalSpec"
+    },
+    "marker_policy": {
+      "$ref": "#/$defs/optionalSpec"
+    },
+    "marker_state": {
+      "$ref": "#/$defs/optionalSpec"
+    },
+    "degeneracy_control": {
+      "$ref": "#/$defs/optionalSpec"
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "optionalSpec": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/spec"
+        }
+      ]
+    },
+    "spec": {
+      "type": "object",
+      "required": ["id"],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": ["string", "null"]
+        },
+        "declared": {
+          "type": "boolean"
+        },
+        "description": {
+          "type": ["string", "null"]
+        },
+        "metadata": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

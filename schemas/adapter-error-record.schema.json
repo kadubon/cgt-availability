@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/kadubon/cgt-availability/schemas/adapter-error-record.schema.json",
+  "title": "CGT Availability AdapterErrorRecord",
+  "type": "object",
+  "required": ["adapter", "error_type", "message", "command", "metadata"],
+  "properties": {
+    "adapter": {
+      "type": "string"
+    },
+    "error_type": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "command": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "metadata": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}

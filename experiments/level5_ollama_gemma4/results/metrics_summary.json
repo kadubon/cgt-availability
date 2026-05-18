@@ -1,0 +1,45 @@
+{
+  "by_arm": [
+    {
+      "arm_id": "minimal_text",
+      "diagnostic_signature_agreement_rate": 0.0,
+      "mean_declared_component_count": 0.0,
+      "mean_f1": 0.4641305,
+      "mode": "llm_extraction",
+      "parse_rate": 1.0,
+      "row_count": 20
+    },
+    {
+      "arm_id": "report_only",
+      "diagnostic_signature_agreement_rate": 0.0,
+      "mean_declared_component_count": 0.0,
+      "mean_f1": 0.4641305,
+      "mode": "llm_extraction",
+      "parse_rate": 1.0,
+      "row_count": 20
+    },
+    {
+      "arm_id": "schema_guided_dossier",
+      "diagnostic_signature_agreement_rate": 0.25,
+      "mean_declared_component_count": 1.5,
+      "mean_f1": 0.4891305,
+      "mode": "llm_extraction",
+      "parse_rate": 1.0,
+      "row_count": 20
+    }
+  ],
+  "by_mode": [
+    {
+      "diagnostic_signature_agreement_rate": 0.08333333333333333,
+      "json_rate": 1.0,
+      "mean_closed_profile_jaccard": 0.44886375,
+      "mean_f1": 0.47246383333333336,
+      "mean_latency_ms": 8091.022833333333,
+      "mode": "llm_extraction",
+      "parse_rate": 1.0,
+      "row_count": 60,
+      "status_agreement_rate": 0.5
+    }
+  ],
+  "row_count": 60
+}

@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/kadubon/cgt-availability/schemas/deficiency.schema.json",
+  "title": "CGT Availability Deficiency",
+  "type": "object",
+  "required": ["code", "component", "severity", "message", "depends_on", "metadata"],
+  "properties": {
+    "code": {
+      "type": "string",
+      "enum": [
+        "missing_frame",
+        "missing_system",
+        "missing_projection",
+        "missing_observation",
+        "missing_description",
+        "missing_normalizer",
+        "missing_expected_report",
+        "missing_verifier",
+        "missing_failure_predicate",
+        "missing_reproduction_protocol",
+        "missing_comparison_regime",
+        "missing_provenance",
+        "missing_history",
+        "missing_marker_policy",
+        "missing_marker_provenance",
+        "marker_policy_incomplete",
+        "missing_continuation",
+        "missing_continuation_diagnostic",
+        "verifier_failure_incoherent",
+        "report_path_type_error",
+        "protocol_incoherent",
+        "direct_selector_degeneracy_risk",
+        "report_only_insufficiency_risk",
+        "marker_sensitive_missing_marker_policy",
+        "continuation_sensitive_missing_continuation"
+      ]
+    },
+    "component": {
+      "type": "string"
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["info", "warning", "blocking"]
+    },
+    "message": {
+      "type": "string"
+    },
+    "depends_on": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "metadata": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}

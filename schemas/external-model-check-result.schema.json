@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/kadubon/cgt-availability/schemas/external-model-check-result.schema.json",
+  "title": "CGT Availability ExternalModelCheckResult",
+  "type": "object",
+  "required": ["command", "returncode", "stdout", "stderr", "parsed", "metadata"],
+  "properties": {
+    "command": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "returncode": {
+      "type": "integer"
+    },
+    "stdout": {
+      "type": "string"
+    },
+    "stderr": {
+      "type": "string"
+    },
+    "parsed": {
+      "type": ["object", "null"]
+    },
+    "metadata": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}

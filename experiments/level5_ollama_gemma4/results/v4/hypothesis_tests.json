@@ -1,0 +1,98 @@
+{
+  "interpretation_limits": [
+    "finite synthetic scenarios only",
+    "not a truth verdict",
+    "not a science/non-science classifier",
+    "LLM extraction is secondary to deterministic theory separation"
+  ],
+  "primary_claim": "finite_cgt_diagnostic_separation_exceeds_report_only",
+  "primary_tests": {
+    "all_declared_dimensions_separated": {
+      "dimension_separation_accuracy": {
+        "almost_sure": {
+          "accuracy": 1.0,
+          "cgt_separated_count": 1,
+          "group_count": 1
+        },
+        "continuation": {
+          "accuracy": 1.0,
+          "cgt_separated_count": 3,
+          "group_count": 3
+        },
+        "degeneracy_control": {
+          "accuracy": 1.0,
+          "cgt_separated_count": 1,
+          "group_count": 1
+        },
+        "dependency_closure": {
+          "accuracy": 1.0,
+          "cgt_separated_count": 1,
+          "group_count": 1
+        },
+        "history": {
+          "accuracy": 1.0,
+          "cgt_separated_count": 1,
+          "group_count": 1
+        },
+        "marker": {
+          "accuracy": 1.0,
+          "cgt_separated_count": 1,
+          "group_count": 1
+        },
+        "marker_policy": {
+          "accuracy": 1.0,
+          "cgt_separated_count": 1,
+          "group_count": 1
+        },
+        "marker_state": {
+          "accuracy": 1.0,
+          "cgt_separated_count": 1,
+          "group_count": 1
+        },
+        "may_must": {
+          "accuracy": 1.0,
+          "cgt_separated_count": 1,
+          "group_count": 1
+        },
+        "protocol_strictness": {
+          "accuracy": 1.0,
+          "cgt_separated_count": 1,
+          "group_count": 1
+        },
+        "reproduction_protocol": {
+          "accuracy": 1.0,
+          "cgt_separated_count": 1,
+          "group_count": 1
+        },
+        "typed_report_path": {
+          "accuracy": 1.0,
+          "cgt_separated_count": 1,
+          "group_count": 1
+        }
+      },
+      "passed": true
+    },
+    "cgt_lift_over_report_only": {
+      "effect_size": 1.0,
+      "passed": true
+    },
+    "cgt_separates_same_report_groups": {
+      "passed": true,
+      "rate": 1.0
+    },
+    "report_only_collapses_same_report_groups": {
+      "passed": true,
+      "rate": 1.0
+    }
+  },
+  "raw_outputs_published": false,
+  "schema_version": "2026-05-18.level5.hypothesis-tests.v1",
+  "secondary_extraction_tests": {
+    "component_slot_lift_over_minimal": {
+      "declared_component_count_delta": 1.25,
+      "diagnostic_agreement_delta": 0.25
+    },
+    "live_record_count": 80,
+    "partial_live_run": true
+  }
+}

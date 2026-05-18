@@ -1,0 +1,27 @@
+{
+  "by_arm": [
+    {
+      "arm_id": "gold",
+      "diagnostic_signature_agreement_rate": 1.0,
+      "mean_declared_component_count": 11.208333333333334,
+      "mean_f1": 1.0,
+      "mode": "gold_deterministic",
+      "parse_rate": 1.0,
+      "row_count": 24
+    }
+  ],
+  "by_mode": [
+    {
+      "diagnostic_signature_agreement_rate": 1.0,
+      "json_rate": 1.0,
+      "mean_closed_profile_jaccard": 1.0,
+      "mean_f1": 1.0,
+      "mean_latency_ms": null,
+      "mode": "gold_deterministic",
+      "parse_rate": 1.0,
+      "row_count": 24,
+      "status_agreement_rate": 1.0
+    }
+  ],
+  "row_count": 24
+}

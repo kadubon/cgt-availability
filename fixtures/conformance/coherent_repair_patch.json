@@ -1,0 +1,29 @@
+{
+  "package_patch": {
+    "set_fields": {
+      "reproduction_protocol": {
+        "id": "protocol",
+        "declared": true,
+        "metadata": {},
+        "reconstructs": ["projection", "observation", "description", "normalizer", "verifier"],
+        "equivalence": "same_normalized_report"
+      }
+    },
+    "metadata_updates": {}
+  },
+  "repair_candidate_patch": {
+    "candidate_id": "repair-protocol",
+    "patch": {
+      "set_fields": {
+        "reproduction_protocol": {
+          "id": "protocol",
+          "declared": true,
+          "metadata": {},
+          "reconstructs": ["projection", "observation", "description", "normalizer", "verifier"],
+          "equivalence": "same_normalized_report"
+        }
+      },
+      "metadata_updates": {}
+    }
+  }
+}

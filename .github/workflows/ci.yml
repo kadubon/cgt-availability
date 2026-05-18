@@ -1,0 +1,73 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: uv sync
+      - name: Test
+        run: uv run pytest
+      - name: Lint
+        run: uv run ruff check .
+      - name: Type check
+        run: uv run mypy
+      - name: CLI strict smoke
+        run: uv run python -m cgt_availability diagnose fixtures/conformance/strict_protocol_claim_package.json --pipeline standard --format json --strict
+      - name: License audit
+        run: uv run python tools/license_audit.py --allow-missing
+
+  optional-extras:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        extra: ["schema", "stats", "modelcheck", "research", "adapters", "test", "experiments"]
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install optional extra
+        run: uv sync --extra ${{ matrix.extra }}
+      - name: Test with optional extra
+        run: uv run pytest
+      - name: License audit with optional extra
+        run: uv run python tools/license_audit.py --allow-missing
+
+  opt-extra:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install optimization extra
+        run: uv sync --extra opt
+      - name: Test optimization path
+        run: uv run pytest tests/test_weighted_repair.py tests/test_completion_extended.py
+      - name: License audit with optimization extra
+        run: uv run python tools/license_audit.py --allow-missing

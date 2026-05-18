@@ -1,0 +1,267 @@
+{
+  "title": "CGT scientific availability theory alignment",
+  "items": [
+    {
+      "concept": "partial scientific availability package",
+      "paper_location": "TeX:182 Partial scientific availability package",
+      "status": "implemented",
+      "implementation": "cgt_availability.ClaimPackage and spec dataclasses",
+      "notes": ""
+    },
+    {
+      "concept": "continuation-extended package",
+      "paper_location": "TeX:205 Continuation-extended package",
+      "status": "poc_approximation",
+      "implementation": "ContinuationSpec and residual helpers",
+      "notes": "The implementation handles finite declared residual structures only."
+    },
+    {
+      "concept": "complete package",
+      "paper_location": "TeX:213 Complete package",
+      "status": "implemented",
+      "implementation": "AvailabilityProfile.is_complete and required component rules",
+      "notes": ""
+    },
+    {
+      "concept": "report path",
+      "paper_location": "TeX:221 Report path",
+      "status": "poc_approximation",
+      "implementation": "ReportPathSpec, TypedMapSpec, and legacy metadata compatibility",
+      "notes": "Checks finite declarations rather than semantic functions."
+    },
+    {
+      "concept": "well-typed package",
+      "paper_location": "TeX:242 Well-typed package",
+      "status": "poc_approximation",
+      "implementation": "report-path and report-consumer domain/codomain checks",
+      "notes": "Checks declared string labels, not mathematical domains."
+    },
+    {
+      "concept": "coherence components",
+      "paper_location": "TeX:265 Coherence components",
+      "status": "poc_approximation",
+      "implementation": "rule pack for path, verifier/failure, protocol, degeneracy, marker, continuation",
+      "notes": "Finite rule checks only; no theorem proving."
+    },
+    {
+      "concept": "coherent package",
+      "paper_location": "TeX:284 Coherent package",
+      "status": "poc_approximation",
+      "implementation": "AvailabilityProfile.is_coherent",
+      "notes": "Coherence follows implemented finite rules and declared diagnostics."
+    },
+    {
+      "concept": "reproducibly available package",
+      "paper_location": "TeX:288 Reproducibly available package",
+      "status": "poc_approximation",
+      "implementation": "ReproductionProtocolSpec.reconstructs and profile.is_reproducibly_available",
+      "notes": "Strict mode requires explicit finite report-path replay declarations."
+    },
+    {
+      "concept": "availability is not verifier success",
+      "paper_location": "TeX:292 Availability is not verdict success",
+      "status": "implemented",
+      "implementation": "separate AvailabilityProfile and verifier readout helpers",
+      "notes": ""
+    },
+    {
+      "concept": "truth is not the diagnostic target",
+      "paper_location": "TeX:296 Truth is not the diagnostic target",
+      "status": "out_of_scope",
+      "implementation": "explicit non-goal in README, docs, and adapters",
+      "notes": ""
+    },
+    {
+      "concept": "primitive deficiency symbols",
+      "paper_location": "TeX:302 Primitive deficiency symbols",
+      "status": "implemented",
+      "implementation": "DeficiencyCode and DEFICIENCY_CODE_INFO",
+      "notes": ""
+    },
+    {
+      "concept": "direct deficiency profile",
+      "paper_location": "TeX:324 Direct deficiency profile",
+      "status": "implemented",
+      "implementation": "AvailabilityReport.deficiencies",
+      "notes": ""
+    },
+    {
+      "concept": "package-relative dependency relation",
+      "paper_location": "TeX:328 Package-relative dependency relation on deficiencies",
+      "status": "implemented",
+      "implementation": "DependencyGraph, DependencyEdge, DependencyCondition",
+      "notes": "Current graph is finite and deterministic."
+    },
+    {
+      "concept": "dependency-closed deficiency profile",
+      "paper_location": "TeX:354 Dependency-closed deficiency profile",
+      "status": "implemented",
+      "implementation": "DependencyGraph, DependencyClosure, DiagnosticVocabulary",
+      "notes": ""
+    },
+    {
+      "concept": "availability preorder",
+      "paper_location": "TeX:403 Availability preorder",
+      "status": "implemented",
+      "implementation": "availability_preorder over dependency-closed profiles",
+      "notes": ""
+    },
+    {
+      "concept": "coarse availability labels",
+      "paper_location": "TeX:431 Coarse availability labels",
+      "status": "poc_approximation",
+      "implementation": "CoarseAvailabilityClass",
+      "notes": "Lossy secondary summaries, not primary diagnostic objects."
+    },
+    {
+      "concept": "compatible non-destructive completion",
+      "paper_location": "TeX:459 Compatible non-destructive completion",
+      "status": "poc_approximation",
+      "implementation": "PackagePatch and CoherentRepairProblem",
+      "notes": "Finite patch search only; no arbitrary synthesis."
+    },
+    {
+      "concept": "report-factorization obstruction",
+      "paper_location": "TeX:575 Report-factorization obstruction",
+      "status": "poc_approximation",
+      "implementation": "FactorizationWitness and projection omitted-dimension diagnostics",
+      "notes": "Witnesses finite samples rather than symbolic factorization."
+    },
+    {
+      "concept": "history-sensitive diagnostic",
+      "paper_location": "TeX:603 History-sensitive diagnostic",
+      "status": "poc_approximation",
+      "implementation": "history metadata, report omission checks, direct-selector diagnostics",
+      "notes": ""
+    },
+    {
+      "concept": "residual constraint space",
+      "paper_location": "TeX:627 Residual constraint space",
+      "status": "poc_approximation",
+      "implementation": "ContinuationSpec and ResidualConstraintSpec",
+      "notes": ""
+    },
+    {
+      "concept": "residual transition system",
+      "paper_location": "TeX:650 Residual transition system",
+      "status": "poc_approximation",
+      "implementation": "ResidualTransitionSystem with finite validation",
+      "notes": ""
+    },
+    {
+      "concept": "residual simulation",
+      "paper_location": "TeX:658 Residual simulation",
+      "status": "poc_approximation",
+      "implementation": "bounded_residual_simulation",
+      "notes": "Bounded label simulation only."
+    },
+    {
+      "concept": "continuation-sensitive diagnostic",
+      "paper_location": "TeX:666 Continuation-sensitive diagnostic",
+      "status": "poc_approximation",
+      "implementation": "ContinuationSpec, ResidualTransitionSystem, bounded simulation",
+      "notes": ""
+    },
+    {
+      "concept": "continuation diagnostic preorder",
+      "paper_location": "TeX:700 Continuation diagnostic preorder",
+      "status": "poc_approximation",
+      "implementation": "continuation_preorder and continuation_preorder_result",
+      "notes": ""
+    },
+    {
+      "concept": "marker-sensitive diagnostic",
+      "paper_location": "TeX:746 Marker-sensitive diagnostic",
+      "status": "poc_approximation",
+      "implementation": "MarkerPolicySpec and MarkerStateSpec",
+      "notes": ""
+    },
+    {
+      "concept": "direct-selector degeneracy",
+      "paper_location": "TeX:762 Direct-selector degeneracy",
+      "status": "poc_approximation",
+      "implementation": "Degeneracy checks and DirectSelectorWitness",
+      "notes": ""
+    },
+    {
+      "concept": "deficiency repair cover",
+      "paper_location": "TeX:786 Deficiency Repair Cover",
+      "status": "implemented",
+      "implementation": "solve_repair_cover and greedy_repair_cover",
+      "notes": "Finite exact/greedy algorithms only."
+    },
+    {
+      "concept": "conflict-constrained repair",
+      "paper_location": "TeX:819 Conflict-constrained repair",
+      "status": "implemented",
+      "implementation": "RepairCandidate.conflicts_with and solver filtering",
+      "notes": ""
+    },
+    {
+      "concept": "continuation-sensitive completion",
+      "paper_location": "TeX:839 Continuation-sensitive completion",
+      "status": "poc_approximation",
+      "implementation": "ContinuationRepairProblem",
+      "notes": "Finite residual-effect threshold and declared diagnostic names only."
+    },
+    {
+      "concept": "cascaded availability completion",
+      "paper_location": "TeX:859 Cascaded availability completion",
+      "status": "poc_approximation",
+      "implementation": "solve_cascaded_repair",
+      "notes": "Finite ordered prerequisite search only."
+    },
+    {
+      "concept": "deficiency lattice and infinitary dependency operator",
+      "paper_location": "TeX:872 Deficiency lattice and infinitary dependency operator",
+      "status": "poc_approximation",
+      "implementation": "least_fixed_point finite Kleene iteration over deficiency codes",
+      "notes": "Finite powerset-style operators only."
+    },
+    {
+      "concept": "transfinite deficiency iteration",
+      "paper_location": "TeX:892 Transfinite deficiency iteration",
+      "status": "not_implemented",
+      "implementation": "documented non-claim",
+      "notes": "No ordinal engine is implemented."
+    },
+    {
+      "concept": "nondeterministic may/must/almost-sure availability",
+      "paper_location": "TeX:919 Nondeterministic availability modes",
+      "status": "poc_approximation",
+      "implementation": "evaluate_run_modes and almost_sure_available over finite run families",
+      "notes": "Almost-sure mode requires explicit finite probabilities."
+    },
+    {
+      "concept": "coinductive availability",
+      "paper_location": "TeX:936 Coinductive availability, schematic",
+      "status": "not_implemented",
+      "implementation": "documented roadmap item",
+      "notes": "No stream-level coinductive semantics are implemented."
+    },
+    {
+      "concept": "finite probabilistic availability model readout",
+      "paper_location": "TeX:868 Infinitary and nondeterministic availability",
+      "status": "poc_approximation",
+      "implementation": "FiniteDTMC with bounded and unbounded reachability probability",
+      "notes": "This is finite DTMC reachability, not full temporal-logic model checking."
+    },
+    {
+      "concept": "finite statistical verifier readout",
+      "paper_location": "TeX:156 Relation to statistics and model checking",
+      "status": "poc_approximation",
+      "implementation": "BernoulliEvidence and evaluate_binomial_verifier",
+      "notes": "Statistical significance is reported as a declared verifier readout, not truth."
+    },
+    {
+      "concept": "external statistical and model-checking tools",
+      "paper_location": "TeX:983 Relation to philosophy of science and reproducibility",
+      "status": "adapter_boundary",
+      "implementation": "cgt_availability.adapters optional integration points",
+      "notes": "Adapters are explicit tool boundaries and not core truth judgments."
+    }
+  ],
+  "metadata": {
+    "runtime_judgment": false
+  }
+}

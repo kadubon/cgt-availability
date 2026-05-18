@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0",
+  "claim_id": "fixture-complete",
+  "statement": "Model M reaches 90 percent on benchmark B under protocol P.",
+  "frame": {
+    "id": "frame",
+    "declared": true,
+    "metadata": {}
+  },
+  "comparison_regime": {
+    "id": "comparison",
+    "declared": true,
+    "metadata": {},
+    "dimensions": ["score"],
+    "relation": "greater_or_equal"
+  },
+  "system": {
+    "id": "system",
+    "declared": true,
+    "metadata": {}
+  },
+  "projection": {
+    "id": "projection",
+    "declared": true,
+    "metadata": {
+      "domain": "effect_profile",
+      "codomain": "observation_target"
+    }
+  },
+  "observation": {
+    "id": "observation",
+    "declared": true,
+    "metadata": {
+      "domain": "observation_target",
+      "codomain": "raw_observation"
+    }
+  },
+  "description": {
+    "id": "description",
+    "declared": true,
+    "metadata": {
+      "domain": "raw_observation",
+      "codomain": "described_observation"
+    }
+  },
+  "normalizer": {
+    "id": "normalizer",
+    "declared": true,
+    "metadata": {
+      "domain": "described_observation",
+      "codomain": "normalized_report"
+    }
+  },
+  "expected_report": {
+    "id": "expected",
+    "declared": true,
+    "metadata": {}
+  },
+  "verifier": {
+    "id": "verifier",
+    "declared": true,
+    "metadata": {},
+    "verdict_domain": ["pass", "fail", "inconclusive"]
+  },
+  "failure_predicate": {
+    "id": "failure",
+    "declared": true,
+    "metadata": {},
+    "implies_verifier_fail": true
+  },
+  "reproduction_protocol": {
+    "id": "protocol",
+    "declared": true,
+    "metadata": {},
+    "reconstructs": ["projection", "observation", "description", "normalizer"],
+    "equivalence": "same_normalized_report"
+  },
+  "provenance": [
+    {
+      "id": "benchmark-card",
+      "declared": true,
+      "metadata": {},
+      "uri": "https://example.invalid/benchmark-card"
+    }
+  ],
+  "metadata": {
+    "claims_reproducible": true
+  }
+}

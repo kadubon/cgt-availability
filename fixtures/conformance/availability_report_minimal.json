@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "claim_id": "fixture-minimal",
+  "status": "unformed",
+  "profile": {
+    "is_partial": true,
+    "is_complete": false,
+    "is_well_typed": false,
+    "is_coherent": false,
+    "is_reproducibly_available": false,
+    "is_continuation_sensitive": false,
+    "is_blocked": true
+  },
+  "deficiencies": [
+    {
+      "code": "missing_frame",
+      "component": "frame",
+      "severity": "blocking",
+      "message": "No declared CGT frame is available.",
+      "depends_on": [],
+      "metadata": {}
+    }
+  ],
+  "dependency_closed_deficiencies": [
+    {
+      "code": "missing_frame",
+      "component": "frame",
+      "severity": "blocking",
+      "message": "No declared CGT frame is available.",
+      "depends_on": [],
+      "metadata": {}
+    }
+  ],
+  "warnings": [],
+  "recommendations": [
+    "Declare the CGT frame in which the selected effects are interpreted."
+  ],
+  "summary": "Fixture report for schema conformance.",
+  "metadata": {
+    "pipeline": "minimal"
+  }
+}

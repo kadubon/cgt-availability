@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0",
+  "claim_id": "fixture-marker-blocking",
+  "statement": "A marker-sensitive claim without enough marker policy.",
+  "frame": {
+    "id": "frame",
+    "declared": true,
+    "metadata": {}
+  },
+  "system": {
+    "id": "system",
+    "declared": true,
+    "metadata": {}
+  },
+  "projection": {
+    "id": "projection",
+    "declared": true,
+    "metadata": {
+      "domain": "effect_profile",
+      "codomain": "projected",
+      "omits_dimensions": ["marker"]
+    }
+  },
+  "observation": {
+    "id": "observation",
+    "declared": true,
+    "metadata": {
+      "domain": "projected",
+      "codomain": "observed"
+    }
+  },
+  "description": {
+    "id": "description",
+    "declared": true,
+    "metadata": {
+      "domain": "observed",
+      "codomain": "described"
+    }
+  },
+  "normalizer": {
+    "id": "normalizer",
+    "declared": true,
+    "metadata": {
+      "domain": "described",
+      "codomain": "report"
+    }
+  },
+  "expected_report": {
+    "id": "expected",
+    "declared": true,
+    "metadata": {}
+  },
+  "verifier": {
+    "id": "verifier",
+    "declared": true,
+    "metadata": {},
+    "verdict_domain": ["pass", "fail", "inconclusive"]
+  },
+  "failure_predicate": {
+    "id": "failure",
+    "declared": true,
+    "metadata": {},
+    "implies_verifier_fail": true
+  },
+  "reproduction_protocol": {
+    "id": "protocol",
+    "declared": true,
+    "metadata": {},
+    "reconstructs": ["projection", "observation", "description", "normalizer", "verifier"],
+    "equivalence": "same_normalized_report"
+  },
+  "marker_policy": {
+    "id": "marker-policy",
+    "declared": true,
+    "metadata": {},
+    "tracks_unresolved": false,
+    "marker_provenance": [],
+    "preserves_markers": false
+  },
+  "provenance": [
+    {
+      "id": "source",
+      "declared": true,
+      "metadata": {},
+      "uri": "https://example.invalid/source"
+    }
+  ],
+  "metadata": {
+    "marker_sensitive": true
+  }
+}

@@ -1,0 +1,297 @@
+{
+  "extends": "scenario_catalog_v2.json",
+  "scenarios": [
+    {
+      "id": "dependency_closure_resolved_v4",
+      "category": "dependency_closure_resolved",
+      "extends_scenario": "strict_reproduction_protocol",
+      "statement": "The cascade report has all downstream report-path declarations, so no dependency closure cascade is induced.",
+      "report_signature": "cascade_no_projection",
+      "expected_status": "reproducibly_available",
+      "expected_closed_deficiency_codes": [],
+      "expected_cgt_diagnostic_focus": {
+        "same_report_pair": "cascade_no_projection",
+        "separating_dimension": "dependency_closure"
+      },
+      "gold_claim_package_patch": {
+        "claim_id": "dependency_closure_resolved_v4",
+        "statement": "The cascade report has all downstream report-path declarations, so no dependency closure cascade is induced.",
+        "provenance": [
+          {
+            "id": "provenance.synthetic_cascade_resolved_v4",
+            "uri": "synthetic://cascade-resolved-v4"
+          }
+        ]
+      },
+      "extraction_dossier": "The package declares frame, system, projection, observation, description, normalizer, expected report, verifier, failure predicate, strict reproduction protocol, typed report path, and provenance. The same public report signature is used as the dependency-cascade case, but the downstream declarations are present."
+    },
+    {
+      "id": "typed_path_coherent_v4",
+      "category": "typed_path_coherent",
+      "extends_scenario": "strict_reproduction_protocol",
+      "statement": "The domain-mismatch report has a coherent typed report path.",
+      "report_signature": "domain_mismatch_pair",
+      "expected_status": "reproducibly_available",
+      "expected_closed_deficiency_codes": [],
+      "expected_cgt_diagnostic_focus": {
+        "same_report_pair": "domain_mismatch_pair",
+        "separating_dimension": "typed_report_path",
+        "strict_reconstructs_report_path": true
+      },
+      "gold_claim_package_patch": {
+        "claim_id": "typed_path_coherent_v4",
+        "statement": "The domain-mismatch report has a coherent typed report path.",
+        "provenance": [
+          {
+            "id": "provenance.synthetic_typed_path_coherent_v4",
+            "uri": "synthetic://typed-path-coherent-v4"
+          }
+        ]
+      },
+      "extraction_dossier": "The package declares a full typed report path. The normalizer emits report_z, and both verifier and failure predicate read report_z. The reproduction protocol reconstructs projection, observation, description, normalizer, and verifier."
+    },
+    {
+      "id": "finite_run_family_must_available_v4",
+      "category": "finite_run_family_must_available",
+      "extends_scenario": "finite_run_family_may_must",
+      "statement": "A finite run family has only reproducibly available runs under the declared report path.",
+      "report_signature": "finite_run_family",
+      "expected_status": "reproducibly_available",
+      "expected_closed_deficiency_codes": [],
+      "expected_run_modes": {
+        "may_available": true,
+        "must_available": true,
+        "satisfying_run_ids": [
+          "run_with_protocol",
+          "run_missing_protocol"
+        ],
+        "counterexample_run_ids": []
+      },
+      "expected_cgt_diagnostic_focus": {
+        "same_report_pair": "finite_run_family",
+        "separating_dimension": "may_must"
+      },
+      "gold_claim_package_patch": {
+        "claim_id": "finite_run_family_must_available_v4",
+        "statement": "A finite run family has only reproducibly available runs under the declared report path.",
+        "reproduction_protocol": {
+          "id": "protocol.run.must",
+          "reconstructs": [
+            "projection",
+            "observation",
+            "description",
+            "normalizer",
+            "verifier"
+          ]
+        },
+        "metadata": {
+          "run_family_mode": "must"
+        },
+        "provenance": [
+          {
+            "id": "provenance.synthetic_run_must_v4",
+            "uri": "synthetic://run-family-must-v4"
+          }
+        ]
+      },
+      "extraction_dossier": "The package declares a finite run family and a strict reproduction protocol in the base package. Both finite runs inherit a protocol that reconstructs projection, observation, description, normalizer, and verifier, so may and must availability agree."
+    },
+    {
+      "id": "finite_run_family_not_almost_sure_v4",
+      "category": "finite_run_family_not_almost_sure",
+      "extends_scenario": "finite_run_family_almost_sure",
+      "statement": "A finite run family is may-available but not almost-sure available because the deficient run has nonzero probability.",
+      "report_signature": "finite_run_family_prob",
+      "expected_status": "partial",
+      "expected_closed_deficiency_codes": [
+        "missing_reproduction_protocol"
+      ],
+      "expected_run_modes": {
+        "almost_sure": false,
+        "may_available": true,
+        "must_available": false,
+        "probability_satisfying": 0.5,
+        "satisfying_run_ids": [
+          "run_with_protocol"
+        ],
+        "counterexample_run_ids": [
+          "run_missing_protocol"
+        ]
+      },
+      "expected_cgt_diagnostic_focus": {
+        "same_report_pair": "finite_run_family_prob",
+        "separating_dimension": "almost_sure"
+      },
+      "gold_claim_package_patch": {
+        "claim_id": "finite_run_family_not_almost_sure_v4",
+        "statement": "A finite run family is may-available but not almost-sure available because the deficient run has nonzero probability.",
+        "metadata": {
+          "run_family_mode": "almost_sure_mixed"
+        },
+        "provenance": [
+          {
+            "id": "provenance.synthetic_run_not_almost_sure_v4",
+            "uri": "synthetic://run-family-not-almost-sure-v4"
+          }
+        ]
+      },
+      "run_family": {
+        "probabilities": {
+          "run_missing_protocol": 0.5,
+          "run_with_protocol": 0.5
+        }
+      },
+      "extraction_dossier": "The package declares a finite run family with one protocol-bearing run and one deficient run. The deficient run has probability 0.5, so may availability holds but almost-sure availability does not."
+    },
+    {
+      "id": "marker_policy_incomplete_v4",
+      "category": "marker_policy_incomplete",
+      "extends_scenario": "marker_sensitive_preserved",
+      "statement": "The marker-sensitive report has marker provenance but does not track or preserve unresolved markers.",
+      "report_signature": "marker_policy_pair",
+      "expected_status": "blocked",
+      "expected_closed_deficiency_codes": [
+        "marker_policy_incomplete",
+        "report_only_insufficiency_risk"
+      ],
+      "expected_cgt_diagnostic_focus": {
+        "same_report_pair": "marker_policy_pair",
+        "separating_dimension": "marker_policy",
+        "marker_policy_declared": true,
+        "tracks_unresolved": false,
+        "preserves_markers": false,
+        "unresolved_marker_count": 0
+      },
+      "remove_gold_claim_package_keys": [
+        "marker_state"
+      ],
+      "gold_claim_package_patch": {
+        "claim_id": "marker_policy_incomplete_v4",
+        "statement": "The marker-sensitive report has marker provenance but does not track or preserve unresolved markers.",
+        "marker_policy": {
+          "id": "marker.policy.incomplete.v4",
+          "tracks_unresolved": false,
+          "marker_provenance": [
+            "synthetic-marker-source"
+          ],
+          "preserves_markers": false
+        },
+        "provenance": [
+          {
+            "id": "provenance.synthetic_marker_policy_incomplete_v4",
+            "uri": "synthetic://marker-policy-incomplete-v4"
+          }
+        ]
+      },
+      "extraction_dossier": "The package is marker-sensitive and has marker provenance. The marker policy explicitly does not track unresolved markers and does not preserve markers. The projection omits marker information from the report."
+    },
+    {
+      "id": "marker_policy_complete_v4",
+      "category": "marker_policy_complete",
+      "extends_scenario": "marker_sensitive_preserved",
+      "statement": "The marker-sensitive report has a complete marker policy and marker state.",
+      "report_signature": "marker_policy_pair",
+      "expected_status": "well_typed",
+      "expected_closed_deficiency_codes": [
+        "report_only_insufficiency_risk"
+      ],
+      "expected_cgt_diagnostic_focus": {
+        "same_report_pair": "marker_policy_pair",
+        "separating_dimension": "marker_policy",
+        "marker_policy_declared": true,
+        "tracks_unresolved": true,
+        "preserves_markers": true
+      },
+      "gold_claim_package_patch": {
+        "claim_id": "marker_policy_complete_v4",
+        "statement": "The marker-sensitive report has a complete marker policy and marker state.",
+        "provenance": [
+          {
+            "id": "provenance.synthetic_marker_policy_complete_v4",
+            "uri": "synthetic://marker-policy-complete-v4"
+          }
+        ]
+      },
+      "extraction_dossier": "The package is marker-sensitive and declares a complete marker policy: unresolved markers are tracked, markers are preserved, and marker provenance is declared. The marker state lists one unresolved marker."
+    },
+    {
+      "id": "continuation_empty_space_v4",
+      "category": "continuation_empty_space",
+      "extends_scenario": "same_report_continuation_low",
+      "statement": "The continuation-sensitive report declares a diagnostic readout but no residual tests, refinements, or repairs.",
+      "report_signature": "continuation_space_pair",
+      "expected_status": "continuation_sensitive",
+      "expected_closed_deficiency_codes": [],
+      "expected_cgt_diagnostic_focus": {
+        "same_report_pair": "continuation_space_pair",
+        "same_closed_profile_as_pair": true,
+        "separating_dimension": "continuation",
+        "residual_test_count": 0,
+        "residual_refinement_count": 0,
+        "residual_repair_count": 0
+      },
+      "gold_claim_package_patch": {
+        "claim_id": "continuation_empty_space_v4",
+        "statement": "The continuation-sensitive report declares a diagnostic readout but no residual tests, refinements, or repairs.",
+        "continuation": {
+          "id": "continuation.empty.v4",
+          "diagnostic_name": "residual_follow_up_capacity",
+          "follow_up_tests": [],
+          "refinement_paths": [],
+          "repair_paths": []
+        },
+        "provenance": [
+          {
+            "id": "provenance.synthetic_continuation_empty_v4",
+            "uri": "synthetic://continuation-empty-v4"
+          }
+        ]
+      },
+      "extraction_dossier": "The package requests continuation-sensitive diagnosis and names residual_follow_up_capacity as the readout. No residual follow-up tests, refinement paths, or repair paths are declared."
+    },
+    {
+      "id": "continuation_rich_space_v4",
+      "category": "continuation_rich_space",
+      "extends_scenario": "same_report_continuation_low",
+      "statement": "The continuation-sensitive report leaves multiple residual tests, refinements, and repairs.",
+      "report_signature": "continuation_space_pair",
+      "expected_status": "continuation_sensitive",
+      "expected_closed_deficiency_codes": [],
+      "expected_cgt_diagnostic_focus": {
+        "same_report_pair": "continuation_space_pair",
+        "same_closed_profile_as_pair": true,
+        "separating_dimension": "continuation",
+        "residual_test_count": 2,
+        "residual_refinement_count": 2,
+        "residual_repair_count": 2
+      },
+      "gold_claim_package_patch": {
+        "claim_id": "continuation_rich_space_v4",
+        "statement": "The continuation-sensitive report leaves multiple residual tests, refinements, and repairs.",
+        "continuation": {
+          "id": "continuation.rich.v4",
+          "diagnostic_name": "residual_follow_up_capacity",
+          "follow_up_tests": [
+            "replicate-on-split-b",
+            "stress-test-shift-c"
+          ],
+          "refinement_paths": [
+            "add-calibration-stratum",
+            "separate-marker-conditioned-report"
+          ],
+          "repair_paths": [
+            "collect-new-observation-window",
+            "revise-normalizer"
+          ]
+        },
+        "provenance": [
+          {
+            "id": "provenance.synthetic_continuation_rich_v4",
+            "uri": "synthetic://continuation-rich-v4"
+          }
+        ]
+      },
+      "extraction_dossier": "The package requests continuation-sensitive diagnosis, names residual_follow_up_capacity as the readout, and declares two follow-up tests, two refinement paths, and two repair paths."
+    }
+  ]
+}

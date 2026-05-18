@@ -1,0 +1,1488 @@
+{
+  "analysis_backend": "external",
+  "average_f1": 0.220704,
+  "cgt_separation_rate": 0.0,
+  "closed_profile_separation_rate": 0.75,
+  "continuation_sensitive_separation_count": 1,
+  "experiment_id": "level5_ollama_gemma4_no_think",
+  "external_analysis": {
+    "libraries": [
+      "pandas",
+      "scipy",
+      "matplotlib",
+      "jsonschema"
+    ],
+    "metrics_summary_path": "metrics_summary.json",
+    "separation_plot_path": "separation_rates.png"
+  },
+  "format": "json",
+  "gold_cgt_separation_rate": 1.0,
+  "gold_theory_evaluation": {
+    "evaluations": [
+      {
+        "cgt_diagnostic_signature": {
+          "closed_profile": {
+            "closed_deficiency_codes": [
+              "missing_comparison_regime",
+              "missing_description",
+              "missing_expected_report",
+              "missing_failure_predicate",
+              "missing_frame",
+              "missing_normalizer",
+              "missing_observation",
+              "missing_projection",
+              "missing_provenance",
+              "missing_reproduction_protocol",
+              "missing_system",
+              "missing_verifier"
+            ],
+            "status": "unformed"
+          },
+          "continuation": {
+            "diagnostic_name": null,
+            "has_residual_scientific_space": false,
+            "residual_refinement_count": 0,
+            "residual_repair_count": 0,
+            "residual_test_count": 0
+          },
+          "history": {
+            "construction_kind": null,
+            "direct_selector": false
+          },
+          "marker": {
+            "marker_provenance_count": 0,
+            "policy_declared": false,
+            "preserves_markers": false,
+            "tracks_unresolved": false,
+            "unresolved_marker_count": 0
+          },
+          "protocol": {
+            "legacy_reconstructs_report_path": false,
+            "reconstructs": [],
+            "strict_reconstructs_report_path": false
+          },
+          "report_only": {
+            "report_signature": "no_declared_report",
+            "verifier_verdict": "unknown"
+          },
+          "requested_dimensions": []
+        },
+        "cgt_diagnostic_signature_hash": "40afd3f8b71bb6e5940ad7657649b02e4c149029a156efe82b0b7d85962f84db",
+        "closed_profile_signature": {
+          "closed_deficiency_codes": [
+            "missing_comparison_regime",
+            "missing_description",
+            "missing_expected_report",
+            "missing_failure_predicate",
+            "missing_frame",
+            "missing_normalizer",
+            "missing_observation",
+            "missing_projection",
+            "missing_provenance",
+            "missing_reproduction_protocol",
+            "missing_system",
+            "missing_verifier"
+          ],
+          "status": "unformed"
+        },
+        "report_only_signature": {
+          "report_signature": "no_declared_report",
+          "verifier_verdict": "unknown"
+        },
+        "scenario_id": "vague_ai_claim"
+      },
+      {
+        "cgt_diagnostic_signature": {
+          "closed_profile": {
+            "closed_deficiency_codes": [
+              "report_only_insufficiency_risk"
+            ],
+            "status": "well_typed"
+          },
+          "continuation": {
+            "diagnostic_name": null,
+            "has_residual_scientific_space": false,
+            "residual_refinement_count": 0,
+            "residual_repair_count": 0,
+            "residual_test_count": 0
+          },
+          "history": {
+            "construction_kind": null,
+            "direct_selector": false
+          },
+          "marker": {
+            "marker_provenance_count": 0,
+            "policy_declared": false,
+            "preserves_markers": false,
+            "tracks_unresolved": false,
+            "unresolved_marker_count": 0
+          },
+          "protocol": {
+            "legacy_reconstructs_report_path": false,
+            "reconstructs": [
+              "description",
+              "normalizer",
+              "observation",
+              "projection",
+              "verifier"
+            ],
+            "strict_reconstructs_report_path": true
+          },
+          "report_only": {
+            "report_signature": "accuracy_0.90",
+            "verifier_verdict": "unknown"
+          },
+          "requested_dimensions": [
+            "calibration",
+            "leakage",
+            "variance"
+          ]
+        },
+        "cgt_diagnostic_signature_hash": "9d31ec372ce63da8df1f3218bac10296f98bd1fca05e20cbeed810db5a7458f2",
+        "closed_profile_signature": {
+          "closed_deficiency_codes": [
+            "report_only_insufficiency_risk"
+          ],
+          "status": "well_typed"
+        },
+        "report_only_signature": {
+          "report_signature": "accuracy_0.90",
+          "verifier_verdict": "unknown"
+        },
+        "scenario_id": "benchmark_claim"
+      },
+      {
+        "cgt_diagnostic_signature": {
+          "closed_profile": {
+            "closed_deficiency_codes": [
+              "missing_description",
+              "missing_expected_report",
+              "missing_failure_predicate",
+              "missing_normalizer",
+              "missing_observation",
+              "missing_projection",
+              "missing_provenance",
+              "missing_reproduction_protocol",
+              "missing_verifier"
+            ],
+            "status": "unformed"
+          },
+          "continuation": {
+            "diagnostic_name": null,
+            "has_residual_scientific_space": false,
+            "residual_refinement_count": 0,
+            "residual_repair_count": 0,
+            "residual_test_count": 0
+          },
+          "history": {
+            "construction_kind": null,
+            "direct_selector": false
+          },
+          "marker": {
+            "marker_provenance_count": 0,
+            "policy_declared": false,
+            "preserves_markers": false,
+            "tracks_unresolved": false,
+            "unresolved_marker_count": 0
+          },
+          "protocol": {
+            "legacy_reconstructs_report_path": false,
+            "reconstructs": [],
+            "strict_reconstructs_report_path": false
+          },
+          "report_only": {
+            "report_signature": "no_observable_report",
+            "verifier_verdict": "unknown"
+          },
+          "requested_dimensions": []
+        },
+        "cgt_diagnostic_signature_hash": "56f2abbfc665d1f56977f09c4257c0b62277b5192f24c4cb1de71d034c0f854a",
+        "closed_profile_signature": {
+          "closed_deficiency_codes": [
+            "missing_description",
+            "missing_expected_report",
+            "missing_failure_predicate",
+            "missing_normalizer",
+            "missing_observation",
+            "missing_projection",
+            "missing_provenance",
+            "missing_reproduction_protocol",
+            "missing_verifier"
+          ],
+          "status": "unformed"
+        },
+        "report_only_signature": {
+          "report_signature": "no_observable_report",
+          "verifier_verdict": "unknown"
+        },
+        "scenario_id": "unobservable_claim"
+      },
+      {
+        "cgt_diagnostic_signature": {
+          "closed_profile": {
+            "closed_deficiency_codes": [
+              "verifier_failure_incoherent"
+            ],
+            "status": "blocked"
+          },
+          "continuation": {
+            "diagnostic_name": null,
+            "has_residual_scientific_space": false,
+            "residual_refinement_count": 0,
+            "residual_repair_count": 0,
+            "residual_test_count": 0
+          },
+          "history": {
+            "construction_kind": null,
+            "direct_selector": false
+          },
+          "marker": {
+            "marker_provenance_count": 0,
+            "policy_declared": false,
+            "preserves_markers": false,
+            "tracks_unresolved": false,
+            "unresolved_marker_count": 0
+          },
+          "protocol": {
+            "legacy_reconstructs_report_path": false,
+            "reconstructs": [
+              "description",
+              "normalizer",
+              "observation",
+              "projection",
+              "verifier"
+            ],
+            "strict_reconstructs_report_path": true
+          },
+          "report_only": {
+            "report_signature": "report_r_accept_and_fail",
+            "verifier_verdict": "unknown"
+          },
+          "requested_dimensions": []
+        },
+        "cgt_diagnostic_signature_hash": "e89f29532ab65b0d7e6aeaeed197593b06f13f4f7eb60bb0079365582e2f39d0",
+        "closed_profile_signature": {
+          "closed_deficiency_codes": [
+            "verifier_failure_incoherent"
+          ],
+          "status": "blocked"
+        },
+        "report_only_signature": {
+          "report_signature": "report_r_accept_and_fail",
+          "verifier_verdict": "unknown"
+        },
+        "scenario_id": "verifier_failure_incoherence"
+      },
+      {
+        "cgt_diagnostic_signature": {
+          "closed_profile": {
+            "closed_deficiency_codes": [
+              "missing_reproduction_protocol"
+            ],
+            "status": "partial"
+          },
+          "continuation": {
+            "diagnostic_name": null,
+            "has_residual_scientific_space": false,
+            "residual_refinement_count": 0,
+            "residual_repair_count": 0,
+            "residual_test_count": 0
+          },
+          "history": {
+            "construction_kind": null,
+            "direct_selector": false
+          },
+          "marker": {
+            "marker_provenance_count": 0,
+            "policy_declared": false,
+            "preserves_markers": false,
+            "tracks_unresolved": false,
+            "unresolved_marker_count": 0
+          },
+          "protocol": {
+            "legacy_reconstructs_report_path": false,
+            "reconstructs": [],
+            "strict_reconstructs_report_path": false
+          },
+          "report_only": {
+            "report_signature": "normalized_z",
+            "verifier_verdict": "unknown"
+          },
+          "requested_dimensions": []
+        },
+        "cgt_diagnostic_signature_hash": "4bad87f983423c33acb01fa8fd161512def4325098ef2993de0ed692fca44911",
+        "closed_profile_signature": {
+          "closed_deficiency_codes": [
+            "missing_reproduction_protocol"
+          ],
+          "status": "partial"
+        },
+        "report_only_signature": {
+          "report_signature": "normalized_z",
+          "verifier_verdict": "unknown"
+        },
+        "scenario_id": "missing_reproduction_protocol"
+      },
+      {
+        "cgt_diagnostic_signature": {
+          "closed_profile": {
+            "closed_deficiency_codes": [],
+            "status": "reproducibly_available"
+          },
+          "continuation": {
+            "diagnostic_name": null,
+            "has_residual_scientific_space": false,
+            "residual_refinement_count": 0,
+            "residual_repair_count": 0,
+            "residual_test_count": 0
+          },
+          "history": {
+            "construction_kind": null,
+            "direct_selector": false
+          },
+          "marker": {
+            "marker_provenance_count": 0,
+            "policy_declared": false,
+            "preserves_markers": false,
+            "tracks_unresolved": false,
+            "unresolved_marker_count": 0
+          },
+          "protocol": {
+            "legacy_reconstructs_report_path": false,
+            "reconstructs": [
+              "description",
+              "normalizer",
+              "observation",
+              "projection",
+              "verifier"
+            ],
+            "strict_reconstructs_report_path": true
+          },
+          "report_only": {
+            "report_signature": "normalized_z",
+            "verifier_verdict": "unknown"
+          },
+          "requested_dimensions": []
+        },
+        "cgt_diagnostic_signature_hash": "8ea4fdfaf9ab0e42ecc257edf61f7ecba12d7bbeeb1087ff363df13baa16bb85",
+        "closed_profile_signature": {
+          "closed_deficiency_codes": [],
+          "status": "reproducibly_available"
+        },
+        "report_only_signature": {
+          "report_signature": "normalized_z",
+          "verifier_verdict": "unknown"
+        },
+        "scenario_id": "strict_reproduction_protocol"
+      },
+      {
+        "cgt_diagnostic_signature": {
+          "closed_profile": {
+            "closed_deficiency_codes": [],
+            "status": "continuation_sensitive"
+          },
+          "continuation": {
+            "diagnostic_name": "residual_follow_up_capacity",
+            "has_residual_scientific_space": true,
+            "residual_refinement_count": 0,
+            "residual_repair_count": 0,
+            "residual_test_count": 1
+          },
+          "history": {
+            "construction_kind": null,
+            "direct_selector": false
+          },
+          "marker": {
+            "marker_provenance_count": 0,
+            "policy_declared": false,
+            "preserves_markers": false,
+            "tracks_unresolved": false,
+            "unresolved_marker_count": 0
+          },
+          "protocol": {
+            "legacy_reconstructs_report_path": false,
+            "reconstructs": [
+              "description",
+              "normalizer",
+              "observation",
+              "projection",
+              "verifier"
+            ],
+            "strict_reconstructs_report_path": true
+          },
+          "report_only": {
+            "report_signature": "same_report_0.90",
+            "verifier_verdict": "unknown"
+          },
+          "requested_dimensions": [
+            "continuation"
+          ]
+        },
+        "cgt_diagnostic_signature_hash": "c268c0a2cca7c4e3b2efeacd46ded00caccd6ad889e837b21dcc07e999651ea6",
+        "closed_profile_signature": {
+          "closed_deficiency_codes": [],
+          "status": "continuation_sensitive"
+        },
+        "report_only_signature": {
+          "report_signature": "same_report_0.90",
+          "verifier_verdict": "unknown"
+        },
+        "scenario_id": "same_report_continuation_low"
+      },
+      {
+        "cgt_diagnostic_signature": {
+          "closed_profile": {
+            "closed_deficiency_codes": [],
+            "status": "continuation_sensitive"
+          },
+          "continuation": {
+            "diagnostic_name": "residual_follow_up_capacity",
+            "has_residual_scientific_space": true,
+            "residual_refinement_count": 2,
+            "residual_repair_count": 2,
+            "residual_test_count": 3
+          },
+          "history": {
+            "construction_kind": null,
+            "direct_selector": false
+          },
+          "marker": {
+            "marker_provenance_count": 0,
+            "policy_declared": false,
+            "preserves_markers": false,
+            "tracks_unresolved": false,
+            "unresolved_marker_count": 0
+          },
+          "protocol": {
+            "legacy_reconstructs_report_path": false,
+            "reconstructs": [
+              "description",
+              "normalizer",
+              "observation",
+              "projection",
+              "verifier"
+            ],
+            "strict_reconstructs_report_path": true
+          },
+          "report_only": {
+            "report_signature": "same_report_0.90",
+            "verifier_verdict": "unknown"
+          },
+          "requested_dimensions": [
+            "continuation"
+          ]
+        },
+        "cgt_diagnostic_signature_hash": "2cc94a0e218a64a12c98e55f4a497075de2cdc16b52dc7c7e80bb2fecae2e1a8",
+        "closed_profile_signature": {
+          "closed_deficiency_codes": [],
+          "status": "continuation_sensitive"
+        },
+        "report_only_signature": {
+          "report_signature": "same_report_0.90",
+          "verifier_verdict": "unknown"
+        },
+        "scenario_id": "same_report_continuation_high"
+      },
+      {
+        "cgt_diagnostic_signature": {
+          "closed_profile": {
+            "closed_deficiency_codes": [
+              "marker_sensitive_missing_marker_policy",
+              "missing_marker_policy",
+              "report_only_insufficiency_risk"
+            ],
+            "status": "blocked"
+          },
+          "continuation": {
+            "diagnostic_name": null,
+            "has_residual_scientific_space": false,
+            "residual_refinement_count": 0,
+            "residual_repair_count": 0,
+            "residual_test_count": 0
+          },
+          "history": {
+            "construction_kind": null,
+            "direct_selector": false
+          },
+          "marker": {
+            "marker_provenance_count": 0,
+            "policy_declared": false,
+            "preserves_markers": false,
+            "tracks_unresolved": false,
+            "unresolved_marker_count": 0
+          },
+          "protocol": {
+            "legacy_reconstructs_report_path": false,
+            "reconstructs": [
+              "description",
+              "normalizer",
+              "observation",
+              "projection",
+              "verifier"
+            ],
+            "strict_reconstructs_report_path": true
+          },
+          "report_only": {
+            "report_signature": "marker_omitted_report",
+            "verifier_verdict": "unknown"
+          },
+          "requested_dimensions": [
+            "marker"
+          ]
+        },
+        "cgt_diagnostic_signature_hash": "0328ed279b573884ca344f219ee203ded53fc066ca318113ccde759d3f84447d",
+        "closed_profile_signature": {
+          "closed_deficiency_codes": [
+            "marker_sensitive_missing_marker_policy",
+            "missing_marker_policy",
+            "report_only_insufficiency_risk"
+          ],
+          "status": "blocked"
+        },
+        "report_only_signature": {
+          "report_signature": "marker_omitted_report",
+          "verifier_verdict": "unknown"
+        },
+        "scenario_id": "marker_sensitive_omission"
+      },
+      {
+        "cgt_diagnostic_signature": {
+          "closed_profile": {
+            "closed_deficiency_codes": [
+              "report_only_insufficiency_risk"
+            ],
+            "status": "well_typed"
+          },
+          "continuation": {
+            "diagnostic_name": null,
+            "has_residual_scientific_space": false,
+            "residual_refinement_count": 0,
+            "residual_repair_count": 0,
+            "residual_test_count": 0
+          },
+          "history": {
+            "construction_kind": null,
+            "direct_selector": false
+          },
+          "marker": {
+            "marker_provenance_count": 2,
+            "policy_declared": true,
+            "preserves_markers": true,
+            "tracks_unresolved": true,
+            "unresolved_marker_count": 1
+          },
+          "protocol": {
+            "legacy_reconstructs_report_path": false,
+            "reconstructs": [
+              "description",
+              "normalizer",
+              "observation",
+              "projection",
+              "verifier"
+            ],
+            "strict_reconstructs_report_path": true
+          },
+          "report_only": {
+            "report_signature": "marker_omitted_report",
+            "verifier_verdict": "unknown"
+          },
+          "requested_dimensions": [
+            "marker"
+          ]
+        },
+        "cgt_diagnostic_signature_hash": "ac7831e85b9938fc8feda9b800f4867251483bb4fa25044a19b142861d4aaf79",
+        "closed_profile_signature": {
+          "closed_deficiency_codes": [
+            "report_only_insufficiency_risk"
+          ],
+          "status": "well_typed"
+        },
+        "report_only_signature": {
+          "report_signature": "marker_omitted_report",
+          "verifier_verdict": "unknown"
+        },
+        "scenario_id": "marker_sensitive_preserved"
+      },
+      {
+        "cgt_diagnostic_signature": {
+          "closed_profile": {
+            "closed_deficiency_codes": [
+              "direct_selector_degeneracy_risk"
+            ],
+            "status": "well_typed"
+          },
+          "continuation": {
+            "diagnostic_name": null,
+            "has_residual_scientific_space": false,
+            "residual_refinement_count": 0,
+            "residual_repair_count": 0,
+            "residual_test_count": 0
+          },
+          "history": {
+            "construction_kind": "direct_selector",
+            "direct_selector": true
+          },
+          "marker": {
+            "marker_provenance_count": 0,
+            "policy_declared": false,
+            "preserves_markers": false,
+            "tracks_unresolved": false,
+            "unresolved_marker_count": 0
+          },
+          "protocol": {
+            "legacy_reconstructs_report_path": false,
+            "reconstructs": [
+              "description",
+              "normalizer",
+              "observation",
+              "projection",
+              "verifier"
+            ],
+            "strict_reconstructs_report_path": true
+          },
+          "report_only": {
+            "report_signature": "direct_target_report",
+            "verifier_verdict": "unknown"
+          },
+          "requested_dimensions": []
+        },
+        "cgt_diagnostic_signature_hash": "b5b31c4c89de2fb3a3d1353e13416051fc05a77c0596d21c6f92a54a4c902102",
+        "closed_profile_signature": {
+          "closed_deficiency_codes": [
+            "direct_selector_degeneracy_risk"
+          ],
+          "status": "well_typed"
+        },
+        "report_only_signature": {
+          "report_signature": "direct_target_report",
+          "verifier_verdict": "unknown"
+        },
+        "scenario_id": "direct_selector_degeneracy"
+      },
+      {
+        "cgt_diagnostic_signature": {
+          "closed_profile": {
+            "closed_deficiency_codes": [],
+            "status": "reproducibly_available"
+          },
+          "continuation": {
+            "diagnostic_name": null,
+            "has_residual_scientific_space": false,
+            "residual_refinement_count": 0,
+            "residual_repair_count": 0,
+            "residual_test_count": 0
+          },
+          "history": {
+            "construction_kind": "structured",
+            "direct_selector": false
+          },
+          "marker": {
+            "marker_provenance_count": 0,
+            "policy_declared": false,
+            "preserves_markers": false,
+            "tracks_unresolved": false,
+            "unresolved_marker_count": 0
+          },
+          "protocol": {
+            "legacy_reconstructs_report_path": false,
+            "reconstructs": [
+              "description",
+              "normalizer",
+              "observation",
+              "projection",
+              "verifier"
+            ],
+            "strict_reconstructs_report_path": true
+          },
+          "report_only": {
+            "report_signature": "direct_target_report",
+            "verifier_verdict": "unknown"
+          },
+          "requested_dimensions": []
+        },
+        "cgt_diagnostic_signature_hash": "aede2c37425d84c68207e3af080a5e93d61f3fd8e8ebca4e1a81f3ec3ff37848",
+        "closed_profile_signature": {
+          "closed_deficiency_codes": [],
+          "status": "reproducibly_available"
+        },
+        "report_only_signature": {
+          "report_signature": "direct_target_report",
+          "verifier_verdict": "unknown"
+        },
+        "scenario_id": "structured_history_control"
+      },
+      {
+        "cgt_diagnostic_signature": {
+          "closed_profile": {
+            "closed_deficiency_codes": [
+              "missing_description",
+              "missing_expected_report",
+              "missing_failure_predicate",
+              "missing_normalizer",
+              "missing_observation",
+              "missing_projection",
+              "missing_provenance",
+              "missing_reproduction_protocol",
+              "missing_verifier"
+            ],
+            "status": "unformed"
+          },
+          "continuation": {
+            "diagnostic_name": null,
+            "has_residual_scientific_space": false,
+            "residual_refinement_count": 0,
+            "residual_repair_count": 0,
+            "residual_test_count": 0
+          },
+          "history": {
+            "construction_kind": null,
+            "direct_selector": false
+          },
+          "marker": {
+            "marker_provenance_count": 0,
+            "policy_declared": false,
+            "preserves_markers": false,
+            "tracks_unresolved": false,
+            "unresolved_marker_count": 0
+          },
+          "protocol": {
+            "legacy_reconstructs_report_path": false,
+            "reconstructs": [],
+            "strict_reconstructs_report_path": false
+          },
+          "report_only": {
+            "report_signature": "cascade_no_projection",
+            "verifier_verdict": "unknown"
+          },
+          "requested_dimensions": []
+        },
+        "cgt_diagnostic_signature_hash": "e27d8ff98aa5d4359e3aa93c73ac2d315b9cec511e1f8f9efa192c84cf63a414",
+        "closed_profile_signature": {
+          "closed_deficiency_codes": [
+            "missing_description",
+            "missing_expected_report",
+            "missing_failure_predicate",
+            "missing_normalizer",
+            "missing_observation",
+            "missing_projection",
+            "missing_provenance",
+            "missing_reproduction_protocol",
+            "missing_verifier"
+          ],
+          "status": "unformed"
+        },
+        "report_only_signature": {
+          "report_signature": "cascade_no_projection",
+          "verifier_verdict": "unknown"
+        },
+        "scenario_id": "dependency_closure_cascade"
+      },
+      {
+        "cgt_diagnostic_signature": {
+          "closed_profile": {
+            "closed_deficiency_codes": [
+              "missing_reproduction_protocol"
+            ],
+            "status": "partial"
+          },
+          "continuation": {
+            "diagnostic_name": null,
+            "has_residual_scientific_space": false,
+            "residual_refinement_count": 0,
+            "residual_repair_count": 0,
+            "residual_test_count": 0
+          },
+          "history": {
+            "construction_kind": null,
+            "direct_selector": false
+          },
+          "marker": {
+            "marker_provenance_count": 0,
+            "policy_declared": false,
+            "preserves_markers": false,
+            "tracks_unresolved": false,
+            "unresolved_marker_count": 0
+          },
+          "protocol": {
+            "legacy_reconstructs_report_path": false,
+            "reconstructs": [],
+            "strict_reconstructs_report_path": false
+          },
+          "report_only": {
+            "report_signature": "finite_run_family",
+            "verifier_verdict": "unknown"
+          },
+          "requested_dimensions": []
+        },
+        "cgt_diagnostic_signature_hash": "170ca9f74f431a3608725b5272b31f4a84932d2f0488dcfcc74708a179158ccd",
+        "closed_profile_signature": {
+          "closed_deficiency_codes": [
+            "missing_reproduction_protocol"
+          ],
+          "status": "partial"
+        },
+        "report_only_signature": {
+          "report_signature": "finite_run_family",
+          "verifier_verdict": "unknown"
+        },
+        "scenario_id": "finite_run_family_may_must"
+      }
+    ],
+    "metrics": [
+      {
+        "cgt_diagnostic_signature_hash": "40afd3f8b71bb6e5940ad7657649b02e4c149029a156efe82b0b7d85962f84db",
+        "closed_profile_jaccard": 1.0,
+        "diagnostic_signature_agreement": 1,
+        "expected_cgt_diagnostic_signature_hash": "40afd3f8b71bb6e5940ad7657649b02e4c149029a156efe82b0b7d85962f84db",
+        "expected_status": "unformed",
+        "f1": 1.0,
+        "json_valid": 1,
+        "latency_ms": "",
+        "mode": "gold_deterministic",
+        "parse_valid": 1,
+        "precision": 1.0,
+        "predicted_status": "unformed",
+        "recall": 1.0,
+        "run_may_available": "",
+        "run_must_available": "",
+        "scenario_id": "vague_ai_claim",
+        "seed": "",
+        "status_agreement": 1
+      },
+      {
+        "cgt_diagnostic_signature_hash": "9d31ec372ce63da8df1f3218bac10296f98bd1fca05e20cbeed810db5a7458f2",
+        "closed_profile_jaccard": 1.0,
+        "diagnostic_signature_agreement": 1,
+        "expected_cgt_diagnostic_signature_hash": "9d31ec372ce63da8df1f3218bac10296f98bd1fca05e20cbeed810db5a7458f2",
+        "expected_status": "well_typed",
+        "f1": 1.0,
+        "json_valid": 1,
+        "latency_ms": "",
+        "mode": "gold_deterministic",
+        "parse_valid": 1,
+        "precision": 1.0,
+        "predicted_status": "well_typed",
+        "recall": 1.0,
+        "run_may_available": "",
+        "run_must_available": "",
+        "scenario_id": "benchmark_claim",
+        "seed": "",
+        "status_agreement": 1
+      },
+      {
+        "cgt_diagnostic_signature_hash": "56f2abbfc665d1f56977f09c4257c0b62277b5192f24c4cb1de71d034c0f854a",
+        "closed_profile_jaccard": 1.0,
+        "diagnostic_signature_agreement": 1,
+        "expected_cgt_diagnostic_signature_hash": "56f2abbfc665d1f56977f09c4257c0b62277b5192f24c4cb1de71d034c0f854a",
+        "expected_status": "unformed",
+        "f1": 1.0,
+        "json_valid": 1,
+        "latency_ms": "",
+        "mode": "gold_deterministic",
+        "parse_valid": 1,
+        "precision": 1.0,
+        "predicted_status": "unformed",
+        "recall": 1.0,
+        "run_may_available": "",
+        "run_must_available": "",
+        "scenario_id": "unobservable_claim",
+        "seed": "",
+        "status_agreement": 1
+      },
+      {
+        "cgt_diagnostic_signature_hash": "e89f29532ab65b0d7e6aeaeed197593b06f13f4f7eb60bb0079365582e2f39d0",
+        "closed_profile_jaccard": 1.0,
+        "diagnostic_signature_agreement": 1,
+        "expected_cgt_diagnostic_signature_hash": "e89f29532ab65b0d7e6aeaeed197593b06f13f4f7eb60bb0079365582e2f39d0",
+        "expected_status": "blocked",
+        "f1": 1.0,
+        "json_valid": 1,
+        "latency_ms": "",
+        "mode": "gold_deterministic",
+        "parse_valid": 1,
+        "precision": 1.0,
+        "predicted_status": "blocked",
+        "recall": 1.0,
+        "run_may_available": "",
+        "run_must_available": "",
+        "scenario_id": "verifier_failure_incoherence",
+        "seed": "",
+        "status_agreement": 1
+      },
+      {
+        "cgt_diagnostic_signature_hash": "4bad87f983423c33acb01fa8fd161512def4325098ef2993de0ed692fca44911",
+        "closed_profile_jaccard": 1.0,
+        "diagnostic_signature_agreement": 1,
+        "expected_cgt_diagnostic_signature_hash": "4bad87f983423c33acb01fa8fd161512def4325098ef2993de0ed692fca44911",
+        "expected_status": "partial",
+        "f1": 1.0,
+        "json_valid": 1,
+        "latency_ms": "",
+        "mode": "gold_deterministic",
+        "parse_valid": 1,
+        "precision": 1.0,
+        "predicted_status": "partial",
+        "recall": 1.0,
+        "run_may_available": "",
+        "run_must_available": "",
+        "scenario_id": "missing_reproduction_protocol",
+        "seed": "",
+        "status_agreement": 1
+      },
+      {
+        "cgt_diagnostic_signature_hash": "8ea4fdfaf9ab0e42ecc257edf61f7ecba12d7bbeeb1087ff363df13baa16bb85",
+        "closed_profile_jaccard": 1.0,
+        "diagnostic_signature_agreement": 1,
+        "expected_cgt_diagnostic_signature_hash": "8ea4fdfaf9ab0e42ecc257edf61f7ecba12d7bbeeb1087ff363df13baa16bb85",
+        "expected_status": "reproducibly_available",
+        "f1": 1.0,
+        "json_valid": 1,
+        "latency_ms": "",
+        "mode": "gold_deterministic",
+        "parse_valid": 1,
+        "precision": 1.0,
+        "predicted_status": "reproducibly_available",
+        "recall": 1.0,
+        "run_may_available": "",
+        "run_must_available": "",
+        "scenario_id": "strict_reproduction_protocol",
+        "seed": "",
+        "status_agreement": 1
+      },
+      {
+        "cgt_diagnostic_signature_hash": "c268c0a2cca7c4e3b2efeacd46ded00caccd6ad889e837b21dcc07e999651ea6",
+        "closed_profile_jaccard": 1.0,
+        "diagnostic_signature_agreement": 1,
+        "expected_cgt_diagnostic_signature_hash": "c268c0a2cca7c4e3b2efeacd46ded00caccd6ad889e837b21dcc07e999651ea6",
+        "expected_status": "continuation_sensitive",
+        "f1": 1.0,
+        "json_valid": 1,
+        "latency_ms": "",
+        "mode": "gold_deterministic",
+        "parse_valid": 1,
+        "precision": 1.0,
+        "predicted_status": "continuation_sensitive",
+        "recall": 1.0,
+        "run_may_available": "",
+        "run_must_available": "",
+        "scenario_id": "same_report_continuation_low",
+        "seed": "",
+        "status_agreement": 1
+      },
+      {
+        "cgt_diagnostic_signature_hash": "2cc94a0e218a64a12c98e55f4a497075de2cdc16b52dc7c7e80bb2fecae2e1a8",
+        "closed_profile_jaccard": 1.0,
+        "diagnostic_signature_agreement": 1,
+        "expected_cgt_diagnostic_signature_hash": "2cc94a0e218a64a12c98e55f4a497075de2cdc16b52dc7c7e80bb2fecae2e1a8",
+        "expected_status": "continuation_sensitive",
+        "f1": 1.0,
+        "json_valid": 1,
+        "latency_ms": "",
+        "mode": "gold_deterministic",
+        "parse_valid": 1,
+        "precision": 1.0,
+        "predicted_status": "continuation_sensitive",
+        "recall": 1.0,
+        "run_may_available": "",
+        "run_must_available": "",
+        "scenario_id": "same_report_continuation_high",
+        "seed": "",
+        "status_agreement": 1
+      },
+      {
+        "cgt_diagnostic_signature_hash": "0328ed279b573884ca344f219ee203ded53fc066ca318113ccde759d3f84447d",
+        "closed_profile_jaccard": 1.0,
+        "diagnostic_signature_agreement": 1,
+        "expected_cgt_diagnostic_signature_hash": "0328ed279b573884ca344f219ee203ded53fc066ca318113ccde759d3f84447d",
+        "expected_status": "blocked",
+        "f1": 1.0,
+        "json_valid": 1,
+        "latency_ms": "",
+        "mode": "gold_deterministic",
+        "parse_valid": 1,
+        "precision": 1.0,
+        "predicted_status": "blocked",
+        "recall": 1.0,
+        "run_may_available": "",
+        "run_must_available": "",
+        "scenario_id": "marker_sensitive_omission",
+        "seed": "",
+        "status_agreement": 1
+      },
+      {
+        "cgt_diagnostic_signature_hash": "ac7831e85b9938fc8feda9b800f4867251483bb4fa25044a19b142861d4aaf79",
+        "closed_profile_jaccard": 1.0,
+        "diagnostic_signature_agreement": 1,
+        "expected_cgt_diagnostic_signature_hash": "ac7831e85b9938fc8feda9b800f4867251483bb4fa25044a19b142861d4aaf79",
+        "expected_status": "well_typed",
+        "f1": 1.0,
+        "json_valid": 1,
+        "latency_ms": "",
+        "mode": "gold_deterministic",
+        "parse_valid": 1,
+        "precision": 1.0,
+        "predicted_status": "well_typed",
+        "recall": 1.0,
+        "run_may_available": "",
+        "run_must_available": "",
+        "scenario_id": "marker_sensitive_preserved",
+        "seed": "",
+        "status_agreement": 1
+      },
+      {
+        "cgt_diagnostic_signature_hash": "b5b31c4c89de2fb3a3d1353e13416051fc05a77c0596d21c6f92a54a4c902102",
+        "closed_profile_jaccard": 1.0,
+        "diagnostic_signature_agreement": 1,
+        "expected_cgt_diagnostic_signature_hash": "b5b31c4c89de2fb3a3d1353e13416051fc05a77c0596d21c6f92a54a4c902102",
+        "expected_status": "well_typed",
+        "f1": 1.0,
+        "json_valid": 1,
+        "latency_ms": "",
+        "mode": "gold_deterministic",
+        "parse_valid": 1,
+        "precision": 1.0,
+        "predicted_status": "well_typed",
+        "recall": 1.0,
+        "run_may_available": "",
+        "run_must_available": "",
+        "scenario_id": "direct_selector_degeneracy",
+        "seed": "",
+        "status_agreement": 1
+      },
+      {
+        "cgt_diagnostic_signature_hash": "aede2c37425d84c68207e3af080a5e93d61f3fd8e8ebca4e1a81f3ec3ff37848",
+        "closed_profile_jaccard": 1.0,
+        "diagnostic_signature_agreement": 1,
+        "expected_cgt_diagnostic_signature_hash": "aede2c37425d84c68207e3af080a5e93d61f3fd8e8ebca4e1a81f3ec3ff37848",
+        "expected_status": "reproducibly_available",
+        "f1": 1.0,
+        "json_valid": 1,
+        "latency_ms": "",
+        "mode": "gold_deterministic",
+        "parse_valid": 1,
+        "precision": 1.0,
+        "predicted_status": "reproducibly_available",
+        "recall": 1.0,
+        "run_may_available": "",
+        "run_must_available": "",
+        "scenario_id": "structured_history_control",
+        "seed": "",
+        "status_agreement": 1
+      },
+      {
+        "cgt_diagnostic_signature_hash": "e27d8ff98aa5d4359e3aa93c73ac2d315b9cec511e1f8f9efa192c84cf63a414",
+        "closed_profile_jaccard": 1.0,
+        "diagnostic_signature_agreement": 1,
+        "expected_cgt_diagnostic_signature_hash": "e27d8ff98aa5d4359e3aa93c73ac2d315b9cec511e1f8f9efa192c84cf63a414",
+        "expected_status": "unformed",
+        "f1": 1.0,
+        "json_valid": 1,
+        "latency_ms": "",
+        "mode": "gold_deterministic",
+        "parse_valid": 1,
+        "precision": 1.0,
+        "predicted_status": "unformed",
+        "recall": 1.0,
+        "run_may_available": "",
+        "run_must_available": "",
+        "scenario_id": "dependency_closure_cascade",
+        "seed": "",
+        "status_agreement": 1
+      },
+      {
+        "cgt_diagnostic_signature_hash": "170ca9f74f431a3608725b5272b31f4a84932d2f0488dcfcc74708a179158ccd",
+        "closed_profile_jaccard": 1.0,
+        "diagnostic_signature_agreement": 1,
+        "expected_cgt_diagnostic_signature_hash": "170ca9f74f431a3608725b5272b31f4a84932d2f0488dcfcc74708a179158ccd",
+        "expected_status": "partial",
+        "f1": 1.0,
+        "json_valid": 1,
+        "latency_ms": "",
+        "mode": "gold_deterministic",
+        "parse_valid": 1,
+        "precision": 1.0,
+        "predicted_status": "partial",
+        "recall": 1.0,
+        "run_may_available": true,
+        "run_must_available": false,
+        "scenario_id": "finite_run_family_may_must",
+        "seed": "",
+        "status_agreement": 1
+      }
+    ],
+    "run_family_results": {
+      "finite_run_family_may_must": {
+        "almost_sure": null,
+        "counterexample_run_ids": [
+          "run_missing_protocol"
+        ],
+        "may_available": true,
+        "metadata": {},
+        "must_available": false,
+        "probability_satisfying": null,
+        "run_count": 2,
+        "satisfying_count": 1,
+        "satisfying_run_ids": [
+          "run_with_protocol"
+        ]
+      }
+    },
+    "theory_separation": {
+      "cgt_separation_rate": 1.0,
+      "closed_profile_separation_rate": 0.75,
+      "continuation_sensitive_separation_count": 1,
+      "report_only_collapse_rate": 1.0,
+      "same_report_groups": [
+        "{\"report_signature\":\"direct_target_report\",\"verifier_verdict\":\"unknown\"}",
+        "{\"report_signature\":\"marker_omitted_report\",\"verifier_verdict\":\"unknown\"}",
+        "{\"report_signature\":\"normalized_z\",\"verifier_verdict\":\"unknown\"}",
+        "{\"report_signature\":\"same_report_0.90\",\"verifier_verdict\":\"unknown\"}"
+      ]
+    }
+  },
+  "live_run_count": 70,
+  "llm_extracted_cgt_separation_rate": 0.0,
+  "may_must_empirical_stability": {
+    "benchmark_claim": {
+      "empirical_probability": 0.0,
+      "may": false,
+      "must": false
+    },
+    "dependency_closure_cascade": {
+      "empirical_probability": 0.0,
+      "may": false,
+      "must": false
+    },
+    "direct_selector_degeneracy": {
+      "empirical_probability": 0.0,
+      "may": false,
+      "must": false
+    },
+    "finite_run_family_may_must": {
+      "empirical_probability": 0.0,
+      "may": false,
+      "must": false
+    },
+    "marker_sensitive_omission": {
+      "empirical_probability": 0.0,
+      "may": false,
+      "must": false
+    },
+    "marker_sensitive_preserved": {
+      "empirical_probability": 0.0,
+      "may": false,
+      "must": false
+    },
+    "missing_reproduction_protocol": {
+      "empirical_probability": 0.0,
+      "may": false,
+      "must": false
+    },
+    "same_report_continuation_high": {
+      "empirical_probability": 0.0,
+      "may": false,
+      "must": false
+    },
+    "same_report_continuation_low": {
+      "empirical_probability": 0.0,
+      "may": false,
+      "must": false
+    },
+    "strict_reproduction_protocol": {
+      "empirical_probability": 0.0,
+      "may": false,
+      "must": false
+    },
+    "structured_history_control": {
+      "empirical_probability": 0.0,
+      "may": false,
+      "must": false
+    },
+    "unobservable_claim": {
+      "empirical_probability": 0.0,
+      "may": false,
+      "must": false
+    },
+    "vague_ai_claim": {
+      "empirical_probability": 0.0,
+      "may": false,
+      "must": false
+    },
+    "verifier_failure_incoherence": {
+      "empirical_probability": 0.0,
+      "may": false,
+      "must": false
+    }
+  },
+  "model": "gemma4:e4b",
+  "parse_error_count": 0,
+  "pipeline": "research",
+  "public_scenarios": [
+    {
+      "category": "vague_ai_claim",
+      "expected_closed_deficiency_codes": [
+        "missing_comparison_regime",
+        "missing_description",
+        "missing_expected_report",
+        "missing_failure_predicate",
+        "missing_frame",
+        "missing_normalizer",
+        "missing_observation",
+        "missing_projection",
+        "missing_provenance",
+        "missing_reproduction_protocol",
+        "missing_system",
+        "missing_verifier"
+      ],
+      "expected_status": "unformed",
+      "id": "vague_ai_claim",
+      "report_signature": "no_declared_report"
+    },
+    {
+      "category": "benchmark_claim",
+      "expected_closed_deficiency_codes": [
+        "report_only_insufficiency_risk"
+      ],
+      "expected_status": "well_typed",
+      "id": "benchmark_claim",
+      "report_signature": "accuracy_0.90"
+    },
+    {
+      "category": "unobservable_claim",
+      "expected_closed_deficiency_codes": [
+        "missing_description",
+        "missing_expected_report",
+        "missing_failure_predicate",
+        "missing_normalizer",
+        "missing_observation",
+        "missing_projection",
+        "missing_provenance",
+        "missing_reproduction_protocol",
+        "missing_verifier"
+      ],
+      "expected_status": "unformed",
+      "id": "unobservable_claim",
+      "report_signature": "no_observable_report"
+    },
+    {
+      "category": "verifier_failure_incoherence",
+      "expected_closed_deficiency_codes": [
+        "verifier_failure_incoherent"
+      ],
+      "expected_status": "blocked",
+      "id": "verifier_failure_incoherence",
+      "report_signature": "report_r_accept_and_fail"
+    },
+    {
+      "category": "missing_reproduction_protocol",
+      "expected_cgt_diagnostic_focus": {
+        "same_report_pair": "normalized_z",
+        "separating_dimension": "reproduction_protocol",
+        "strict_reconstructs_report_path": false
+      },
+      "expected_closed_deficiency_codes": [
+        "missing_reproduction_protocol"
+      ],
+      "expected_status": "partial",
+      "id": "missing_reproduction_protocol",
+      "report_signature": "normalized_z"
+    },
+    {
+      "category": "strict_reproduction_protocol",
+      "expected_cgt_diagnostic_focus": {
+        "same_report_pair": "normalized_z",
+        "separating_dimension": "reproduction_protocol",
+        "strict_reconstructs_report_path": true
+      },
+      "expected_closed_deficiency_codes": [],
+      "expected_status": "reproducibly_available",
+      "id": "strict_reproduction_protocol",
+      "report_signature": "normalized_z"
+    },
+    {
+      "category": "same_report_different_continuation",
+      "expected_cgt_diagnostic_focus": {
+        "residual_refinement_count": 0,
+        "residual_repair_count": 0,
+        "residual_test_count": 1,
+        "same_closed_profile_as_pair": true,
+        "same_report_pair": "same_report_0.90",
+        "separating_dimension": "continuation"
+      },
+      "expected_closed_deficiency_codes": [],
+      "expected_status": "continuation_sensitive",
+      "id": "same_report_continuation_low",
+      "report_signature": "same_report_0.90"
+    },
+    {
+      "category": "same_report_different_continuation",
+      "expected_cgt_diagnostic_focus": {
+        "residual_refinement_count": 2,
+        "residual_repair_count": 2,
+        "residual_test_count": 3,
+        "same_closed_profile_as_pair": true,
+        "same_report_pair": "same_report_0.90",
+        "separating_dimension": "continuation"
+      },
+      "expected_closed_deficiency_codes": [],
+      "expected_status": "continuation_sensitive",
+      "id": "same_report_continuation_high",
+      "report_signature": "same_report_0.90"
+    },
+    {
+      "category": "marker_sensitive_omission",
+      "expected_cgt_diagnostic_focus": {
+        "marker_policy_declared": false,
+        "preserves_markers": false,
+        "same_report_pair": "marker_omitted_report",
+        "separating_dimension": "marker",
+        "tracks_unresolved": false,
+        "unresolved_marker_count": 0
+      },
+      "expected_closed_deficiency_codes": [
+        "marker_sensitive_missing_marker_policy",
+        "missing_marker_policy",
+        "report_only_insufficiency_risk"
+      ],
+      "expected_status": "blocked",
+      "id": "marker_sensitive_omission",
+      "report_signature": "marker_omitted_report"
+    },
+    {
+      "category": "marker_sensitive_preserved",
+      "expected_cgt_diagnostic_focus": {
+        "marker_policy_declared": true,
+        "preserves_markers": true,
+        "same_report_pair": "marker_omitted_report",
+        "separating_dimension": "marker",
+        "tracks_unresolved": true,
+        "unresolved_marker_count": 1
+      },
+      "expected_closed_deficiency_codes": [
+        "report_only_insufficiency_risk"
+      ],
+      "expected_status": "well_typed",
+      "id": "marker_sensitive_preserved",
+      "report_signature": "marker_omitted_report"
+    },
+    {
+      "category": "direct_selector_degeneracy",
+      "expected_cgt_diagnostic_focus": {
+        "construction_kind": "direct_selector",
+        "direct_selector": true,
+        "same_report_pair": "direct_target_report",
+        "separating_dimension": "history"
+      },
+      "expected_closed_deficiency_codes": [
+        "direct_selector_degeneracy_risk"
+      ],
+      "expected_status": "well_typed",
+      "id": "direct_selector_degeneracy",
+      "report_signature": "direct_target_report"
+    },
+    {
+      "category": "structured_history_control",
+      "expected_cgt_diagnostic_focus": {
+        "construction_kind": "structured",
+        "direct_selector": false,
+        "same_report_pair": "direct_target_report",
+        "separating_dimension": "history"
+      },
+      "expected_closed_deficiency_codes": [],
+      "expected_status": "reproducibly_available",
+      "id": "structured_history_control",
+      "report_signature": "direct_target_report"
+    },
+    {
+      "category": "dependency_closure_cascade",
+      "expected_closed_deficiency_codes": [
+        "missing_description",
+        "missing_expected_report",
+        "missing_failure_predicate",
+        "missing_normalizer",
+        "missing_observation",
+        "missing_projection",
+        "missing_provenance",
+        "missing_reproduction_protocol",
+        "missing_verifier"
+      ],
+      "expected_status": "unformed",
+      "id": "dependency_closure_cascade",
+      "report_signature": "cascade_no_projection"
+    },
+    {
+      "category": "finite_run_family_may_must_variation",
+      "expected_closed_deficiency_codes": [
+        "missing_reproduction_protocol"
+      ],
+      "expected_run_modes": {
+        "counterexample_run_ids": [
+          "run_missing_protocol"
+        ],
+        "may_available": true,
+        "must_available": false,
+        "satisfying_run_ids": [
+          "run_with_protocol"
+        ]
+      },
+      "expected_status": "partial",
+      "id": "finite_run_family_may_must",
+      "report_signature": "finite_run_family"
+    }
+  ],
+  "rate_confidence_intervals": {
+    "cgt_separation_rate": {
+      "confidence_level": 0.95,
+      "high": 0.6023646356164858,
+      "low": 0.0,
+      "rate": 0.0,
+      "successes": 0,
+      "trials": 4
+    },
+    "closed_profile_separation_rate": {
+      "confidence_level": 0.95,
+      "high": 0.9936905367902901,
+      "low": 0.1941204496832434,
+      "rate": 0.75,
+      "successes": 3,
+      "trials": 4
+    },
+    "diagnostic_signature_agreement_rate": {
+      "confidence_level": 0.95,
+      "high": 0.05133379715102378,
+      "low": 0.0,
+      "rate": 0.0,
+      "successes": 0,
+      "trials": 70
+    },
+    "parse_rate": {
+      "confidence_level": 0.95,
+      "high": 1.0,
+      "low": 0.9486662028489762,
+      "rate": 1.0,
+      "successes": 70,
+      "trials": 70
+    },
+    "report_only_collapse_rate": {
+      "confidence_level": 0.95,
+      "high": 1.0,
+      "low": 0.3976353643835142,
+      "rate": 1.0,
+      "successes": 4,
+      "trials": 4
+    },
+    "status_agreement_rate": {
+      "confidence_level": 0.95,
+      "high": 0.32868514527895115,
+      "low": 0.12518357149224696,
+      "rate": 0.21428571428571427,
+      "successes": 15,
+      "trials": 70
+    }
+  },
+  "raw_outputs_published": false,
+  "report_only_collapse_rate": 1.0,
+  "scenario_count": 14,
+  "stream": false,
+  "think": false
+}

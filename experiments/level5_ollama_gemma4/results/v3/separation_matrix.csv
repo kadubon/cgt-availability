@@ -1,0 +1,9 @@
+mode,arm_id,report_signature,row_count,report_only_collapsed,closed_profile_separated,cgt_separated,closed_profile_signature_count,cgt_signature_count
+gold_deterministic,gold,continuation_diag_pair,2,True,True,True,2,2
+gold_deterministic,gold,direct_selector_control_pair,2,True,True,True,2,2
+gold_deterministic,gold,direct_target_report,2,True,True,True,2,2
+gold_deterministic,gold,legacy_protocol_pair,2,True,False,True,1,2
+gold_deterministic,gold,marker_omitted_report,2,True,True,True,2,2
+gold_deterministic,gold,marker_state_pair,2,True,False,True,1,2
+gold_deterministic,gold,normalized_z,2,True,True,True,2,2
+gold_deterministic,gold,same_report_0.90,2,True,False,True,1,2

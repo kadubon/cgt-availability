@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/kadubon/cgt-availability/schemas/repair-candidate-patch.schema.json",
+  "title": "CGT Availability RepairCandidatePatch",
+  "type": "object",
+  "required": ["candidate_id", "patch"],
+  "properties": {
+    "candidate_id": {
+      "type": "string"
+    },
+    "patch": {
+      "type": "object",
+      "required": ["set_fields", "metadata_updates"],
+      "properties": {
+        "set_fields": {
+          "type": "object"
+        },
+        "metadata_updates": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,26 @@
+{
+  "arms": [
+    "minimal_text",
+    "report_only",
+    "schema_guided_dossier",
+    "schema_guided_component_slots"
+  ],
+  "endpoint": "http://localhost:11434/api/chat",
+  "experiment_id": "level5_ollama_gemma4_v4_finite_theory",
+  "format": "json",
+  "max_cases": null,
+  "model": "gemma4:e4b",
+  "pipeline": "research",
+  "prompt_version": "2026-05-18.level5.synthetic.v4",
+  "seed_list": [
+    101,
+    102,
+    103,
+    104,
+    105
+  ],
+  "stream": false,
+  "temperature": 0.0,
+  "think": false,
+  "timeout_seconds": 120.0
+}

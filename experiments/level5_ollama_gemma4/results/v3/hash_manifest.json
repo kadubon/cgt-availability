@@ -1,0 +1,16 @@
+{
+  "config_hash": "06909216491025e0dc1835ca3c1d29516ff4cc0d5b8ce386bb97fa72680b0a6c",
+  "gold_evaluation_hash": "cc58891b56aa36a726f1c373f0fffd789b0b34bae675accac9c62396312b6aee",
+  "public_artifact_hashes": {
+    "component_coverage.csv": "ad04868fed5f573eb1ae87f6bbd5ab6a72dfa5b420bd71a1f48db968d8b29e70",
+    "diagnostic_signatures.json": "324c7617620fc6180f46f0df03e617f460298c7162ed22927be1d9b1678cec43",
+    "metrics.csv": "8551056cf56c6fd2fef3cff4c086ebd27657b9bb59a9502a22b2e864ba6379c4",
+    "metrics_summary.json": "8da0ddac2bc0ab60ae4c6efd4809bc0d3b363f9fc1540bd1e9515e2e21ef1320",
+    "report.md": "10f6a6896c07efad7d03dfccf7fd7d122374ae56a942b06df3714cd0a4bdb770",
+    "separation_matrix.csv": "00deef9c89713e61603990712e78c20592cfca4b32b668e02080f34a2e5c0e67",
+    "separation_rates.png": "1fc668d4be248c1c82c0ab6e76d14389dc0a109e4e7115c4b45327012c1c407e",
+    "summary.json": "c3d1db76785ad1e5386353459753dc03e6d837815655e9b996529ec93e8d62c2"
+  },
+  "raw_record_hashes": [],
+  "scenario_catalog_hash": "939d7c6ac33dd8ff89ca0d2cde18a423e709539aa3024ef7dac5cebbb8dc832b"
+}

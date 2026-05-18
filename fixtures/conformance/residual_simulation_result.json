@@ -1,0 +1,8 @@
+{
+  "source": "l0",
+  "target": "r0",
+  "matched": false,
+  "missing": ["probe"],
+  "depth": 1,
+  "bounded": true
+}

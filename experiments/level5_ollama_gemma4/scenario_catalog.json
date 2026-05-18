@@ -1,0 +1,1341 @@
+{
+  "scenario_version": "2026-05-18.synthetic.v1",
+  "private_data_used": false,
+  "description": "Synthetic, non-private scenarios for finite CGT availability extraction and deterministic diagnosis.",
+  "scenarios": [
+    {
+      "id": "vague_ai_claim",
+      "category": "vague_ai_claim",
+      "statement": "This AI is smarter than humans.",
+      "report_signature": "no_declared_report",
+      "expected_status": "unformed",
+      "expected_closed_deficiency_codes": [
+        "missing_comparison_regime",
+        "missing_description",
+        "missing_expected_report",
+        "missing_failure_predicate",
+        "missing_frame",
+        "missing_normalizer",
+        "missing_observation",
+        "missing_projection",
+        "missing_provenance",
+        "missing_reproduction_protocol",
+        "missing_system",
+        "missing_verifier"
+      ],
+      "gold_claim_package": {
+        "claim_id": "vague_ai_claim",
+        "statement": "This AI is smarter than humans.",
+        "metadata": {
+          "comparison_required": true
+        }
+      }
+    },
+    {
+      "id": "benchmark_claim",
+      "category": "benchmark_claim",
+      "statement": "Model M obtains 90 percent accuracy on benchmark B under split S.",
+      "report_signature": "accuracy_0.90",
+      "expected_status": "well_typed",
+      "expected_closed_deficiency_codes": [
+        "report_only_insufficiency_risk"
+      ],
+      "gold_claim_package": {
+        "claim_id": "benchmark_claim",
+        "statement": "Model M obtains 90 percent accuracy on benchmark B under split S.",
+        "frame": {
+          "id": "frame.benchmark"
+        },
+        "comparison_regime": {
+          "id": "comparison.benchmark",
+          "dimensions": [
+            "accuracy"
+          ],
+          "relation": ">="
+        },
+        "system": {
+          "id": "system.model_m"
+        },
+        "projection": {
+          "id": "projection.accuracy",
+          "metadata": {
+            "omits_dimensions": [
+              "calibration",
+              "variance",
+              "leakage"
+            ]
+          }
+        },
+        "observation": {
+          "id": "observation.split_s"
+        },
+        "description": {
+          "id": "description.accuracy_count"
+        },
+        "normalizer": {
+          "id": "normalizer.percent"
+        },
+        "report_path": {
+          "id": "path.accuracy",
+          "projection": {
+            "id": "path.projection",
+            "domain": "effect_profile",
+            "codomain": "selected_effects"
+          },
+          "observation": {
+            "id": "path.observation",
+            "domain": "selected_effects",
+            "codomain": "observed_counts"
+          },
+          "description_map": {
+            "id": "path.description",
+            "domain": "observed_counts",
+            "codomain": "accuracy_description"
+          },
+          "normalizer": {
+            "id": "path.normalizer",
+            "domain": "accuracy_description",
+            "codomain": "accuracy_report"
+          },
+          "verifier_domain": [
+            "accuracy_report"
+          ],
+          "failure_domain": [
+            "accuracy_report"
+          ]
+        },
+        "expected_report": {
+          "id": "expected.accuracy90",
+          "metadata": {
+            "report_domain": "accuracy_report"
+          }
+        },
+        "verifier": {
+          "id": "verifier.threshold",
+          "rule": "accuracy >= 0.90",
+          "metadata": {
+            "report_domain": "accuracy_report"
+          }
+        },
+        "failure_predicate": {
+          "id": "failure.below90",
+          "rule": "accuracy < 0.90",
+          "metadata": {
+            "report_domain": "accuracy_report"
+          }
+        },
+        "reproduction_protocol": {
+          "id": "protocol.benchmark",
+          "reconstructs": [
+            "projection",
+            "observation",
+            "description",
+            "normalizer",
+            "verifier"
+          ],
+          "equivalence": "same split and metric"
+        },
+        "provenance": [
+          {
+            "id": "provenance.synthetic_benchmark",
+            "uri": "synthetic://benchmark-b"
+          }
+        ],
+        "metadata": {
+          "comparison_required": true,
+          "diagnostics_requested": [
+            "calibration",
+            "variance",
+            "leakage"
+          ]
+        }
+      }
+    },
+    {
+      "id": "unobservable_claim",
+      "category": "unobservable_claim",
+      "statement": "An undetectable force causes every observation while remaining compatible with all possible observations.",
+      "report_signature": "no_observable_report",
+      "expected_status": "unformed",
+      "expected_closed_deficiency_codes": [
+        "missing_description",
+        "missing_expected_report",
+        "missing_failure_predicate",
+        "missing_normalizer",
+        "missing_observation",
+        "missing_projection",
+        "missing_provenance",
+        "missing_reproduction_protocol",
+        "missing_verifier"
+      ],
+      "gold_claim_package": {
+        "claim_id": "unobservable_claim",
+        "statement": "An undetectable force causes every observation while remaining compatible with all possible observations.",
+        "frame": {
+          "id": "frame.force_claim"
+        },
+        "system": {
+          "id": "system.force_claim"
+        }
+      }
+    },
+    {
+      "id": "verifier_failure_incoherence",
+      "category": "verifier_failure_incoherence",
+      "statement": "Report R is accepted, but the declared failure predicate also fires on R.",
+      "report_signature": "report_r_accept_and_fail",
+      "expected_status": "blocked",
+      "expected_closed_deficiency_codes": [
+        "verifier_failure_incoherent"
+      ],
+      "gold_claim_package": {
+        "claim_id": "verifier_failure_incoherence",
+        "statement": "Report R is accepted, but the declared failure predicate also fires on R.",
+        "frame": {
+          "id": "frame.incoherence"
+        },
+        "system": {
+          "id": "system.incoherence"
+        },
+        "projection": {
+          "id": "projection.r"
+        },
+        "observation": {
+          "id": "observation.r"
+        },
+        "description": {
+          "id": "description.r"
+        },
+        "normalizer": {
+          "id": "normalizer.r"
+        },
+        "report_path": {
+          "id": "path.r",
+          "projection": {
+            "id": "path.projection",
+            "domain": "effect_profile",
+            "codomain": "selected_effects"
+          },
+          "observation": {
+            "id": "path.observation",
+            "domain": "selected_effects",
+            "codomain": "observed_r"
+          },
+          "description_map": {
+            "id": "path.description",
+            "domain": "observed_r",
+            "codomain": "described_r"
+          },
+          "normalizer": {
+            "id": "path.normalizer",
+            "domain": "described_r",
+            "codomain": "report_r"
+          },
+          "verifier_domain": [
+            "report_r"
+          ],
+          "failure_domain": [
+            "report_r"
+          ]
+        },
+        "expected_report": {
+          "id": "expected.r",
+          "metadata": {
+            "report_domain": "report_r"
+          }
+        },
+        "verifier": {
+          "id": "verifier.accept_only",
+          "verdict_domain": [
+            "pass",
+            "inconclusive"
+          ],
+          "metadata": {
+            "report_domain": "report_r"
+          }
+        },
+        "failure_predicate": {
+          "id": "failure.fires",
+          "implies_verifier_fail": true,
+          "metadata": {
+            "report_domain": "report_r"
+          }
+        },
+        "reproduction_protocol": {
+          "id": "protocol.r",
+          "reconstructs": [
+            "projection",
+            "observation",
+            "description",
+            "normalizer",
+            "verifier"
+          ]
+        },
+        "provenance": [
+          {
+            "id": "provenance.synthetic_r",
+            "uri": "synthetic://report-r"
+          }
+        ]
+      }
+    },
+    {
+      "id": "missing_reproduction_protocol",
+      "category": "missing_reproduction_protocol",
+      "statement": "The observed sample has normalized measurement Z, but no replay protocol is declared.",
+      "report_signature": "normalized_z",
+      "expected_status": "partial",
+      "expected_closed_deficiency_codes": [
+        "missing_reproduction_protocol"
+      ],
+      "expected_cgt_diagnostic_focus": {
+        "same_report_pair": "normalized_z",
+        "separating_dimension": "reproduction_protocol",
+        "strict_reconstructs_report_path": false
+      },
+      "gold_claim_package": {
+        "claim_id": "missing_reproduction_protocol",
+        "statement": "The observed sample has normalized measurement Z, but no replay protocol is declared.",
+        "frame": {
+          "id": "frame.z"
+        },
+        "system": {
+          "id": "system.z"
+        },
+        "projection": {
+          "id": "projection.z"
+        },
+        "observation": {
+          "id": "observation.z"
+        },
+        "description": {
+          "id": "description.z"
+        },
+        "normalizer": {
+          "id": "normalizer.z"
+        },
+        "report_path": {
+          "id": "path.z",
+          "projection": {
+            "id": "path.projection",
+            "domain": "effect_profile",
+            "codomain": "selected_effects"
+          },
+          "observation": {
+            "id": "path.observation",
+            "domain": "selected_effects",
+            "codomain": "observed_z"
+          },
+          "description_map": {
+            "id": "path.description",
+            "domain": "observed_z",
+            "codomain": "described_z"
+          },
+          "normalizer": {
+            "id": "path.normalizer",
+            "domain": "described_z",
+            "codomain": "report_z"
+          },
+          "verifier_domain": [
+            "report_z"
+          ],
+          "failure_domain": [
+            "report_z"
+          ]
+        },
+        "expected_report": {
+          "id": "expected.z",
+          "metadata": {
+            "report_domain": "report_z"
+          }
+        },
+        "verifier": {
+          "id": "verifier.z",
+          "metadata": {
+            "report_domain": "report_z"
+          }
+        },
+        "failure_predicate": {
+          "id": "failure.z",
+          "metadata": {
+            "report_domain": "report_z"
+          }
+        },
+        "provenance": [
+          {
+            "id": "provenance.synthetic_z",
+            "uri": "synthetic://z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "strict_reproduction_protocol",
+      "category": "strict_reproduction_protocol",
+      "statement": "The same normalized measurement Z includes an explicit protocol that reconstructs projection, observation, description, normalization, and verification.",
+      "report_signature": "normalized_z",
+      "expected_status": "reproducibly_available",
+      "expected_closed_deficiency_codes": [],
+      "expected_cgt_diagnostic_focus": {
+        "same_report_pair": "normalized_z",
+        "separating_dimension": "reproduction_protocol",
+        "strict_reconstructs_report_path": true
+      },
+      "gold_claim_package": {
+        "claim_id": "strict_reproduction_protocol",
+        "statement": "The same normalized measurement Z includes an explicit protocol that reconstructs projection, observation, description, normalization, and verification.",
+        "frame": {
+          "id": "frame.z"
+        },
+        "system": {
+          "id": "system.z"
+        },
+        "projection": {
+          "id": "projection.z"
+        },
+        "observation": {
+          "id": "observation.z"
+        },
+        "description": {
+          "id": "description.z"
+        },
+        "normalizer": {
+          "id": "normalizer.z"
+        },
+        "report_path": {
+          "id": "path.z",
+          "projection": {
+            "id": "path.projection",
+            "domain": "effect_profile",
+            "codomain": "selected_effects"
+          },
+          "observation": {
+            "id": "path.observation",
+            "domain": "selected_effects",
+            "codomain": "observed_z"
+          },
+          "description_map": {
+            "id": "path.description",
+            "domain": "observed_z",
+            "codomain": "described_z"
+          },
+          "normalizer": {
+            "id": "path.normalizer",
+            "domain": "described_z",
+            "codomain": "report_z"
+          },
+          "verifier_domain": [
+            "report_z"
+          ],
+          "failure_domain": [
+            "report_z"
+          ]
+        },
+        "expected_report": {
+          "id": "expected.z",
+          "metadata": {
+            "report_domain": "report_z"
+          }
+        },
+        "verifier": {
+          "id": "verifier.z",
+          "metadata": {
+            "report_domain": "report_z"
+          }
+        },
+        "failure_predicate": {
+          "id": "failure.z",
+          "metadata": {
+            "report_domain": "report_z"
+          }
+        },
+        "reproduction_protocol": {
+          "id": "protocol.z",
+          "reconstructs": [
+            "projection",
+            "observation",
+            "description",
+            "normalizer",
+            "verifier"
+          ],
+          "equivalence": "same synthetic Z protocol"
+        },
+        "provenance": [
+          {
+            "id": "provenance.synthetic_z",
+            "uri": "synthetic://z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "same_report_continuation_low",
+      "category": "same_report_different_continuation",
+      "statement": "Run A reports normalized value 0.90 and leaves one follow-up test.",
+      "report_signature": "same_report_0.90",
+      "expected_status": "continuation_sensitive",
+      "expected_closed_deficiency_codes": [],
+      "expected_continuation_readout": {
+        "follow_up_tests": 1,
+        "refinement_paths": 0,
+        "repair_paths": 0
+      },
+      "expected_cgt_diagnostic_focus": {
+        "same_report_pair": "same_report_0.90",
+        "same_closed_profile_as_pair": true,
+        "separating_dimension": "continuation",
+        "residual_test_count": 1,
+        "residual_refinement_count": 0,
+        "residual_repair_count": 0
+      },
+      "gold_claim_package": {
+        "claim_id": "same_report_continuation_low",
+        "statement": "Run A reports normalized value 0.90 and leaves one follow-up test.",
+        "frame": {
+          "id": "frame.cont"
+        },
+        "system": {
+          "id": "system.cont.a"
+        },
+        "projection": {
+          "id": "projection.cont"
+        },
+        "observation": {
+          "id": "observation.cont"
+        },
+        "description": {
+          "id": "description.cont"
+        },
+        "normalizer": {
+          "id": "normalizer.cont"
+        },
+        "report_path": {
+          "id": "path.cont",
+          "projection": {
+            "id": "path.projection",
+            "domain": "effect_profile",
+            "codomain": "selected_effects"
+          },
+          "observation": {
+            "id": "path.observation",
+            "domain": "selected_effects",
+            "codomain": "observed_cont"
+          },
+          "description_map": {
+            "id": "path.description",
+            "domain": "observed_cont",
+            "codomain": "described_cont"
+          },
+          "normalizer": {
+            "id": "path.normalizer",
+            "domain": "described_cont",
+            "codomain": "report_cont"
+          },
+          "verifier_domain": [
+            "report_cont"
+          ],
+          "failure_domain": [
+            "report_cont"
+          ]
+        },
+        "expected_report": {
+          "id": "expected.cont",
+          "metadata": {
+            "report_domain": "report_cont"
+          }
+        },
+        "verifier": {
+          "id": "verifier.cont",
+          "metadata": {
+            "report_domain": "report_cont"
+          }
+        },
+        "failure_predicate": {
+          "id": "failure.cont",
+          "metadata": {
+            "report_domain": "report_cont"
+          }
+        },
+        "reproduction_protocol": {
+          "id": "protocol.cont",
+          "reconstructs": [
+            "projection",
+            "observation",
+            "description",
+            "normalizer",
+            "verifier"
+          ]
+        },
+        "continuation": {
+          "id": "continuation.low",
+          "diagnostic_name": "residual_follow_up_capacity",
+          "follow_up_tests": [
+            "replicate-on-split-b"
+          ]
+        },
+        "provenance": [
+          {
+            "id": "provenance.synthetic_cont_a",
+            "uri": "synthetic://continuation-a"
+          }
+        ],
+        "metadata": {
+          "continuation_sensitive": true,
+          "diagnostics_requested": [
+            "continuation"
+          ]
+        }
+      }
+    },
+    {
+      "id": "same_report_continuation_high",
+      "category": "same_report_different_continuation",
+      "statement": "Run B reports normalized value 0.90 and leaves tests, refinements, and repairs.",
+      "report_signature": "same_report_0.90",
+      "expected_status": "continuation_sensitive",
+      "expected_closed_deficiency_codes": [],
+      "expected_continuation_readout": {
+        "follow_up_tests": 3,
+        "refinement_paths": 2,
+        "repair_paths": 2
+      },
+      "expected_cgt_diagnostic_focus": {
+        "same_report_pair": "same_report_0.90",
+        "same_closed_profile_as_pair": true,
+        "separating_dimension": "continuation",
+        "residual_test_count": 3,
+        "residual_refinement_count": 2,
+        "residual_repair_count": 2
+      },
+      "gold_claim_package": {
+        "claim_id": "same_report_continuation_high",
+        "statement": "Run B reports normalized value 0.90 and leaves tests, refinements, and repairs.",
+        "frame": {
+          "id": "frame.cont"
+        },
+        "system": {
+          "id": "system.cont.b"
+        },
+        "projection": {
+          "id": "projection.cont"
+        },
+        "observation": {
+          "id": "observation.cont"
+        },
+        "description": {
+          "id": "description.cont"
+        },
+        "normalizer": {
+          "id": "normalizer.cont"
+        },
+        "report_path": {
+          "id": "path.cont",
+          "projection": {
+            "id": "path.projection",
+            "domain": "effect_profile",
+            "codomain": "selected_effects"
+          },
+          "observation": {
+            "id": "path.observation",
+            "domain": "selected_effects",
+            "codomain": "observed_cont"
+          },
+          "description_map": {
+            "id": "path.description",
+            "domain": "observed_cont",
+            "codomain": "described_cont"
+          },
+          "normalizer": {
+            "id": "path.normalizer",
+            "domain": "described_cont",
+            "codomain": "report_cont"
+          },
+          "verifier_domain": [
+            "report_cont"
+          ],
+          "failure_domain": [
+            "report_cont"
+          ]
+        },
+        "expected_report": {
+          "id": "expected.cont",
+          "metadata": {
+            "report_domain": "report_cont"
+          }
+        },
+        "verifier": {
+          "id": "verifier.cont",
+          "metadata": {
+            "report_domain": "report_cont"
+          }
+        },
+        "failure_predicate": {
+          "id": "failure.cont",
+          "metadata": {
+            "report_domain": "report_cont"
+          }
+        },
+        "reproduction_protocol": {
+          "id": "protocol.cont",
+          "reconstructs": [
+            "projection",
+            "observation",
+            "description",
+            "normalizer",
+            "verifier"
+          ]
+        },
+        "continuation": {
+          "id": "continuation.high",
+          "diagnostic_name": "residual_follow_up_capacity",
+          "follow_up_tests": [
+            "replicate-on-split-b",
+            "ablation-probe",
+            "leakage-audit"
+          ],
+          "refinement_paths": [
+            "calibration-refinement",
+            "variance-refinement"
+          ],
+          "repair_paths": [
+            "data-leakage-repair",
+            "metric-definition-repair"
+          ]
+        },
+        "provenance": [
+          {
+            "id": "provenance.synthetic_cont_b",
+            "uri": "synthetic://continuation-b"
+          }
+        ],
+        "metadata": {
+          "continuation_sensitive": true,
+          "diagnostics_requested": [
+            "continuation"
+          ]
+        }
+      }
+    },
+    {
+      "id": "marker_sensitive_omission",
+      "category": "marker_sensitive_omission",
+      "statement": "The report hides unresolved inconsistency markers while requesting marker-sensitive diagnosis.",
+      "report_signature": "marker_omitted_report",
+      "expected_status": "blocked",
+      "expected_closed_deficiency_codes": [
+        "marker_sensitive_missing_marker_policy",
+        "missing_marker_policy",
+        "report_only_insufficiency_risk"
+      ],
+      "expected_cgt_diagnostic_focus": {
+        "same_report_pair": "marker_omitted_report",
+        "separating_dimension": "marker",
+        "marker_policy_declared": false,
+        "tracks_unresolved": false,
+        "preserves_markers": false,
+        "unresolved_marker_count": 0
+      },
+      "gold_claim_package": {
+        "claim_id": "marker_sensitive_omission",
+        "statement": "The report hides unresolved inconsistency markers while requesting marker-sensitive diagnosis.",
+        "frame": {
+          "id": "frame.marker"
+        },
+        "system": {
+          "id": "system.marker"
+        },
+        "projection": {
+          "id": "projection.marker",
+          "metadata": {
+            "omits_dimensions": [
+              "marker"
+            ]
+          }
+        },
+        "observation": {
+          "id": "observation.marker"
+        },
+        "description": {
+          "id": "description.marker"
+        },
+        "normalizer": {
+          "id": "normalizer.marker"
+        },
+        "report_path": {
+          "id": "path.marker",
+          "projection": {
+            "id": "path.projection",
+            "domain": "effect_profile",
+            "codomain": "selected_effects"
+          },
+          "observation": {
+            "id": "path.observation",
+            "domain": "selected_effects",
+            "codomain": "observed_marker"
+          },
+          "description_map": {
+            "id": "path.description",
+            "domain": "observed_marker",
+            "codomain": "described_marker"
+          },
+          "normalizer": {
+            "id": "path.normalizer",
+            "domain": "described_marker",
+            "codomain": "report_marker"
+          },
+          "verifier_domain": [
+            "report_marker"
+          ],
+          "failure_domain": [
+            "report_marker"
+          ]
+        },
+        "expected_report": {
+          "id": "expected.marker",
+          "metadata": {
+            "report_domain": "report_marker"
+          }
+        },
+        "verifier": {
+          "id": "verifier.marker",
+          "metadata": {
+            "report_domain": "report_marker"
+          }
+        },
+        "failure_predicate": {
+          "id": "failure.marker",
+          "metadata": {
+            "report_domain": "report_marker"
+          }
+        },
+        "reproduction_protocol": {
+          "id": "protocol.marker",
+          "reconstructs": [
+            "projection",
+            "observation",
+            "description",
+            "normalizer",
+            "verifier"
+          ]
+        },
+        "provenance": [
+          {
+            "id": "provenance.synthetic_marker",
+            "uri": "synthetic://marker"
+          }
+        ],
+        "metadata": {
+          "marker_sensitive": true,
+          "diagnostics_requested": [
+            "marker"
+          ]
+        }
+      }
+    },
+    {
+      "id": "marker_sensitive_preserved",
+      "category": "marker_sensitive_preserved",
+      "statement": "The same normalized marker report preserves unresolved marker provenance for marker-sensitive diagnosis.",
+      "report_signature": "marker_omitted_report",
+      "expected_status": "well_typed",
+      "expected_closed_deficiency_codes": [
+        "report_only_insufficiency_risk"
+      ],
+      "expected_cgt_diagnostic_focus": {
+        "same_report_pair": "marker_omitted_report",
+        "separating_dimension": "marker",
+        "marker_policy_declared": true,
+        "tracks_unresolved": true,
+        "preserves_markers": true,
+        "unresolved_marker_count": 1
+      },
+      "gold_claim_package": {
+        "claim_id": "marker_sensitive_preserved",
+        "statement": "The same normalized marker report preserves unresolved marker provenance for marker-sensitive diagnosis.",
+        "frame": {
+          "id": "frame.marker"
+        },
+        "system": {
+          "id": "system.marker.preserved"
+        },
+        "projection": {
+          "id": "projection.marker",
+          "metadata": {
+            "omits_dimensions": [
+              "marker"
+            ]
+          }
+        },
+        "observation": {
+          "id": "observation.marker"
+        },
+        "description": {
+          "id": "description.marker"
+        },
+        "normalizer": {
+          "id": "normalizer.marker"
+        },
+        "report_path": {
+          "id": "path.marker",
+          "projection": {
+            "id": "path.projection",
+            "domain": "effect_profile",
+            "codomain": "selected_effects"
+          },
+          "observation": {
+            "id": "path.observation",
+            "domain": "selected_effects",
+            "codomain": "observed_marker"
+          },
+          "description_map": {
+            "id": "path.description",
+            "domain": "observed_marker",
+            "codomain": "described_marker"
+          },
+          "normalizer": {
+            "id": "path.normalizer",
+            "domain": "described_marker",
+            "codomain": "report_marker"
+          },
+          "verifier_domain": [
+            "report_marker"
+          ],
+          "failure_domain": [
+            "report_marker"
+          ]
+        },
+        "expected_report": {
+          "id": "expected.marker",
+          "metadata": {
+            "report_domain": "report_marker"
+          }
+        },
+        "verifier": {
+          "id": "verifier.marker",
+          "metadata": {
+            "report_domain": "report_marker"
+          }
+        },
+        "failure_predicate": {
+          "id": "failure.marker",
+          "metadata": {
+            "report_domain": "report_marker"
+          }
+        },
+        "reproduction_protocol": {
+          "id": "protocol.marker",
+          "reconstructs": [
+            "projection",
+            "observation",
+            "description",
+            "normalizer",
+            "verifier"
+          ]
+        },
+        "marker_policy": {
+          "id": "marker.policy",
+          "tracks_unresolved": true,
+          "marker_provenance": [
+            "synthetic-marker-source"
+          ],
+          "preserves_markers": true
+        },
+        "marker_state": {
+          "id": "marker.state",
+          "unresolved_markers": [
+            "source-disagreement"
+          ],
+          "marker_provenance": [
+            "synthetic-marker-source"
+          ],
+          "preserves_markers": true
+        },
+        "provenance": [
+          {
+            "id": "provenance.synthetic_marker_preserved",
+            "uri": "synthetic://marker-preserved"
+          }
+        ],
+        "metadata": {
+          "marker_sensitive": true,
+          "diagnostics_requested": [
+            "marker"
+          ]
+        }
+      }
+    },
+    {
+      "id": "direct_selector_degeneracy",
+      "category": "direct_selector_degeneracy",
+      "statement": "A selector directly encodes the target report without declared selector-language or history controls.",
+      "report_signature": "direct_target_report",
+      "expected_status": "well_typed",
+      "expected_closed_deficiency_codes": [
+        "direct_selector_degeneracy_risk"
+      ],
+      "expected_cgt_diagnostic_focus": {
+        "same_report_pair": "direct_target_report",
+        "separating_dimension": "history",
+        "construction_kind": "direct_selector",
+        "direct_selector": true
+      },
+      "gold_claim_package": {
+        "claim_id": "direct_selector_degeneracy",
+        "statement": "A selector directly encodes the target report without declared selector-language or history controls.",
+        "frame": {
+          "id": "frame.selector"
+        },
+        "system": {
+          "id": "system.selector"
+        },
+        "projection": {
+          "id": "projection.selector"
+        },
+        "observation": {
+          "id": "observation.selector"
+        },
+        "description": {
+          "id": "description.selector"
+        },
+        "normalizer": {
+          "id": "normalizer.selector"
+        },
+        "report_path": {
+          "id": "path.selector",
+          "projection": {
+            "id": "path.projection",
+            "domain": "effect_profile",
+            "codomain": "selected_effects"
+          },
+          "observation": {
+            "id": "path.observation",
+            "domain": "selected_effects",
+            "codomain": "observed_selector"
+          },
+          "description_map": {
+            "id": "path.description",
+            "domain": "observed_selector",
+            "codomain": "described_selector"
+          },
+          "normalizer": {
+            "id": "path.normalizer",
+            "domain": "described_selector",
+            "codomain": "report_selector"
+          },
+          "verifier_domain": [
+            "report_selector"
+          ],
+          "failure_domain": [
+            "report_selector"
+          ]
+        },
+        "expected_report": {
+          "id": "expected.selector",
+          "metadata": {
+            "report_domain": "report_selector"
+          }
+        },
+        "verifier": {
+          "id": "verifier.selector",
+          "metadata": {
+            "report_domain": "report_selector"
+          }
+        },
+        "failure_predicate": {
+          "id": "failure.selector",
+          "metadata": {
+            "report_domain": "report_selector"
+          }
+        },
+        "reproduction_protocol": {
+          "id": "protocol.selector",
+          "reconstructs": [
+            "projection",
+            "observation",
+            "description",
+            "normalizer",
+            "verifier"
+          ]
+        },
+        "history": {
+          "id": "history.selector",
+          "construction_kind": "direct_selector"
+        },
+        "provenance": [
+          {
+            "id": "provenance.synthetic_selector",
+            "uri": "synthetic://selector"
+          }
+        ]
+      }
+    },
+    {
+      "id": "structured_history_control",
+      "category": "structured_history_control",
+      "statement": "A structured construction produces the same target report with declared history and effect-profile controls.",
+      "report_signature": "direct_target_report",
+      "expected_status": "reproducibly_available",
+      "expected_closed_deficiency_codes": [],
+      "expected_cgt_diagnostic_focus": {
+        "same_report_pair": "direct_target_report",
+        "separating_dimension": "history",
+        "construction_kind": "structured",
+        "direct_selector": false
+      },
+      "gold_claim_package": {
+        "claim_id": "structured_history_control",
+        "statement": "A structured construction produces the same target report with declared history and effect-profile controls.",
+        "frame": {
+          "id": "frame.selector"
+        },
+        "system": {
+          "id": "system.selector.structured"
+        },
+        "projection": {
+          "id": "projection.selector"
+        },
+        "observation": {
+          "id": "observation.selector"
+        },
+        "description": {
+          "id": "description.selector"
+        },
+        "normalizer": {
+          "id": "normalizer.selector"
+        },
+        "report_path": {
+          "id": "path.selector",
+          "projection": {
+            "id": "path.projection",
+            "domain": "effect_profile",
+            "codomain": "selected_effects"
+          },
+          "observation": {
+            "id": "path.observation",
+            "domain": "selected_effects",
+            "codomain": "observed_selector"
+          },
+          "description_map": {
+            "id": "path.description",
+            "domain": "observed_selector",
+            "codomain": "described_selector"
+          },
+          "normalizer": {
+            "id": "path.normalizer",
+            "domain": "described_selector",
+            "codomain": "report_selector"
+          },
+          "verifier_domain": [
+            "report_selector"
+          ],
+          "failure_domain": [
+            "report_selector"
+          ]
+        },
+        "expected_report": {
+          "id": "expected.selector",
+          "metadata": {
+            "report_domain": "report_selector"
+          }
+        },
+        "verifier": {
+          "id": "verifier.selector",
+          "metadata": {
+            "report_domain": "report_selector"
+          }
+        },
+        "failure_predicate": {
+          "id": "failure.selector",
+          "metadata": {
+            "report_domain": "report_selector"
+          }
+        },
+        "reproduction_protocol": {
+          "id": "protocol.selector",
+          "reconstructs": [
+            "projection",
+            "observation",
+            "description",
+            "normalizer",
+            "verifier"
+          ]
+        },
+        "history": {
+          "id": "history.selector.structured",
+          "construction_kind": "structured",
+          "steps": [
+            "declare-grammar",
+            "evaluate-fixed-protocol"
+          ]
+        },
+        "degeneracy_control": {
+          "id": "degeneracy.structured",
+          "controls": [
+            "history",
+            "effect_profile"
+          ],
+          "restricted_selector_language": true
+        },
+        "provenance": [
+          {
+            "id": "provenance.synthetic_selector_structured",
+            "uri": "synthetic://selector-structured"
+          }
+        ]
+      }
+    },
+    {
+      "id": "dependency_closure_cascade",
+      "category": "dependency_closure_cascade",
+      "statement": "A claim declares a system but no selected projection, so observation and downstream report operations are unavailable.",
+      "report_signature": "cascade_no_projection",
+      "expected_status": "unformed",
+      "expected_closed_deficiency_codes": [
+        "missing_description",
+        "missing_expected_report",
+        "missing_failure_predicate",
+        "missing_normalizer",
+        "missing_observation",
+        "missing_projection",
+        "missing_provenance",
+        "missing_reproduction_protocol",
+        "missing_verifier"
+      ],
+      "gold_claim_package": {
+        "claim_id": "dependency_closure_cascade",
+        "statement": "A claim declares a system but no selected projection, so observation and downstream report operations are unavailable.",
+        "frame": {
+          "id": "frame.cascade"
+        },
+        "system": {
+          "id": "system.cascade"
+        }
+      }
+    },
+    {
+      "id": "finite_run_family_may_must",
+      "category": "finite_run_family_may_must_variation",
+      "statement": "A finite run family has one reproducibly available run and one run missing reproduction data.",
+      "report_signature": "finite_run_family",
+      "expected_status": "partial",
+      "expected_closed_deficiency_codes": [
+        "missing_reproduction_protocol"
+      ],
+      "expected_run_modes": {
+        "may_available": true,
+        "must_available": false,
+        "satisfying_run_ids": [
+          "run_with_protocol"
+        ],
+        "counterexample_run_ids": [
+          "run_missing_protocol"
+        ]
+      },
+      "run_family": {
+        "predicate": "reproducibly_available",
+        "runs": [
+          {
+            "run_id": "run_with_protocol",
+            "package_patch": {
+              "claim_id": "finite_run_family_may_must.run_with_protocol",
+              "reproduction_protocol": {
+                "id": "protocol.run",
+                "reconstructs": [
+                  "projection",
+                  "observation",
+                  "description",
+                  "normalizer",
+                  "verifier"
+                ]
+              }
+            }
+          },
+          {
+            "run_id": "run_missing_protocol",
+            "package_patch": {
+              "claim_id": "finite_run_family_may_must.run_missing_protocol"
+            }
+          }
+        ]
+      },
+      "gold_claim_package": {
+        "claim_id": "finite_run_family_may_must",
+        "statement": "A finite run family has one reproducibly available run and one run missing reproduction data.",
+        "frame": {
+          "id": "frame.run_family"
+        },
+        "system": {
+          "id": "system.run_family"
+        },
+        "projection": {
+          "id": "projection.run_family"
+        },
+        "observation": {
+          "id": "observation.run_family"
+        },
+        "description": {
+          "id": "description.run_family"
+        },
+        "normalizer": {
+          "id": "normalizer.run_family"
+        },
+        "report_path": {
+          "id": "path.run_family",
+          "projection": {
+            "id": "path.projection",
+            "domain": "effect_profile",
+            "codomain": "selected_effects"
+          },
+          "observation": {
+            "id": "path.observation",
+            "domain": "selected_effects",
+            "codomain": "observed_run"
+          },
+          "description_map": {
+            "id": "path.description",
+            "domain": "observed_run",
+            "codomain": "described_run"
+          },
+          "normalizer": {
+            "id": "path.normalizer",
+            "domain": "described_run",
+            "codomain": "report_run"
+          },
+          "verifier_domain": [
+            "report_run"
+          ],
+          "failure_domain": [
+            "report_run"
+          ]
+        },
+        "expected_report": {
+          "id": "expected.run",
+          "metadata": {
+            "report_domain": "report_run"
+          }
+        },
+        "verifier": {
+          "id": "verifier.run",
+          "metadata": {
+            "report_domain": "report_run"
+          }
+        },
+        "failure_predicate": {
+          "id": "failure.run",
+          "metadata": {
+            "report_domain": "report_run"
+          }
+        },
+        "provenance": [
+          {
+            "id": "provenance.synthetic_run",
+            "uri": "synthetic://run-family"
+          }
+        ],
+        "metadata": {
+          "run_family_mode": "may_must"
+        }
+      }
+    }
+  ]
+}

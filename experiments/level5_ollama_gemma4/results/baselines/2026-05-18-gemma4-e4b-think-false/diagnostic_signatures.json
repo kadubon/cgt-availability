@@ -1,0 +1,1332 @@
+{
+  "raw_outputs_published": false,
+  "scenario_signatures": [
+    {
+      "cgt_diagnostic_signature": {
+        "closed_profile": {
+          "closed_deficiency_codes": [
+            "missing_comparison_regime",
+            "missing_description",
+            "missing_expected_report",
+            "missing_failure_predicate",
+            "missing_frame",
+            "missing_normalizer",
+            "missing_observation",
+            "missing_projection",
+            "missing_provenance",
+            "missing_reproduction_protocol",
+            "missing_system",
+            "missing_verifier"
+          ],
+          "status": "unformed"
+        },
+        "continuation": {
+          "diagnostic_name": null,
+          "has_residual_scientific_space": false,
+          "residual_refinement_count": 0,
+          "residual_repair_count": 0,
+          "residual_test_count": 0
+        },
+        "history": {
+          "construction_kind": null,
+          "direct_selector": false
+        },
+        "marker": {
+          "marker_provenance_count": 0,
+          "policy_declared": false,
+          "preserves_markers": false,
+          "tracks_unresolved": false,
+          "unresolved_marker_count": 0
+        },
+        "protocol": {
+          "legacy_reconstructs_report_path": false,
+          "reconstructs": [],
+          "strict_reconstructs_report_path": false
+        },
+        "report_only": {
+          "report_signature": "no_declared_report",
+          "verifier_verdict": "unknown"
+        },
+        "requested_dimensions": []
+      },
+      "cgt_diagnostic_signature_hash": "40afd3f8b71bb6e5940ad7657649b02e4c149029a156efe82b0b7d85962f84db",
+      "closed_profile_signature": {
+        "closed_deficiency_codes": [
+          "missing_comparison_regime",
+          "missing_description",
+          "missing_expected_report",
+          "missing_failure_predicate",
+          "missing_frame",
+          "missing_normalizer",
+          "missing_observation",
+          "missing_projection",
+          "missing_provenance",
+          "missing_reproduction_protocol",
+          "missing_system",
+          "missing_verifier"
+        ],
+        "status": "unformed"
+      },
+      "predicted_extraction_signatures": [
+        {
+          "cgt_diagnostic_signature_hash": "242cfd529338a94fc9922670df2f6b544d6163d4d0179d33ade7b2c330c4d7dd",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "40afd3f8b71bb6e5940ad7657649b02e4c149029a156efe82b0b7d85962f84db",
+          "parse_valid": true,
+          "seed": 101
+        },
+        {
+          "cgt_diagnostic_signature_hash": "242cfd529338a94fc9922670df2f6b544d6163d4d0179d33ade7b2c330c4d7dd",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "40afd3f8b71bb6e5940ad7657649b02e4c149029a156efe82b0b7d85962f84db",
+          "parse_valid": true,
+          "seed": 102
+        },
+        {
+          "cgt_diagnostic_signature_hash": "242cfd529338a94fc9922670df2f6b544d6163d4d0179d33ade7b2c330c4d7dd",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "40afd3f8b71bb6e5940ad7657649b02e4c149029a156efe82b0b7d85962f84db",
+          "parse_valid": true,
+          "seed": 103
+        },
+        {
+          "cgt_diagnostic_signature_hash": "242cfd529338a94fc9922670df2f6b544d6163d4d0179d33ade7b2c330c4d7dd",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "40afd3f8b71bb6e5940ad7657649b02e4c149029a156efe82b0b7d85962f84db",
+          "parse_valid": true,
+          "seed": 104
+        },
+        {
+          "cgt_diagnostic_signature_hash": "242cfd529338a94fc9922670df2f6b544d6163d4d0179d33ade7b2c330c4d7dd",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "40afd3f8b71bb6e5940ad7657649b02e4c149029a156efe82b0b7d85962f84db",
+          "parse_valid": true,
+          "seed": 105
+        }
+      ],
+      "report_only_signature": {
+        "report_signature": "no_declared_report",
+        "verifier_verdict": "unknown"
+      },
+      "scenario_id": "vague_ai_claim"
+    },
+    {
+      "cgt_diagnostic_signature": {
+        "closed_profile": {
+          "closed_deficiency_codes": [
+            "report_only_insufficiency_risk"
+          ],
+          "status": "well_typed"
+        },
+        "continuation": {
+          "diagnostic_name": null,
+          "has_residual_scientific_space": false,
+          "residual_refinement_count": 0,
+          "residual_repair_count": 0,
+          "residual_test_count": 0
+        },
+        "history": {
+          "construction_kind": null,
+          "direct_selector": false
+        },
+        "marker": {
+          "marker_provenance_count": 0,
+          "policy_declared": false,
+          "preserves_markers": false,
+          "tracks_unresolved": false,
+          "unresolved_marker_count": 0
+        },
+        "protocol": {
+          "legacy_reconstructs_report_path": false,
+          "reconstructs": [
+            "description",
+            "normalizer",
+            "observation",
+            "projection",
+            "verifier"
+          ],
+          "strict_reconstructs_report_path": true
+        },
+        "report_only": {
+          "report_signature": "accuracy_0.90",
+          "verifier_verdict": "unknown"
+        },
+        "requested_dimensions": [
+          "calibration",
+          "leakage",
+          "variance"
+        ]
+      },
+      "cgt_diagnostic_signature_hash": "9d31ec372ce63da8df1f3218bac10296f98bd1fca05e20cbeed810db5a7458f2",
+      "closed_profile_signature": {
+        "closed_deficiency_codes": [
+          "report_only_insufficiency_risk"
+        ],
+        "status": "well_typed"
+      },
+      "predicted_extraction_signatures": [
+        {
+          "cgt_diagnostic_signature_hash": "624003cac36ae172f80d3bfcdaf2c589559d369b9d8a4bae55d9634141170a2e",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "9d31ec372ce63da8df1f3218bac10296f98bd1fca05e20cbeed810db5a7458f2",
+          "parse_valid": true,
+          "seed": 101
+        },
+        {
+          "cgt_diagnostic_signature_hash": "624003cac36ae172f80d3bfcdaf2c589559d369b9d8a4bae55d9634141170a2e",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "9d31ec372ce63da8df1f3218bac10296f98bd1fca05e20cbeed810db5a7458f2",
+          "parse_valid": true,
+          "seed": 102
+        },
+        {
+          "cgt_diagnostic_signature_hash": "624003cac36ae172f80d3bfcdaf2c589559d369b9d8a4bae55d9634141170a2e",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "9d31ec372ce63da8df1f3218bac10296f98bd1fca05e20cbeed810db5a7458f2",
+          "parse_valid": true,
+          "seed": 103
+        },
+        {
+          "cgt_diagnostic_signature_hash": "624003cac36ae172f80d3bfcdaf2c589559d369b9d8a4bae55d9634141170a2e",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "9d31ec372ce63da8df1f3218bac10296f98bd1fca05e20cbeed810db5a7458f2",
+          "parse_valid": true,
+          "seed": 104
+        },
+        {
+          "cgt_diagnostic_signature_hash": "624003cac36ae172f80d3bfcdaf2c589559d369b9d8a4bae55d9634141170a2e",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "9d31ec372ce63da8df1f3218bac10296f98bd1fca05e20cbeed810db5a7458f2",
+          "parse_valid": true,
+          "seed": 105
+        }
+      ],
+      "report_only_signature": {
+        "report_signature": "accuracy_0.90",
+        "verifier_verdict": "unknown"
+      },
+      "scenario_id": "benchmark_claim"
+    },
+    {
+      "cgt_diagnostic_signature": {
+        "closed_profile": {
+          "closed_deficiency_codes": [
+            "missing_description",
+            "missing_expected_report",
+            "missing_failure_predicate",
+            "missing_normalizer",
+            "missing_observation",
+            "missing_projection",
+            "missing_provenance",
+            "missing_reproduction_protocol",
+            "missing_verifier"
+          ],
+          "status": "unformed"
+        },
+        "continuation": {
+          "diagnostic_name": null,
+          "has_residual_scientific_space": false,
+          "residual_refinement_count": 0,
+          "residual_repair_count": 0,
+          "residual_test_count": 0
+        },
+        "history": {
+          "construction_kind": null,
+          "direct_selector": false
+        },
+        "marker": {
+          "marker_provenance_count": 0,
+          "policy_declared": false,
+          "preserves_markers": false,
+          "tracks_unresolved": false,
+          "unresolved_marker_count": 0
+        },
+        "protocol": {
+          "legacy_reconstructs_report_path": false,
+          "reconstructs": [],
+          "strict_reconstructs_report_path": false
+        },
+        "report_only": {
+          "report_signature": "no_observable_report",
+          "verifier_verdict": "unknown"
+        },
+        "requested_dimensions": []
+      },
+      "cgt_diagnostic_signature_hash": "56f2abbfc665d1f56977f09c4257c0b62277b5192f24c4cb1de71d034c0f854a",
+      "closed_profile_signature": {
+        "closed_deficiency_codes": [
+          "missing_description",
+          "missing_expected_report",
+          "missing_failure_predicate",
+          "missing_normalizer",
+          "missing_observation",
+          "missing_projection",
+          "missing_provenance",
+          "missing_reproduction_protocol",
+          "missing_verifier"
+        ],
+        "status": "unformed"
+      },
+      "predicted_extraction_signatures": [
+        {
+          "cgt_diagnostic_signature_hash": "361cf4de081dcbc999c219d4be33ba8b7afd162e9bd60d5b4c7540c4aa67fd21",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "56f2abbfc665d1f56977f09c4257c0b62277b5192f24c4cb1de71d034c0f854a",
+          "parse_valid": true,
+          "seed": 101
+        },
+        {
+          "cgt_diagnostic_signature_hash": "361cf4de081dcbc999c219d4be33ba8b7afd162e9bd60d5b4c7540c4aa67fd21",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "56f2abbfc665d1f56977f09c4257c0b62277b5192f24c4cb1de71d034c0f854a",
+          "parse_valid": true,
+          "seed": 102
+        },
+        {
+          "cgt_diagnostic_signature_hash": "361cf4de081dcbc999c219d4be33ba8b7afd162e9bd60d5b4c7540c4aa67fd21",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "56f2abbfc665d1f56977f09c4257c0b62277b5192f24c4cb1de71d034c0f854a",
+          "parse_valid": true,
+          "seed": 103
+        },
+        {
+          "cgt_diagnostic_signature_hash": "361cf4de081dcbc999c219d4be33ba8b7afd162e9bd60d5b4c7540c4aa67fd21",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "56f2abbfc665d1f56977f09c4257c0b62277b5192f24c4cb1de71d034c0f854a",
+          "parse_valid": true,
+          "seed": 104
+        },
+        {
+          "cgt_diagnostic_signature_hash": "361cf4de081dcbc999c219d4be33ba8b7afd162e9bd60d5b4c7540c4aa67fd21",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "56f2abbfc665d1f56977f09c4257c0b62277b5192f24c4cb1de71d034c0f854a",
+          "parse_valid": true,
+          "seed": 105
+        }
+      ],
+      "report_only_signature": {
+        "report_signature": "no_observable_report",
+        "verifier_verdict": "unknown"
+      },
+      "scenario_id": "unobservable_claim"
+    },
+    {
+      "cgt_diagnostic_signature": {
+        "closed_profile": {
+          "closed_deficiency_codes": [
+            "verifier_failure_incoherent"
+          ],
+          "status": "blocked"
+        },
+        "continuation": {
+          "diagnostic_name": null,
+          "has_residual_scientific_space": false,
+          "residual_refinement_count": 0,
+          "residual_repair_count": 0,
+          "residual_test_count": 0
+        },
+        "history": {
+          "construction_kind": null,
+          "direct_selector": false
+        },
+        "marker": {
+          "marker_provenance_count": 0,
+          "policy_declared": false,
+          "preserves_markers": false,
+          "tracks_unresolved": false,
+          "unresolved_marker_count": 0
+        },
+        "protocol": {
+          "legacy_reconstructs_report_path": false,
+          "reconstructs": [
+            "description",
+            "normalizer",
+            "observation",
+            "projection",
+            "verifier"
+          ],
+          "strict_reconstructs_report_path": true
+        },
+        "report_only": {
+          "report_signature": "report_r_accept_and_fail",
+          "verifier_verdict": "unknown"
+        },
+        "requested_dimensions": []
+      },
+      "cgt_diagnostic_signature_hash": "e89f29532ab65b0d7e6aeaeed197593b06f13f4f7eb60bb0079365582e2f39d0",
+      "closed_profile_signature": {
+        "closed_deficiency_codes": [
+          "verifier_failure_incoherent"
+        ],
+        "status": "blocked"
+      },
+      "predicted_extraction_signatures": [
+        {
+          "cgt_diagnostic_signature_hash": "e78d4a8bb74c6ab790648c83b72c60e4b594d7f461a3e029d7502bc10c01bcd2",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "e89f29532ab65b0d7e6aeaeed197593b06f13f4f7eb60bb0079365582e2f39d0",
+          "parse_valid": true,
+          "seed": 101
+        },
+        {
+          "cgt_diagnostic_signature_hash": "e78d4a8bb74c6ab790648c83b72c60e4b594d7f461a3e029d7502bc10c01bcd2",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "e89f29532ab65b0d7e6aeaeed197593b06f13f4f7eb60bb0079365582e2f39d0",
+          "parse_valid": true,
+          "seed": 102
+        },
+        {
+          "cgt_diagnostic_signature_hash": "e78d4a8bb74c6ab790648c83b72c60e4b594d7f461a3e029d7502bc10c01bcd2",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "e89f29532ab65b0d7e6aeaeed197593b06f13f4f7eb60bb0079365582e2f39d0",
+          "parse_valid": true,
+          "seed": 103
+        },
+        {
+          "cgt_diagnostic_signature_hash": "e78d4a8bb74c6ab790648c83b72c60e4b594d7f461a3e029d7502bc10c01bcd2",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "e89f29532ab65b0d7e6aeaeed197593b06f13f4f7eb60bb0079365582e2f39d0",
+          "parse_valid": true,
+          "seed": 104
+        },
+        {
+          "cgt_diagnostic_signature_hash": "e78d4a8bb74c6ab790648c83b72c60e4b594d7f461a3e029d7502bc10c01bcd2",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "e89f29532ab65b0d7e6aeaeed197593b06f13f4f7eb60bb0079365582e2f39d0",
+          "parse_valid": true,
+          "seed": 105
+        }
+      ],
+      "report_only_signature": {
+        "report_signature": "report_r_accept_and_fail",
+        "verifier_verdict": "unknown"
+      },
+      "scenario_id": "verifier_failure_incoherence"
+    },
+    {
+      "cgt_diagnostic_signature": {
+        "closed_profile": {
+          "closed_deficiency_codes": [
+            "missing_reproduction_protocol"
+          ],
+          "status": "partial"
+        },
+        "continuation": {
+          "diagnostic_name": null,
+          "has_residual_scientific_space": false,
+          "residual_refinement_count": 0,
+          "residual_repair_count": 0,
+          "residual_test_count": 0
+        },
+        "history": {
+          "construction_kind": null,
+          "direct_selector": false
+        },
+        "marker": {
+          "marker_provenance_count": 0,
+          "policy_declared": false,
+          "preserves_markers": false,
+          "tracks_unresolved": false,
+          "unresolved_marker_count": 0
+        },
+        "protocol": {
+          "legacy_reconstructs_report_path": false,
+          "reconstructs": [],
+          "strict_reconstructs_report_path": false
+        },
+        "report_only": {
+          "report_signature": "normalized_z",
+          "verifier_verdict": "unknown"
+        },
+        "requested_dimensions": []
+      },
+      "cgt_diagnostic_signature_hash": "4bad87f983423c33acb01fa8fd161512def4325098ef2993de0ed692fca44911",
+      "closed_profile_signature": {
+        "closed_deficiency_codes": [
+          "missing_reproduction_protocol"
+        ],
+        "status": "partial"
+      },
+      "predicted_extraction_signatures": [
+        {
+          "cgt_diagnostic_signature_hash": "5766561127191b432d96cf0b6623f4484b037c59717a747b27624e9256d6de4b",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "4bad87f983423c33acb01fa8fd161512def4325098ef2993de0ed692fca44911",
+          "parse_valid": true,
+          "seed": 101
+        },
+        {
+          "cgt_diagnostic_signature_hash": "5766561127191b432d96cf0b6623f4484b037c59717a747b27624e9256d6de4b",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "4bad87f983423c33acb01fa8fd161512def4325098ef2993de0ed692fca44911",
+          "parse_valid": true,
+          "seed": 102
+        },
+        {
+          "cgt_diagnostic_signature_hash": "5766561127191b432d96cf0b6623f4484b037c59717a747b27624e9256d6de4b",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "4bad87f983423c33acb01fa8fd161512def4325098ef2993de0ed692fca44911",
+          "parse_valid": true,
+          "seed": 103
+        },
+        {
+          "cgt_diagnostic_signature_hash": "5766561127191b432d96cf0b6623f4484b037c59717a747b27624e9256d6de4b",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "4bad87f983423c33acb01fa8fd161512def4325098ef2993de0ed692fca44911",
+          "parse_valid": true,
+          "seed": 104
+        },
+        {
+          "cgt_diagnostic_signature_hash": "5766561127191b432d96cf0b6623f4484b037c59717a747b27624e9256d6de4b",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "4bad87f983423c33acb01fa8fd161512def4325098ef2993de0ed692fca44911",
+          "parse_valid": true,
+          "seed": 105
+        }
+      ],
+      "report_only_signature": {
+        "report_signature": "normalized_z",
+        "verifier_verdict": "unknown"
+      },
+      "scenario_id": "missing_reproduction_protocol"
+    },
+    {
+      "cgt_diagnostic_signature": {
+        "closed_profile": {
+          "closed_deficiency_codes": [],
+          "status": "reproducibly_available"
+        },
+        "continuation": {
+          "diagnostic_name": null,
+          "has_residual_scientific_space": false,
+          "residual_refinement_count": 0,
+          "residual_repair_count": 0,
+          "residual_test_count": 0
+        },
+        "history": {
+          "construction_kind": null,
+          "direct_selector": false
+        },
+        "marker": {
+          "marker_provenance_count": 0,
+          "policy_declared": false,
+          "preserves_markers": false,
+          "tracks_unresolved": false,
+          "unresolved_marker_count": 0
+        },
+        "protocol": {
+          "legacy_reconstructs_report_path": false,
+          "reconstructs": [
+            "description",
+            "normalizer",
+            "observation",
+            "projection",
+            "verifier"
+          ],
+          "strict_reconstructs_report_path": true
+        },
+        "report_only": {
+          "report_signature": "normalized_z",
+          "verifier_verdict": "unknown"
+        },
+        "requested_dimensions": []
+      },
+      "cgt_diagnostic_signature_hash": "8ea4fdfaf9ab0e42ecc257edf61f7ecba12d7bbeeb1087ff363df13baa16bb85",
+      "closed_profile_signature": {
+        "closed_deficiency_codes": [],
+        "status": "reproducibly_available"
+      },
+      "predicted_extraction_signatures": [
+        {
+          "cgt_diagnostic_signature_hash": "5766561127191b432d96cf0b6623f4484b037c59717a747b27624e9256d6de4b",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "8ea4fdfaf9ab0e42ecc257edf61f7ecba12d7bbeeb1087ff363df13baa16bb85",
+          "parse_valid": true,
+          "seed": 101
+        },
+        {
+          "cgt_diagnostic_signature_hash": "5766561127191b432d96cf0b6623f4484b037c59717a747b27624e9256d6de4b",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "8ea4fdfaf9ab0e42ecc257edf61f7ecba12d7bbeeb1087ff363df13baa16bb85",
+          "parse_valid": true,
+          "seed": 102
+        },
+        {
+          "cgt_diagnostic_signature_hash": "5766561127191b432d96cf0b6623f4484b037c59717a747b27624e9256d6de4b",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "8ea4fdfaf9ab0e42ecc257edf61f7ecba12d7bbeeb1087ff363df13baa16bb85",
+          "parse_valid": true,
+          "seed": 103
+        },
+        {
+          "cgt_diagnostic_signature_hash": "5766561127191b432d96cf0b6623f4484b037c59717a747b27624e9256d6de4b",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "8ea4fdfaf9ab0e42ecc257edf61f7ecba12d7bbeeb1087ff363df13baa16bb85",
+          "parse_valid": true,
+          "seed": 104
+        },
+        {
+          "cgt_diagnostic_signature_hash": "5766561127191b432d96cf0b6623f4484b037c59717a747b27624e9256d6de4b",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "8ea4fdfaf9ab0e42ecc257edf61f7ecba12d7bbeeb1087ff363df13baa16bb85",
+          "parse_valid": true,
+          "seed": 105
+        }
+      ],
+      "report_only_signature": {
+        "report_signature": "normalized_z",
+        "verifier_verdict": "unknown"
+      },
+      "scenario_id": "strict_reproduction_protocol"
+    },
+    {
+      "cgt_diagnostic_signature": {
+        "closed_profile": {
+          "closed_deficiency_codes": [],
+          "status": "continuation_sensitive"
+        },
+        "continuation": {
+          "diagnostic_name": "residual_follow_up_capacity",
+          "has_residual_scientific_space": true,
+          "residual_refinement_count": 0,
+          "residual_repair_count": 0,
+          "residual_test_count": 1
+        },
+        "history": {
+          "construction_kind": null,
+          "direct_selector": false
+        },
+        "marker": {
+          "marker_provenance_count": 0,
+          "policy_declared": false,
+          "preserves_markers": false,
+          "tracks_unresolved": false,
+          "unresolved_marker_count": 0
+        },
+        "protocol": {
+          "legacy_reconstructs_report_path": false,
+          "reconstructs": [
+            "description",
+            "normalizer",
+            "observation",
+            "projection",
+            "verifier"
+          ],
+          "strict_reconstructs_report_path": true
+        },
+        "report_only": {
+          "report_signature": "same_report_0.90",
+          "verifier_verdict": "unknown"
+        },
+        "requested_dimensions": [
+          "continuation"
+        ]
+      },
+      "cgt_diagnostic_signature_hash": "c268c0a2cca7c4e3b2efeacd46ded00caccd6ad889e837b21dcc07e999651ea6",
+      "closed_profile_signature": {
+        "closed_deficiency_codes": [],
+        "status": "continuation_sensitive"
+      },
+      "predicted_extraction_signatures": [
+        {
+          "cgt_diagnostic_signature_hash": "2c99860f7661814587ad5fa29d5ad00e116213344092911cf813c99f6b642ab7",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "c268c0a2cca7c4e3b2efeacd46ded00caccd6ad889e837b21dcc07e999651ea6",
+          "parse_valid": true,
+          "seed": 101
+        },
+        {
+          "cgt_diagnostic_signature_hash": "2c99860f7661814587ad5fa29d5ad00e116213344092911cf813c99f6b642ab7",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "c268c0a2cca7c4e3b2efeacd46ded00caccd6ad889e837b21dcc07e999651ea6",
+          "parse_valid": true,
+          "seed": 102
+        },
+        {
+          "cgt_diagnostic_signature_hash": "2c99860f7661814587ad5fa29d5ad00e116213344092911cf813c99f6b642ab7",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "c268c0a2cca7c4e3b2efeacd46ded00caccd6ad889e837b21dcc07e999651ea6",
+          "parse_valid": true,
+          "seed": 103
+        },
+        {
+          "cgt_diagnostic_signature_hash": "2c99860f7661814587ad5fa29d5ad00e116213344092911cf813c99f6b642ab7",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "c268c0a2cca7c4e3b2efeacd46ded00caccd6ad889e837b21dcc07e999651ea6",
+          "parse_valid": true,
+          "seed": 104
+        },
+        {
+          "cgt_diagnostic_signature_hash": "2c99860f7661814587ad5fa29d5ad00e116213344092911cf813c99f6b642ab7",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "c268c0a2cca7c4e3b2efeacd46ded00caccd6ad889e837b21dcc07e999651ea6",
+          "parse_valid": true,
+          "seed": 105
+        }
+      ],
+      "report_only_signature": {
+        "report_signature": "same_report_0.90",
+        "verifier_verdict": "unknown"
+      },
+      "scenario_id": "same_report_continuation_low"
+    },
+    {
+      "cgt_diagnostic_signature": {
+        "closed_profile": {
+          "closed_deficiency_codes": [],
+          "status": "continuation_sensitive"
+        },
+        "continuation": {
+          "diagnostic_name": "residual_follow_up_capacity",
+          "has_residual_scientific_space": true,
+          "residual_refinement_count": 2,
+          "residual_repair_count": 2,
+          "residual_test_count": 3
+        },
+        "history": {
+          "construction_kind": null,
+          "direct_selector": false
+        },
+        "marker": {
+          "marker_provenance_count": 0,
+          "policy_declared": false,
+          "preserves_markers": false,
+          "tracks_unresolved": false,
+          "unresolved_marker_count": 0
+        },
+        "protocol": {
+          "legacy_reconstructs_report_path": false,
+          "reconstructs": [
+            "description",
+            "normalizer",
+            "observation",
+            "projection",
+            "verifier"
+          ],
+          "strict_reconstructs_report_path": true
+        },
+        "report_only": {
+          "report_signature": "same_report_0.90",
+          "verifier_verdict": "unknown"
+        },
+        "requested_dimensions": [
+          "continuation"
+        ]
+      },
+      "cgt_diagnostic_signature_hash": "2cc94a0e218a64a12c98e55f4a497075de2cdc16b52dc7c7e80bb2fecae2e1a8",
+      "closed_profile_signature": {
+        "closed_deficiency_codes": [],
+        "status": "continuation_sensitive"
+      },
+      "predicted_extraction_signatures": [
+        {
+          "cgt_diagnostic_signature_hash": "2c99860f7661814587ad5fa29d5ad00e116213344092911cf813c99f6b642ab7",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "2cc94a0e218a64a12c98e55f4a497075de2cdc16b52dc7c7e80bb2fecae2e1a8",
+          "parse_valid": true,
+          "seed": 101
+        },
+        {
+          "cgt_diagnostic_signature_hash": "2c99860f7661814587ad5fa29d5ad00e116213344092911cf813c99f6b642ab7",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "2cc94a0e218a64a12c98e55f4a497075de2cdc16b52dc7c7e80bb2fecae2e1a8",
+          "parse_valid": true,
+          "seed": 102
+        },
+        {
+          "cgt_diagnostic_signature_hash": "2c99860f7661814587ad5fa29d5ad00e116213344092911cf813c99f6b642ab7",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "2cc94a0e218a64a12c98e55f4a497075de2cdc16b52dc7c7e80bb2fecae2e1a8",
+          "parse_valid": true,
+          "seed": 103
+        },
+        {
+          "cgt_diagnostic_signature_hash": "2c99860f7661814587ad5fa29d5ad00e116213344092911cf813c99f6b642ab7",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "2cc94a0e218a64a12c98e55f4a497075de2cdc16b52dc7c7e80bb2fecae2e1a8",
+          "parse_valid": true,
+          "seed": 104
+        },
+        {
+          "cgt_diagnostic_signature_hash": "2c99860f7661814587ad5fa29d5ad00e116213344092911cf813c99f6b642ab7",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "2cc94a0e218a64a12c98e55f4a497075de2cdc16b52dc7c7e80bb2fecae2e1a8",
+          "parse_valid": true,
+          "seed": 105
+        }
+      ],
+      "report_only_signature": {
+        "report_signature": "same_report_0.90",
+        "verifier_verdict": "unknown"
+      },
+      "scenario_id": "same_report_continuation_high"
+    },
+    {
+      "cgt_diagnostic_signature": {
+        "closed_profile": {
+          "closed_deficiency_codes": [
+            "marker_sensitive_missing_marker_policy",
+            "missing_marker_policy",
+            "report_only_insufficiency_risk"
+          ],
+          "status": "blocked"
+        },
+        "continuation": {
+          "diagnostic_name": null,
+          "has_residual_scientific_space": false,
+          "residual_refinement_count": 0,
+          "residual_repair_count": 0,
+          "residual_test_count": 0
+        },
+        "history": {
+          "construction_kind": null,
+          "direct_selector": false
+        },
+        "marker": {
+          "marker_provenance_count": 0,
+          "policy_declared": false,
+          "preserves_markers": false,
+          "tracks_unresolved": false,
+          "unresolved_marker_count": 0
+        },
+        "protocol": {
+          "legacy_reconstructs_report_path": false,
+          "reconstructs": [
+            "description",
+            "normalizer",
+            "observation",
+            "projection",
+            "verifier"
+          ],
+          "strict_reconstructs_report_path": true
+        },
+        "report_only": {
+          "report_signature": "marker_omitted_report",
+          "verifier_verdict": "unknown"
+        },
+        "requested_dimensions": [
+          "marker"
+        ]
+      },
+      "cgt_diagnostic_signature_hash": "0328ed279b573884ca344f219ee203ded53fc066ca318113ccde759d3f84447d",
+      "closed_profile_signature": {
+        "closed_deficiency_codes": [
+          "marker_sensitive_missing_marker_policy",
+          "missing_marker_policy",
+          "report_only_insufficiency_risk"
+        ],
+        "status": "blocked"
+      },
+      "predicted_extraction_signatures": [
+        {
+          "cgt_diagnostic_signature_hash": "50d10fb58e5debc7f078b84158b9141defd0e9264a8da214dbb531f7feb585fe",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "0328ed279b573884ca344f219ee203ded53fc066ca318113ccde759d3f84447d",
+          "parse_valid": true,
+          "seed": 101
+        },
+        {
+          "cgt_diagnostic_signature_hash": "50d10fb58e5debc7f078b84158b9141defd0e9264a8da214dbb531f7feb585fe",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "0328ed279b573884ca344f219ee203ded53fc066ca318113ccde759d3f84447d",
+          "parse_valid": true,
+          "seed": 102
+        },
+        {
+          "cgt_diagnostic_signature_hash": "50d10fb58e5debc7f078b84158b9141defd0e9264a8da214dbb531f7feb585fe",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "0328ed279b573884ca344f219ee203ded53fc066ca318113ccde759d3f84447d",
+          "parse_valid": true,
+          "seed": 103
+        },
+        {
+          "cgt_diagnostic_signature_hash": "50d10fb58e5debc7f078b84158b9141defd0e9264a8da214dbb531f7feb585fe",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "0328ed279b573884ca344f219ee203ded53fc066ca318113ccde759d3f84447d",
+          "parse_valid": true,
+          "seed": 104
+        },
+        {
+          "cgt_diagnostic_signature_hash": "50d10fb58e5debc7f078b84158b9141defd0e9264a8da214dbb531f7feb585fe",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "0328ed279b573884ca344f219ee203ded53fc066ca318113ccde759d3f84447d",
+          "parse_valid": true,
+          "seed": 105
+        }
+      ],
+      "report_only_signature": {
+        "report_signature": "marker_omitted_report",
+        "verifier_verdict": "unknown"
+      },
+      "scenario_id": "marker_sensitive_omission"
+    },
+    {
+      "cgt_diagnostic_signature": {
+        "closed_profile": {
+          "closed_deficiency_codes": [
+            "report_only_insufficiency_risk"
+          ],
+          "status": "well_typed"
+        },
+        "continuation": {
+          "diagnostic_name": null,
+          "has_residual_scientific_space": false,
+          "residual_refinement_count": 0,
+          "residual_repair_count": 0,
+          "residual_test_count": 0
+        },
+        "history": {
+          "construction_kind": null,
+          "direct_selector": false
+        },
+        "marker": {
+          "marker_provenance_count": 2,
+          "policy_declared": true,
+          "preserves_markers": true,
+          "tracks_unresolved": true,
+          "unresolved_marker_count": 1
+        },
+        "protocol": {
+          "legacy_reconstructs_report_path": false,
+          "reconstructs": [
+            "description",
+            "normalizer",
+            "observation",
+            "projection",
+            "verifier"
+          ],
+          "strict_reconstructs_report_path": true
+        },
+        "report_only": {
+          "report_signature": "marker_omitted_report",
+          "verifier_verdict": "unknown"
+        },
+        "requested_dimensions": [
+          "marker"
+        ]
+      },
+      "cgt_diagnostic_signature_hash": "ac7831e85b9938fc8feda9b800f4867251483bb4fa25044a19b142861d4aaf79",
+      "closed_profile_signature": {
+        "closed_deficiency_codes": [
+          "report_only_insufficiency_risk"
+        ],
+        "status": "well_typed"
+      },
+      "predicted_extraction_signatures": [
+        {
+          "cgt_diagnostic_signature_hash": "50d10fb58e5debc7f078b84158b9141defd0e9264a8da214dbb531f7feb585fe",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "ac7831e85b9938fc8feda9b800f4867251483bb4fa25044a19b142861d4aaf79",
+          "parse_valid": true,
+          "seed": 101
+        },
+        {
+          "cgt_diagnostic_signature_hash": "50d10fb58e5debc7f078b84158b9141defd0e9264a8da214dbb531f7feb585fe",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "ac7831e85b9938fc8feda9b800f4867251483bb4fa25044a19b142861d4aaf79",
+          "parse_valid": true,
+          "seed": 102
+        },
+        {
+          "cgt_diagnostic_signature_hash": "50d10fb58e5debc7f078b84158b9141defd0e9264a8da214dbb531f7feb585fe",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "ac7831e85b9938fc8feda9b800f4867251483bb4fa25044a19b142861d4aaf79",
+          "parse_valid": true,
+          "seed": 103
+        },
+        {
+          "cgt_diagnostic_signature_hash": "50d10fb58e5debc7f078b84158b9141defd0e9264a8da214dbb531f7feb585fe",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "ac7831e85b9938fc8feda9b800f4867251483bb4fa25044a19b142861d4aaf79",
+          "parse_valid": true,
+          "seed": 104
+        },
+        {
+          "cgt_diagnostic_signature_hash": "50d10fb58e5debc7f078b84158b9141defd0e9264a8da214dbb531f7feb585fe",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "ac7831e85b9938fc8feda9b800f4867251483bb4fa25044a19b142861d4aaf79",
+          "parse_valid": true,
+          "seed": 105
+        }
+      ],
+      "report_only_signature": {
+        "report_signature": "marker_omitted_report",
+        "verifier_verdict": "unknown"
+      },
+      "scenario_id": "marker_sensitive_preserved"
+    },
+    {
+      "cgt_diagnostic_signature": {
+        "closed_profile": {
+          "closed_deficiency_codes": [
+            "direct_selector_degeneracy_risk"
+          ],
+          "status": "well_typed"
+        },
+        "continuation": {
+          "diagnostic_name": null,
+          "has_residual_scientific_space": false,
+          "residual_refinement_count": 0,
+          "residual_repair_count": 0,
+          "residual_test_count": 0
+        },
+        "history": {
+          "construction_kind": "direct_selector",
+          "direct_selector": true
+        },
+        "marker": {
+          "marker_provenance_count": 0,
+          "policy_declared": false,
+          "preserves_markers": false,
+          "tracks_unresolved": false,
+          "unresolved_marker_count": 0
+        },
+        "protocol": {
+          "legacy_reconstructs_report_path": false,
+          "reconstructs": [
+            "description",
+            "normalizer",
+            "observation",
+            "projection",
+            "verifier"
+          ],
+          "strict_reconstructs_report_path": true
+        },
+        "report_only": {
+          "report_signature": "direct_target_report",
+          "verifier_verdict": "unknown"
+        },
+        "requested_dimensions": []
+      },
+      "cgt_diagnostic_signature_hash": "b5b31c4c89de2fb3a3d1353e13416051fc05a77c0596d21c6f92a54a4c902102",
+      "closed_profile_signature": {
+        "closed_deficiency_codes": [
+          "direct_selector_degeneracy_risk"
+        ],
+        "status": "well_typed"
+      },
+      "predicted_extraction_signatures": [
+        {
+          "cgt_diagnostic_signature_hash": "2d3b5a2cdf688010d6e6424d6314488d7745d54193cfdb30bc4d3aba1188747f",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "b5b31c4c89de2fb3a3d1353e13416051fc05a77c0596d21c6f92a54a4c902102",
+          "parse_valid": true,
+          "seed": 101
+        },
+        {
+          "cgt_diagnostic_signature_hash": "2d3b5a2cdf688010d6e6424d6314488d7745d54193cfdb30bc4d3aba1188747f",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "b5b31c4c89de2fb3a3d1353e13416051fc05a77c0596d21c6f92a54a4c902102",
+          "parse_valid": true,
+          "seed": 102
+        },
+        {
+          "cgt_diagnostic_signature_hash": "2d3b5a2cdf688010d6e6424d6314488d7745d54193cfdb30bc4d3aba1188747f",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "b5b31c4c89de2fb3a3d1353e13416051fc05a77c0596d21c6f92a54a4c902102",
+          "parse_valid": true,
+          "seed": 103
+        },
+        {
+          "cgt_diagnostic_signature_hash": "2d3b5a2cdf688010d6e6424d6314488d7745d54193cfdb30bc4d3aba1188747f",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "b5b31c4c89de2fb3a3d1353e13416051fc05a77c0596d21c6f92a54a4c902102",
+          "parse_valid": true,
+          "seed": 104
+        },
+        {
+          "cgt_diagnostic_signature_hash": "2d3b5a2cdf688010d6e6424d6314488d7745d54193cfdb30bc4d3aba1188747f",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "b5b31c4c89de2fb3a3d1353e13416051fc05a77c0596d21c6f92a54a4c902102",
+          "parse_valid": true,
+          "seed": 105
+        }
+      ],
+      "report_only_signature": {
+        "report_signature": "direct_target_report",
+        "verifier_verdict": "unknown"
+      },
+      "scenario_id": "direct_selector_degeneracy"
+    },
+    {
+      "cgt_diagnostic_signature": {
+        "closed_profile": {
+          "closed_deficiency_codes": [],
+          "status": "reproducibly_available"
+        },
+        "continuation": {
+          "diagnostic_name": null,
+          "has_residual_scientific_space": false,
+          "residual_refinement_count": 0,
+          "residual_repair_count": 0,
+          "residual_test_count": 0
+        },
+        "history": {
+          "construction_kind": "structured",
+          "direct_selector": false
+        },
+        "marker": {
+          "marker_provenance_count": 0,
+          "policy_declared": false,
+          "preserves_markers": false,
+          "tracks_unresolved": false,
+          "unresolved_marker_count": 0
+        },
+        "protocol": {
+          "legacy_reconstructs_report_path": false,
+          "reconstructs": [
+            "description",
+            "normalizer",
+            "observation",
+            "projection",
+            "verifier"
+          ],
+          "strict_reconstructs_report_path": true
+        },
+        "report_only": {
+          "report_signature": "direct_target_report",
+          "verifier_verdict": "unknown"
+        },
+        "requested_dimensions": []
+      },
+      "cgt_diagnostic_signature_hash": "aede2c37425d84c68207e3af080a5e93d61f3fd8e8ebca4e1a81f3ec3ff37848",
+      "closed_profile_signature": {
+        "closed_deficiency_codes": [],
+        "status": "reproducibly_available"
+      },
+      "predicted_extraction_signatures": [
+        {
+          "cgt_diagnostic_signature_hash": "2d3b5a2cdf688010d6e6424d6314488d7745d54193cfdb30bc4d3aba1188747f",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "aede2c37425d84c68207e3af080a5e93d61f3fd8e8ebca4e1a81f3ec3ff37848",
+          "parse_valid": true,
+          "seed": 101
+        },
+        {
+          "cgt_diagnostic_signature_hash": "2d3b5a2cdf688010d6e6424d6314488d7745d54193cfdb30bc4d3aba1188747f",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "aede2c37425d84c68207e3af080a5e93d61f3fd8e8ebca4e1a81f3ec3ff37848",
+          "parse_valid": true,
+          "seed": 102
+        },
+        {
+          "cgt_diagnostic_signature_hash": "2d3b5a2cdf688010d6e6424d6314488d7745d54193cfdb30bc4d3aba1188747f",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "aede2c37425d84c68207e3af080a5e93d61f3fd8e8ebca4e1a81f3ec3ff37848",
+          "parse_valid": true,
+          "seed": 103
+        },
+        {
+          "cgt_diagnostic_signature_hash": "2d3b5a2cdf688010d6e6424d6314488d7745d54193cfdb30bc4d3aba1188747f",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "aede2c37425d84c68207e3af080a5e93d61f3fd8e8ebca4e1a81f3ec3ff37848",
+          "parse_valid": true,
+          "seed": 104
+        },
+        {
+          "cgt_diagnostic_signature_hash": "2d3b5a2cdf688010d6e6424d6314488d7745d54193cfdb30bc4d3aba1188747f",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "aede2c37425d84c68207e3af080a5e93d61f3fd8e8ebca4e1a81f3ec3ff37848",
+          "parse_valid": true,
+          "seed": 105
+        }
+      ],
+      "report_only_signature": {
+        "report_signature": "direct_target_report",
+        "verifier_verdict": "unknown"
+      },
+      "scenario_id": "structured_history_control"
+    },
+    {
+      "cgt_diagnostic_signature": {
+        "closed_profile": {
+          "closed_deficiency_codes": [
+            "missing_description",
+            "missing_expected_report",
+            "missing_failure_predicate",
+            "missing_normalizer",
+            "missing_observation",
+            "missing_projection",
+            "missing_provenance",
+            "missing_reproduction_protocol",
+            "missing_verifier"
+          ],
+          "status": "unformed"
+        },
+        "continuation": {
+          "diagnostic_name": null,
+          "has_residual_scientific_space": false,
+          "residual_refinement_count": 0,
+          "residual_repair_count": 0,
+          "residual_test_count": 0
+        },
+        "history": {
+          "construction_kind": null,
+          "direct_selector": false
+        },
+        "marker": {
+          "marker_provenance_count": 0,
+          "policy_declared": false,
+          "preserves_markers": false,
+          "tracks_unresolved": false,
+          "unresolved_marker_count": 0
+        },
+        "protocol": {
+          "legacy_reconstructs_report_path": false,
+          "reconstructs": [],
+          "strict_reconstructs_report_path": false
+        },
+        "report_only": {
+          "report_signature": "cascade_no_projection",
+          "verifier_verdict": "unknown"
+        },
+        "requested_dimensions": []
+      },
+      "cgt_diagnostic_signature_hash": "e27d8ff98aa5d4359e3aa93c73ac2d315b9cec511e1f8f9efa192c84cf63a414",
+      "closed_profile_signature": {
+        "closed_deficiency_codes": [
+          "missing_description",
+          "missing_expected_report",
+          "missing_failure_predicate",
+          "missing_normalizer",
+          "missing_observation",
+          "missing_projection",
+          "missing_provenance",
+          "missing_reproduction_protocol",
+          "missing_verifier"
+        ],
+        "status": "unformed"
+      },
+      "predicted_extraction_signatures": [
+        {
+          "cgt_diagnostic_signature_hash": "69f1aab9145fdf40674eace79f5b6bf18a6033820185ccca3b11b1e9048e280a",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "e27d8ff98aa5d4359e3aa93c73ac2d315b9cec511e1f8f9efa192c84cf63a414",
+          "parse_valid": true,
+          "seed": 101
+        },
+        {
+          "cgt_diagnostic_signature_hash": "69f1aab9145fdf40674eace79f5b6bf18a6033820185ccca3b11b1e9048e280a",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "e27d8ff98aa5d4359e3aa93c73ac2d315b9cec511e1f8f9efa192c84cf63a414",
+          "parse_valid": true,
+          "seed": 102
+        },
+        {
+          "cgt_diagnostic_signature_hash": "69f1aab9145fdf40674eace79f5b6bf18a6033820185ccca3b11b1e9048e280a",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "e27d8ff98aa5d4359e3aa93c73ac2d315b9cec511e1f8f9efa192c84cf63a414",
+          "parse_valid": true,
+          "seed": 103
+        },
+        {
+          "cgt_diagnostic_signature_hash": "69f1aab9145fdf40674eace79f5b6bf18a6033820185ccca3b11b1e9048e280a",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "e27d8ff98aa5d4359e3aa93c73ac2d315b9cec511e1f8f9efa192c84cf63a414",
+          "parse_valid": true,
+          "seed": 104
+        },
+        {
+          "cgt_diagnostic_signature_hash": "69f1aab9145fdf40674eace79f5b6bf18a6033820185ccca3b11b1e9048e280a",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "e27d8ff98aa5d4359e3aa93c73ac2d315b9cec511e1f8f9efa192c84cf63a414",
+          "parse_valid": true,
+          "seed": 105
+        }
+      ],
+      "report_only_signature": {
+        "report_signature": "cascade_no_projection",
+        "verifier_verdict": "unknown"
+      },
+      "scenario_id": "dependency_closure_cascade"
+    },
+    {
+      "cgt_diagnostic_signature": {
+        "closed_profile": {
+          "closed_deficiency_codes": [
+            "missing_reproduction_protocol"
+          ],
+          "status": "partial"
+        },
+        "continuation": {
+          "diagnostic_name": null,
+          "has_residual_scientific_space": false,
+          "residual_refinement_count": 0,
+          "residual_repair_count": 0,
+          "residual_test_count": 0
+        },
+        "history": {
+          "construction_kind": null,
+          "direct_selector": false
+        },
+        "marker": {
+          "marker_provenance_count": 0,
+          "policy_declared": false,
+          "preserves_markers": false,
+          "tracks_unresolved": false,
+          "unresolved_marker_count": 0
+        },
+        "protocol": {
+          "legacy_reconstructs_report_path": false,
+          "reconstructs": [],
+          "strict_reconstructs_report_path": false
+        },
+        "report_only": {
+          "report_signature": "finite_run_family",
+          "verifier_verdict": "unknown"
+        },
+        "requested_dimensions": []
+      },
+      "cgt_diagnostic_signature_hash": "170ca9f74f431a3608725b5272b31f4a84932d2f0488dcfcc74708a179158ccd",
+      "closed_profile_signature": {
+        "closed_deficiency_codes": [
+          "missing_reproduction_protocol"
+        ],
+        "status": "partial"
+      },
+      "predicted_extraction_signatures": [
+        {
+          "cgt_diagnostic_signature_hash": "836b280b5408d1de6e80cd47842609b9aaa294ed006a40deefff4f4e4ea5e933",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "170ca9f74f431a3608725b5272b31f4a84932d2f0488dcfcc74708a179158ccd",
+          "parse_valid": true,
+          "seed": 101
+        },
+        {
+          "cgt_diagnostic_signature_hash": "836b280b5408d1de6e80cd47842609b9aaa294ed006a40deefff4f4e4ea5e933",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "170ca9f74f431a3608725b5272b31f4a84932d2f0488dcfcc74708a179158ccd",
+          "parse_valid": true,
+          "seed": 102
+        },
+        {
+          "cgt_diagnostic_signature_hash": "836b280b5408d1de6e80cd47842609b9aaa294ed006a40deefff4f4e4ea5e933",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "170ca9f74f431a3608725b5272b31f4a84932d2f0488dcfcc74708a179158ccd",
+          "parse_valid": true,
+          "seed": 103
+        },
+        {
+          "cgt_diagnostic_signature_hash": "836b280b5408d1de6e80cd47842609b9aaa294ed006a40deefff4f4e4ea5e933",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "170ca9f74f431a3608725b5272b31f4a84932d2f0488dcfcc74708a179158ccd",
+          "parse_valid": true,
+          "seed": 104
+        },
+        {
+          "cgt_diagnostic_signature_hash": "836b280b5408d1de6e80cd47842609b9aaa294ed006a40deefff4f4e4ea5e933",
+          "diagnostic_signature_agreement": false,
+          "expected_cgt_diagnostic_signature_hash": "170ca9f74f431a3608725b5272b31f4a84932d2f0488dcfcc74708a179158ccd",
+          "parse_valid": true,
+          "seed": 105
+        }
+      ],
+      "report_only_signature": {
+        "report_signature": "finite_run_family",
+        "verifier_verdict": "unknown"
+      },
+      "scenario_id": "finite_run_family_may_must"
+    }
+  ],
+  "schema_version": "2026-05-18.level5.diagnostic-signatures.v1"
+}
