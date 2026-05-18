@@ -223,12 +223,39 @@ class DependencyClosure:
         package: ClaimPackage | None = None,
     ) -> None:
         if isinstance(dependencies, DependencyGraph):
-            self.dependencies = dependencies.active_mapping(package)
+            active_edges = tuple(edge for edge in dependencies.edges if edge.active_for(package))
+            grouped: dict[str, list[str]] = {}
+            edge_metadata: dict[tuple[str, str], dict[str, JSONValue]] = {}
+            for edge in active_edges:
+                grouped.setdefault(edge.source, []).append(edge.target)
+                edge_metadata[(edge.source, edge.target)] = self._edge_metadata(edge)
+            self.dependencies = {source: tuple(targets) for source, targets in grouped.items()}
+            self.edge_metadata = edge_metadata
         else:
             self.dependencies = {
                 code: tuple(targets)
                 for code, targets in (dependencies or DEFAULT_DEPENDENCIES).items()
             }
+            self.edge_metadata = {}
+
+    def _edge_metadata(self, edge: DependencyEdge) -> dict[str, JSONValue]:
+        metadata: dict[str, JSONValue] = {
+            "source": edge.source,
+            "target": edge.target,
+        }
+        optional_fields: dict[str, JSONValue | None] = {
+            "source_component": edge.source_component,
+            "target_component": edge.target_component,
+            "activation_condition": edge.activation_condition,
+            "condition": edge.condition,
+            "rationale": edge.rationale,
+        }
+        for key, value in optional_fields.items():
+            if value is not None:
+                metadata[key] = value
+        if edge.structured_condition is not None:
+            metadata["structured_condition"] = edge.structured_condition.to_dict()
+        return metadata
 
     def close(self, deficiencies: Iterable[Deficiency]) -> set[Deficiency]:
         """Return the least dependency-closed deficiency set."""
@@ -254,10 +281,17 @@ class DependencyClosure:
             index += 1
             for induced_code in self.dependencies.get(code, ()):
                 if induced_code not in present_codes:
+                    metadata: dict[str, JSONValue] = {
+                        "induced_by": code,
+                        "source_deficiency": code,
+                        "target_deficiency": induced_code,
+                    }
+                    metadata.update(self.edge_metadata.get((code, induced_code), {}))
                     induced = make_deficiency(
                         induced_code,
                         message=f"Induced by dependency on {code}.",
                         depends_on=(code,),
+                        metadata=metadata,
                     )
                     closed_items.append(induced)
                     seen_items.add(induced)

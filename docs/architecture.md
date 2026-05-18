@@ -29,7 +29,10 @@ added without rewriting the analyzer loop.
 
 1. Rules produce direct deficiencies and warnings.
 2. `DiagnosticVocabulary` supplies a finite `DependencyGraph`.
-3. `DependencyClosure` computes package-relative induced deficiencies.
+3. `DependencyClosure` computes package-relative induced deficiencies. When an
+   induced deficiency comes from a typed dependency edge, the report preserves
+   edge metadata such as source component, target component, activation
+   condition, rationale, and `induced_by`.
 4. `AvailabilityProfile` records layered facts such as complete, well typed,
    coherent, reproducibly available, continuation-sensitive, and blocked.
 5. `AvailabilityStatus` and `CoarseAvailabilityClass` provide lossy summaries.

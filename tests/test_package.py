@@ -1,4 +1,9 @@
+import cgt_availability
 from cgt_availability import ClaimPackage, FrameSpec
+
+
+def test_public_version_matches_release() -> None:
+    assert cgt_availability.__version__ == "0.1.0"
 
 
 def test_claim_package_json_roundtrip() -> None:

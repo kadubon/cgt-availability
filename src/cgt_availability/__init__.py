@@ -1,5 +1,7 @@
 """Finite scientific-availability diagnostics for CGT claim packages."""
 
+__version__ = "0.1.0"
+
 from cgt_availability.core import (
     DEFICIENCY_CODE_INFO,
     SCHEMA_VERSION,
@@ -222,4 +224,5 @@ __all__ = [
     "solve_repair_cover",
     "solve_weighted_repair_cover",
     "wilson_score_interval",
+    "__version__",
 ]

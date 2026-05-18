@@ -1,16 +1,22 @@
 # cgt-availability
 
-`cgt-availability` is a diagnostic library for scientific claim packages.
-It does not decide whether a claim is true, and it does not decide whether a
-claim is science. It checks whether the claim declares the constraints needed
-to be handled scientifically: observation, description, normalization,
-verification, failure, reproduction, comparison, provenance, marker policy,
-history, degeneracy control, and continuation structure.
+`cgt-availability` is a finite diagnostic library for scientific availability
+of CGT claim packages. It supports scientific claim diagnostics for
+reproducible claims, AI benchmark claims, and scientific workflow diagnostics.
 
-The core idea is simple: a report is only a projection of a richer effect
-profile. Two packages can have the same report or verifier verdict while
-differing in what they make observable, reproducible, repairable, or usable for
-follow-up scientific work.
+cgt-availability does not decide whether a claim is true. It does not judge
+whether a claim is science or non-science. It diagnoses whether a claim has the
+declared constraints needed to be handled scientifically: observation,
+description, normalization, verification, failure, reproduction, comparison,
+provenance, marker policy, history, degeneracy control, and continuation
+structure.
+
+The core idea from Constraint Generative Theory (CGT) is simple: a report is
+only a report projection of a richer effect profile. Two packages can have the
+same report or verifier verdict while differing in what they make observable,
+reproducible, repairable, or usable for follow-up scientific work. The library
+therefore returns a deficiency profile and recommendations, not a truth or
+demarcation judgment.
 
 ## Quickstart
 
@@ -43,6 +49,18 @@ report = AvailabilityAnalyzer.default().analyze(pkg)
 print(report.status)
 print([item.code for item in report.dependency_closed_deficiencies])
 ```
+
+## Core diagnostic output
+
+Every analysis returns an `AvailabilityReport` containing:
+
+- direct deficiencies;
+- dependency-closed deficiencies;
+- a layered availability profile;
+- a coarse status;
+- warnings and recommendations;
+- metadata describing the pipeline, strict mode, declared components, and finite
+  residual readouts.
 
 ## What it can diagnose
 
@@ -139,78 +157,66 @@ not bundled; they are installed only when the user selects an extra.
 
 PRISM and Storm are not Python dependencies and are not vendored. They are
 supported only through external-process adapter profiles configured by the user.
-Ollama and Gemma models are also not dependencies and are not bundled; the Level
-5 experiment harness uses a user-installed local Ollama service only.
-The experiment can also run `--gold-only` to verify theory-separation metrics
-without Ollama or raw outputs. The LLM is only an extraction assistant for
-candidate `ClaimPackage` JSON; availability conclusions come from the
-deterministic analyzer.
+Ollama and Gemma models are also not dependencies and are not bundled.
 
-Run the practical experiment-analysis backend with optional libraries:
+## API stability in v0.1.0
+
+The stable v0.1.0 surface is intentionally small:
+
+- `ClaimPackage`
+- core spec dataclasses such as `FrameSpec`, `ProjectionSpec`, `VerifierSpec`,
+  `ReproductionProtocolSpec`, `ComparisonRegimeSpec`, and `ContinuationSpec`
+- `Deficiency`
+- `AvailabilityAnalyzer`
+- `AvailabilityReport`
+- `AvailabilityStatus`
+- `render_markdown_report`
+- `render_json_report`
+
+Research and experimental APIs may change faster: residual transition helpers,
+finite DTMC helpers, statistical verifier helpers, external model-checking
+adapters, repair-cover solvers, and experiment utilities. See
+[API stability](docs/api-stability.md).
+
+## Strict mode
+
+Normal mode accepts a small number of v0.1 compatibility shortcuts, such as
+legacy `metadata["reconstructs_report_path"]`. Strict mode requires
+first-class typed specs where applicable and is recommended for reproducible
+claim packages:
 
 ```bash
-uv sync --extra experiments
-uv run python experiments/level5_ollama_gemma4/summarize_results.py \
-  --gold-only \
-  --analysis-backend external \
-  --scenarios experiments/level5_ollama_gemma4/scenario_catalog_v2.json \
-  --config experiments/level5_ollama_gemma4/config_v3.json \
-  --output-dir experiments/level5_ollama_gemma4/results/v3
+uv run python -m cgt_availability diagnose fixtures/conformance/strict_protocol_claim_package.json --pipeline standard --format json --strict
 ```
 
-This writes public aggregate artifacts such as `summary.json`, `metrics.csv`,
-`diagnostic_signatures.json`, `component_coverage.csv`,
-`separation_matrix.csv`, `metrics_summary.json`, `separation_rates.png`, and
-`hash_manifest.json`. Raw prompts and raw model responses remain ignored.
+## Residual and continuation helpers
+
+Continuation-sensitive diagnostics inspect declared residual constraints,
+follow-up tests, refinements, repairs, and finite residual transition systems.
+Residual simulation helpers are finite bounded diagnostics, not full
+coalgebraic or bisimulation semantics. They are CGT-style continuation readouts
+for declared finite structures, not full model checking.
 
 ## Level 5 experiment snapshot
 
-The Level 5 local experiment uses Ollama `gemma4:e4b` with `think=false`.
-The public artifacts contain aggregate metrics and diagnostic signatures only;
-raw prompts and raw model responses are not published.
+The optional Level 5 Ollama Gemma experiment is local-only and isolated under
+`experiments/`. It is not a benchmark, not a validation of CGT as a whole, and
+not a truth test. Raw prompts and model responses remain ignored; public files
+contain aggregate metrics, hashes, and diagnostic summaries only. Ollama and
+Gemma models are also not dependencies, and availability conclusions still come
+from the deterministic analyzer.
 
-The deterministic v3 gold check covers 24 synthetic scenarios and reproduces the
-intended theory cut: report-only diagnosis collapses all same-report groups
-(`1.0`), dependency-closed profiles separate some groups (`0.625`), and the
-fuller CGT diagnostic signature separates the declared marker, history,
-protocol, and continuation cases (`1.0`). This is a deterministic analyzer
-check, not an LLM performance result.
+The current v4 public summary is partial live extraction evidence: 80 live
+records out of a configured 640-record matrix. The deterministic gold check over
+32 synthetic scenarios reports report-only collapse `1.0`, closed-profile
+separation `0.642857`, and CGT diagnostic separation `1.0`. The live extraction
+subset parsed all responses but recovered shallow packages: average deficiency
+F1 `0.47038`, status agreement `40/80`, and diagnostic-signature agreement
+`5/80`. See the [experiment documentation](docs/experiments.md) and
+[v4 report](experiments/level5_ollama_gemma4/results/v4/report.md).
 
-The current v3 live Ollama extraction summary covers 60 records: 4 scenarios,
-3 extraction arms, and 5 seeds. It is therefore a subset of the configured full
-v3 matrix of 360 records. The run parsed all outputs, but still recovered only
-shallow package declarations: average deficiency F1 was `0.472464`, status
-agreement was `30/60`, and diagnostic-signature agreement was `5/60`. This is
-an extraction limitation, not a truth verdict and not a failure of the
-deterministic analyzer.
-
-Detailed v3 artifacts and interpretation are in
-[the Level 5 v3 experiment report](experiments/level5_ollama_gemma4/results/report.md).
-The earlier 14-scenario live result is preserved under
-[`results/baselines/2026-05-18-gemma4-e4b-think-false`](experiments/level5_ollama_gemma4/results/baselines/2026-05-18-gemma4-e4b-think-false)
-as a negative extraction baseline. The v3 gold-only artifacts remain in
-[`experiments/level5_ollama_gemma4/results/v3`](experiments/level5_ollama_gemma4/results/v3).
-
-The v4 design is the current finite theory-effect experiment. It fixes
-`gemma4:e4b`, `think=false`, 32 counterfactual scenarios, 4 extraction arms, and
-5 seeds, for a configured full live matrix of 640 records. The primary v4 claim
-is deterministic: CGT diagnostic signatures separate same-report groups that a
-report-only baseline collapses. The LLM extraction run remains secondary. The
-v4 public artifacts are written under
-[`experiments/level5_ollama_gemma4/results/v4`](experiments/level5_ollama_gemma4/results/v4)
-and include `dimension_effects.csv` and `hypothesis_tests.json`.
-
-The current v4 public summary is intentionally marked as partial live evidence:
-it summarizes 80 live records, covering 4 scenarios, 4 arms, and 5 seeds out of
-the configured 640-record matrix. The deterministic gold check over all 32
-synthetic scenarios gives report-only collapse `1.0`, closed-profile separation
-`0.642857`, and CGT diagnostic separation `1.0`. The live extraction subset
-parsed all responses, but recovered shallow packages: average deficiency F1 was
-`0.47038`, status agreement was `40/80`, and diagnostic-signature agreement was
-`5/80`. The component-slot arm was the strongest extraction arm in this subset
-with diagnostic-signature agreement `0.25`, but this remains extraction evidence
-only. The detailed v4 report is
-[`experiments/level5_ollama_gemma4/results/v4/report.md`](experiments/level5_ollama_gemma4/results/v4/report.md).
+The experiment can also run `--gold-only` to verify deterministic
+theory-separation metrics without Ollama or raw outputs.
 
 ```python
 from cgt_availability.adapters import PRISM_COMMAND_PROFILE
@@ -228,6 +234,7 @@ uv run python tools/license_audit.py --allow-missing
 ## Documentation paths
 
 - [Architecture](docs/architecture.md): module boundaries and analyzer flow
+- [API stability](docs/api-stability.md): stable v0.1.0 surface and experimental helpers
 - [CGT mapping](docs/cgt_mapping.md): paper vocabulary to Python dataclasses
 - [Theory audit](docs/theory_audit.md): implemented, finite approximation, adapter boundary, not implemented, and out-of-scope items
 - [Schema](docs/schema.md): JSON Schema artifacts and conformance fixtures
@@ -235,6 +242,7 @@ uv run python tools/license_audit.py --allow-missing
 - [Experiments](docs/experiments.md): optional Level 5 local experiment policy and Ollama Gemma harness
 - [Limitations](docs/limitations.md): exact limits of the finite implementation
 - [License policy](docs/licenses.md): optional dependency and external binary policy
+- [Release notes](RELEASE_NOTES.md): v0.1.0 release text for GitHub and Zenodo-style publication
 
 ## License
 

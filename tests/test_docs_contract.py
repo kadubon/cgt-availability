@@ -13,6 +13,9 @@ def test_readme_contains_first_time_user_sections() -> None:
         "## What it is not",
         "## Pipeline levels",
         "## Optional extras and external tools",
+        "## API stability in v0.1.0",
+        "## Strict mode",
+        "## Residual and continuation helpers",
         "## Documentation paths",
         "## License",
     )
@@ -25,6 +28,18 @@ def test_readme_contains_first_time_user_sections() -> None:
     assert "docs/experiments.md" in readme
     assert "Ollama and Gemma models are also not dependencies" in readme
     assert "--gold-only" in readme
+    assert "Residual simulation helpers are finite bounded diagnostics" in readme
+    assert "docs/api-stability.md" in readme
+
+
+def test_release_notes_exist_for_v010() -> None:
+    release_notes = (ROOT / "RELEASE_NOTES.md").read_text(encoding="utf-8")
+
+    assert "cgt-availability v0.1.0" in release_notes
+    assert "Scientific Availability Diagnostics" in release_notes
+    assert "Not a truth oracle" in release_notes
+    assert "Not a science/non-science judge" in release_notes
+    assert "https://doi.org/10.5281/zenodo.20262492" in release_notes
 
 
 def test_docs_avoid_early_stage_positioning_terms() -> None:
